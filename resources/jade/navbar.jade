@@ -1,0 +1,104 @@
+@extends('template1')
+
+@section('contenu')
+
+mixin li(color,icon,msg,time,warn)
+    if(warn)
+        li(class='warning')
+            a(href="#")
+                span.icon(class=color)
+                    i(class=icon)
+                span.message= msg
+                span.time= time
+    else
+        li
+            a(href="#")
+                span.icon(class=color)
+                    i(class=icon)
+                span.message= msg
+                span.time= time
+mixin limsg(nom,time,msg,img)
+    li
+        a(href="#")
+            span.avatar
+                img(src= img,alt="Avatar")
+            span.header
+                span.form= nom
+                span.time= time
+            span.message= msg
+
+nav.navbar(role="navigation")
+    div.navbar-inner
+        div.container-fluid
+            a.btn.btn-navbar(data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse")
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a#main-menu-toggle.hidden-phone.open
+                i.icon-reorder
+            div.row-fluid
+                a.brand.span2.noBg(href="/")
+                    span Pideo
+
+            div.nav-no-collapse.header-nav
+                ul.nav.pull-right
+                      li.active
+                        a.btn(href="#")
+                          i.icon-map-marker
+                      li
+                        a.btn(href="#",title="Pideos",data-rel="tooltip")
+                            i.icon-facetime-video
+                      li.dropdown
+                        a.btn.dropdown-toggle(title="Notifications",data-rel="tooltip",data-toggle="dropdown",href="#")
+                            i.icon-bell-alt
+                        ul.dropdown-menu.notifications
+                            li.dropdown-menu-title
+                                span You have notifications
+                            +li('blue','icon-user','New user','1 min')
+                            +li('blue','icon-user','New user','1 min')
+                            li.dropdown-menu-sub-footer
+                                a View all notifications
+
+                      li.dropdown
+                        a.btn.dropdown-toggle(title="Messages",data-rel="tooltip",data-toggle="dropdown",href="#")
+                            i.icon-envelope
+                        ul.dropdown-menu.messages
+                            li.dropdown-menu-title
+                                span You have messages
+                            +limsg('Luc','6 min','Bonjour','path')
+                            li.dropdown-menu-sub-footer
+                                a(href="message") View all messages
+
+
+
+                      li.dropdown
+                        a.btn.account.dropdown-toggle(data-toggle="dropdown")
+                            div.avatar
+                                img(src="#",alt="Avatar")
+                            div.user
+                                span.hello Welcome
+                                span.name EZIN
+                                    small &nbsp Jean
+                        ul.dropdown-menu
+                          li.dropdown-menu-title
+                          li
+                            a(href="#")
+                                i.icon-user
+                                span &nbsp Profile
+                          li
+                            a(href="#")
+                                i.icon-cog
+                                span &nbsp Settings
+                          li
+                            a(href="#")
+                                i.icon-envelope
+                                span &nbsp Messages
+                          li.divider(role="separator")
+                          li
+                            a(href="#")
+                                i.icon-off
+                                span &nbsp Logout
+
+
+
+@endsection

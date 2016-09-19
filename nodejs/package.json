@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-real-favicon": "^0.2.1",
+    "laravel-elixir": "^5.0.0",
+    "laravel-elixir-jade": "^0.1.8"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "jquery": "^3.0.0",
+    "redis": "^2.6.2",
+    "socket.io": "^1.4.8"
+  }
+}

@@ -1,0 +1,99 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use DateTime;
+use App\Events\ChatMessagesEvent;
+use Event;
+use App\Models\Conversation;
+use App\Models\Message;
+use App\Models\MessageNotification;
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
+
+use Illuminate\Support\Str;
+
+
+class MessageController extends Controller
+{
+    /**
+     * Display a listing of messages.
+     *
+     * @return Response
+     */
+    public function index() {
+
+        $conversation = Conversation::where('name', Input::get('conversation'))->first();
+        $messages = Message::where('conversation_id', $conversation->id)->orderBy('created_at')->get();
+
+        $response['messages'] = $messages;
+        $response['userId'] = Auth::user()->id;
+
+        return View::make('partials/chat',$response)->render();
+    }
+
+    /**
+     * Store a newly created message in storage.
+     *
+     * @return Response
+     */
+    public function store() {
+
+        $rules     = array('body' => 'required');
+        $validator = Validator::make(Input::all(), $rules);
+
+        if($validator->fails()) {
+            return Response::json([
+                'success' => false,
+                'result' => $validator->messages()
+            ]);
+        }
+        
+        $id = Input::get('conversation');
+        $conversation = Conversation::where('name', $id)->first();
+
+        $params = array(
+            'conversation_id' => $conversation->id,
+            'body'               => Input::get('body'),
+            'type'              =>  'text',
+            'user_id'           => Input::get('user_id'),
+            'created_at'      => new DateTime
+        );
+
+        $message = Message::create($params);
+        $message->type = 'text';
+
+        // Create Message Notifications
+        $messages_notifications = array();
+
+        foreach($conversation->users()->get() as $user) {
+            array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
+        }
+
+        $message->messages_notifications()->saveMany($messages_notifications);
+
+        // Publish Data To Redis
+        $data = array(
+            'room'        => Input::get('conversation'),
+            'message'  => array( 'body' => Str::words($message->body, 5), 'user_id' => Input::get('user_id'))
+        );
+
+        Event::fire(new ChatMessagesEvent(json_encode($data)));
+
+        return Response::json([
+            'success' => true,
+            'result' => $message
+        ]);
+
+        //return Redirect::route('chat.index', array('conversation', $conversation->name));
+    }
+    
+  
+}

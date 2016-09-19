@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,0DAAY;AAGZ;EACE,yBAHyC,EAI1C","file":"style.css","sourcesContent":["@import url(https://fonts.googleapis.com/css?family=Lato);\r\n$font-family-sans-serif: 'Lato', sans-serif;\r\n\r\nbody {\r\n  font: $font-family-sans-serif;\r\n}"],"sourceRoot":"/source/"}
