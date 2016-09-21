@@ -36,7 +36,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand brand" href="#"><span>Pideo</span></a>
+				<a class="navbar-brand brand" href="#"><span>Piideo</span></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -249,15 +249,15 @@
 			<div class="row bottom-footer text-center-mobile">
 
 				<div class="col-sm-8">
-					<p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">Jbertrius</a> exclusively for <a href="http://tympanus.net/codrops/">Pideo</a></p>
+					<p>&copy; 2016 All Rights Reserved. Powered by <a href="http://www.piideo.com/">Piideo</a> </p>
 				</div>
 
 				<div class="col-sm-4 text-right text-center-mobile">
 
 					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="https://www.facebook.com/Pideomewebsite"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
 			</div>

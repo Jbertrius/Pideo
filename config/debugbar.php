@@ -12,8 +12,7 @@ return array(
      |
      */
 
-    'enabled' => null,
-
+    'enabled' => env('APP_DEBUG', 'false'),
     /*
      |--------------------------------------------------------------------------
      | Storage settings
