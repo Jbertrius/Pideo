@@ -21,6 +21,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-select.css')}}">
 
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-checkbox.css')}}">
+
+
+
 @endsection
 
 @section('contenu')
@@ -34,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">Pideo</a>
+                <a class="navbar-brand" href="">Piideo</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="top-navbar-1">
@@ -80,14 +84,14 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 form-box">
 
-                        <form role="form" action="{!! url('auth/login') !!}" accept-charset="UTF-8" method="post" class="registration-form">
+                        <form role="form" action="{!! url('login') !!}" accept-charset="UTF-8" method="post" class="registration-form">
 
 
                             <fieldset>
                                 {!! csrf_field() !!}
                                 <div class="form-top">
                                     <div class="form-top-left">
-                                        <h3>Sign up</h3>
+                                        <h3>Sign in</h3>
                                         <p> {!! trans('front/login.text') !!}</p>
                                     </div>
                                     <div class="form-top-right">
@@ -107,8 +111,8 @@
                                         <input type="password" name="password" placeholder="Password..." class="password form-control require {{ $errors->has('password') ? 'input-error' : '' }}" id="password">
                                     </div>
 
-                                    <div class="form-group col-sm-6">
-                                        <div class="checkbox checkbox-success ">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
                                             <input id="memory" class="styled" value="1" type="checkbox" name="memory">
                                             <label for="memory">
                                                 Remember me
@@ -116,9 +120,11 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                    <button  type="submit" class="btn">Sign me up!</button>
+
+                                    <div class="form-group text-center">
+                                    <button  type="submit" class="btn">Sign in</button>
                                     </div>
+
 
                                 </div>
                             </fieldset>

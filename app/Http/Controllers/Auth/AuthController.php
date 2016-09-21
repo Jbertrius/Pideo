@@ -62,7 +62,7 @@ class AuthController extends Controller
             ThrottlesLogins::class, class_uses_recursive(get_class($this))
         );
         if ($throttles && $this->hasTooManyLoginAttempts($request)) {
-            return redirect('auth/login')
+            return redirect('login')
                 ->with('error', trans('front/login.maxattempt'))
                 ->withInput($request->only('log'));
         }
@@ -76,7 +76,7 @@ class AuthController extends Controller
             if ($throttles) {
                 $this->incrementLoginAttempts($request);
             }
-            return redirect('auth/login')
+            return redirect('login')
                 ->with('error', trans('front/login.credentials'))
                 ->withInput($request->only('log'));
         }
@@ -94,7 +94,7 @@ class AuthController extends Controller
         }
 
         $request->session()->put('user_id', $user->id);
-        return redirect('auth/login')->with('error', trans('front/verify.again'));
+        return redirect('login')->with('error', trans('front/verify.again'));
     }
 
     /**
@@ -113,7 +113,7 @@ class AuthController extends Controller
             $confirmation_code = str_random(30)
         );
         $this->dispatch(new SendMail($user));
-        return redirect('/')->with('ok', trans('front/verify.message'));
+        return redirect('confirm')->with('ok', trans('front/verify.message'));
     }
 
     /**
@@ -128,7 +128,7 @@ class AuthController extends Controller
         $confirmation_code)
     {
         $user = $user_gestion->confirm($confirmation_code);
-        return redirect('/')->with('ok', trans('front/verify.success'));
+        return redirect('confirm')->with('ok', trans('front/verify.success'));
     }
     /**
      * Handle a resend request.
@@ -144,7 +144,7 @@ class AuthController extends Controller
         if($request->session()->has('user_id'))	{
             $user = $user_gestion->getById($request->session()->get('user_id'));
             $this->dispatch(new SendMail($user));
-            return redirect('/')->with('ok', trans('front/verify.resend'));
+            return redirect('confirm')->with('ok', trans('front/verify.resend'));
         }
         return redirect('/');
     }

@@ -19,15 +19,15 @@ Route::get('/', [
 Route::get('back/result', 'MakepideoController@back');
 Route::get('language/{lang}', 'HomeController@language')->where('lang', '[A-Za-z_-]+');
 Route::get('auth/confirm/{token}', 'Auth\AuthController@getConfirm');
-Route::get('auth/login', [
+Route::get('login', [
     'uses' => 'Auth\AuthController@getLogin',
     'as' => 'login']);
 Route::get('auth/resend', 'Auth\AuthController@getResend');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/register', [
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('register', [
     'uses' => 'Auth\AuthController@getRegister',
     'as' => 'register']);
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::post('register', 'Auth\AuthController@postRegister');
 // Password reset link request routes...
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
@@ -39,11 +39,13 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 
 
-
 Route::group( ['middleware' => 'auth' ], function()
 {
 
+
     Route::get('home', 'HomeController@home');
+
+
 
     // User
     Route::get('user/sort/{role}', 'UserController@indexSort');
@@ -139,6 +141,8 @@ Route::group( ['middleware' => 'auth' ], function()
         return $img->response();
     });
 
+
+
     Route::get('convert', 'MakepideoController@getImages');
 
 	// Admin
@@ -153,6 +157,11 @@ Route::group( ['middleware' => 'auth' ], function()
         'as' => 'medias',
         'middleware' => 'redac'
     ]);
+
+    Route::get('confirm', function(){
+        return view('auth.confirm');
+    });
+
 
     Route::get('front/home', [
     'uses' => 'HomeController@home',

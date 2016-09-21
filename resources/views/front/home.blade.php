@@ -15,7 +15,8 @@
 @foreach($conversations as $conversation)
     <?php $counter = 0;?>
     @if($conversation->messagesNotifications()->count() != 0)
-        <?php $counter++?>
+        <?php $counter++;
+        ?>
     @endif
 @endforeach
 
@@ -87,7 +88,7 @@
                             </form>
 
                         </div>
-                    </div>
+
 
                         <div class="panel-body panel-body-map">
                             <div id="google_search_map" style="width: 100%; height: 500px;"></div>

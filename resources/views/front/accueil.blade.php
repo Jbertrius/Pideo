@@ -42,7 +42,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 
-					<li>{!! link_to('auth/register', trans('front/site.register'), ['class' => 'btn btn-blue']) !!}</li>
+					<li>{!! link_to('register', trans('front/site.register'), ['class' => 'btn btn-blue']) !!}</li>
 					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign In</a></li>
 					<li></li>
 				</ul>
@@ -218,7 +218,7 @@
 					<h3 class="white">Join the Family Of Champions</h3>
 					<h5 class="light regular light-white">If it's an exercise, then the solution is with us</h5>
 
-					{!! link_to('auth/register', trans('front/site.register'), ['class' => 'btn btn-blue ripple trial-button']) !!}
+					{!! link_to('register', trans('front/site.register'), ['class' => 'btn btn-blue ripple trial-button']) !!}
 				</div>
 				<div class="col-sm-6 text-center-mobile">
 					<h3 class="white"> </h3>
