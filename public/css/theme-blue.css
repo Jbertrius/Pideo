@@ -3990,7 +3990,7 @@ td.dataTables_empty {
   width: 40px;
 }
 .messages.messages-img .item .text {
-  margin-left: 50px;
+  margin-left: 50px !important;
   position: relative;
 }
 .messages.messages-img .item .text:after,

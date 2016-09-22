@@ -472,7 +472,7 @@ function deletePideo (filename) {
         type: "POST",
         url: 'delete/'+filename,
         data: {userId: user_id},
-        dataType: html
+        dataType: 'html'
     });
 
     return jqxhr;
@@ -577,11 +577,15 @@ $('#title').on('change', function () {
 });
 
 $('.modal').on('click', '#sendPideo', function () {
+    var filename = $('video').attr('src').split('/')[2];
+
+
 
 });
 
 $('.modal').on('click', '#delPideo', function () {
   var filename = $('video').attr('src').split('/')[2];
+    $('#delPideo').html('Deleting <i class="fa fa-spinner fa-spin"></i>');
 
     deletePideo(filename).done(function (data) {
         location.reload();

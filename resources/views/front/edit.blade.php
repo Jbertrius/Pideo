@@ -9,13 +9,16 @@
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
 @endsection
 
-<?php $conversations = Auth::user()->conversations()->get();?>
-@foreach($conversations as $conversation)
-    <?php $counter = 0;?>
-@if($conversation->messagesNotifications()->count() != 0)
-        <?php $counter++?>
-    @endif
-@endforeach
+<?php
+$conversations = Auth::user()->conversations()->get();
+$counter = 0;
+
+foreach($conversations as $conversation)
+{
+    if($conversation->messagesNotifications()->count() != 0)
+        $counter++;
+}
+?>
 
 
 @section('contenu')
@@ -54,7 +57,7 @@
                                             <div class="col-md-6 col-xs-12">
                                                 <input type="text" id="firstname" name="firstname" class="form-control" value="{!!  Auth::user()->firstname !!}"/>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
                                         <div class="form-group">
@@ -62,7 +65,7 @@
                                             <div class="col-md-6 col-xs-12">
                                                 <input type="text" id="lastname" name="lastname" class="form-control" value="{!!  Auth::user()->lastname !!}"/>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
                                         <div class="form-group">
@@ -76,7 +79,7 @@
                                             <div class="col-md-2 col-xs-12">
                                                 <input type="password" id="confirm" name="confirm" class="form-control" placeholder="Confirm" value=""/>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
                                         <div class="form-group" id="groupsub">
@@ -96,7 +99,7 @@
 
                                             <input type="hidden"  name="sub1" id="sub1" value="" />
                                             <input type="hidden"  name="sub2" id="sub2" value="" />
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
 
                                         </div>
 
@@ -108,7 +111,7 @@
                                                     <option value="English">English</option>
                                                 </select>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
                                         <div class="form-group">
@@ -116,21 +119,10 @@
                                             <div class="col-md-6 col-xs-12">
                                                 <input type="text" class="form-control" value="{!!  Auth::user()->number !!}" id="number" name="number"/>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
-                                        <div class="form-group">
-                                            <label class="col-md-3 col-xs-12 control-label">Profile Picture</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <div class="profile" style="background-color: transparent">
-                                                    <div class="profile-image col-xs-3" style="width: 33% !important;" >
-                                                        <img src="{{asset('img/icons/user.png')}}" />
-                                                    </div>
-                                                    <input type="file" multiple id="file-simple"/>
-                                                </div>
-                                            </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
-                                        </div>
+
 
                                     </div>
                                     <div class="tab-pane" id="tab-second">
@@ -141,7 +133,7 @@
                                             <div class="col-md-6 col-xs-12">
                                                 <input type="text" id="city" name="city" class="form-control" value="{!!  Auth::user()->city !!}"/>
                                             </div>
-                                            <div style="margin-top: 5px"> <a> <span class="fa fa-pencil"></span> Edit</a> </div>
+                                         
                                         </div>
 
                                         <div class="form-group">

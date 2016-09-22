@@ -10,15 +10,18 @@
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
 @endsection
 
-<?php $conversations = Auth::user()->conversations()->get();?>
+<?php
+$conversations = Auth::user()->conversations()->get();
+$counter = 0;
 
-@foreach($conversations as $conversation)
-    <?php $counter = 0;?>
-    @if($conversation->messagesNotifications()->count() != 0)
-        <?php $counter++;
-        ?>
-    @endif
-@endforeach
+foreach($conversations as $conversation)
+{
+    if($conversation->messagesNotifications()->count() != 0)
+        $counter++;
+}
+?>
+
+
 
 
 @section('contenu')

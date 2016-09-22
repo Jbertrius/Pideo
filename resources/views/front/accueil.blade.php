@@ -188,7 +188,7 @@
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Sign In</h3>
 
-				{!! Form::open(['url' => 'auth/login', 'method' => 'post', 'role' => 'form', 'class' => 'popup-form']) !!}
+				{!! Form::open(['url' => 'login', 'method' => 'post', 'role' => 'form', 'class' => 'popup-form']) !!}
 
 
 

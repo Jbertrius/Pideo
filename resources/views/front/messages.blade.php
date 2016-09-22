@@ -10,12 +10,17 @@
 @endsection
 
 
-@foreach($conversations as $conversation)
-    <?php $counter = 0;?>
-    @if($conversation->messagesNotifications()->count() != 0)
-        <?php $counter++?>
-    @endif
-@endforeach
+
+
+<?php
+$counter = 0;
+
+foreach($conversations as $conversation)
+{
+    if($conversation->messagesNotifications()->count() != 0)
+        $counter++;
+}
+?>
 
 @section('contenu')
 

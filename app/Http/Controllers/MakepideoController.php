@@ -52,10 +52,6 @@ class MakepideoController extends Controller
         $params['userId'] = $userId;
 
 
-
-
-
-
         $imgEntry = []; $audioEntry = [];
 
         $id = str_random(30);
@@ -85,7 +81,7 @@ class MakepideoController extends Controller
             FFMPEG::convert()->input($imgPath)
                 ->input($audioPath)
                 ->output($videopath.'/section'.$i.'.mp4')
-               ->go('-loop 1','-c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest')
+               ->go('-loop 1','-c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest ')
                // ->go('-loop 1','-c:v libx264 -t 30 -pix_fmt yuv420p')
             ;
 
@@ -106,7 +102,7 @@ class MakepideoController extends Controller
         $params['path'] = storage_path().'/app/Pideos/'.$userId.'_'.$id.'.mp4';
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
-        Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
+        //Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
 
          $pideo = $this->pideoRepository->store($params);
         

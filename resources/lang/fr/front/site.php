@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'title' => 'Pideo',
+	'title' => 'Piideo',
 	'sub-title' => 'Un framework PHP novateur',
 	'home' => 'Accueil',
 	'contact' => 'Contact',
