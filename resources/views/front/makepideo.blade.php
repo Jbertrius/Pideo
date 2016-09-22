@@ -15,7 +15,7 @@
 $conversations = Auth::user()->conversations()->get();
 $counter = 0;
 
-foreach($conversations as $conversation)
+foreach($conversations as  $conversation)
 {
     if($conversation->messagesNotifications()->count() != 0)
         $counter++;
