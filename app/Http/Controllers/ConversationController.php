@@ -94,6 +94,7 @@ class ConversationController extends Controller
         $params = array(
             'conversation_id' => $conversation->id,
             'body'               => Input::get('body'),
+            'type'              => 'text',
             'user_id'           => Auth::user()->id,
             'created_at'      => new DateTime
         );

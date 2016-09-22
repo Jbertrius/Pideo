@@ -20,6 +20,10 @@
   zoom: 1;
 }
 
+.fix-height{
+    height: 115px;
+}
+
 .mejs-container {
   box-shadow:0 0 18px rgba(0, 0, 0, .2);
 }

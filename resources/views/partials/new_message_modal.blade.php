@@ -5,7 +5,7 @@
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             <h4 class="modal-title" id="defModalHead">New Message</h4>
         </div>
-        <div class="modal-body" >
+        <div class="modal-body fix-height" >
             <div class="form-group">
                 <label class="col-md-2 control-label">To</label>
                 <div class="col-md-10" style="margin-bottom: 12px; margin-top: -7px;">
@@ -22,8 +22,17 @@
             </div>
         </div>
         <div class="modal-footer">
+
+            <div class="pull-left">
+                <button type="button"  class="btn btn-default"><span class="fa fa-camera"></span></button>
+                <button type="button"  class="btn btn-default"><span class="fa fa-chain"></span></button>
+            </div>
+
+            <div class="pull-right">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" onclick="send();" class="btn btn-primary">Send</button>
+            </div>
+
         </div>
     </div>
     <input type="hidden" name="id" id="id" value="{{ $id }}">

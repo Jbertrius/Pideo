@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 form-box">
 
-                        <form role="form" action="{!! url('auth/register') !!}" accept-charset="UTF-8" method="post" class="registration-form">
+                        <form role="form" action="{!! url('register') !!}" accept-charset="UTF-8" method="post" class="registration-form">
 
 
                             <fieldset>
