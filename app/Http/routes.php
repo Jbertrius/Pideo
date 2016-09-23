@@ -36,6 +36,10 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
+Route::get('confirm ', function( ){
+    return view('auth.confirm') ;
+})->name('confirm');
+
 
 
 
@@ -158,9 +162,7 @@ Route::group( ['middleware' => 'auth' ], function()
         'middleware' => 'redac'
     ]);
 
-    Route::get('confirm', function(){
-        return view('auth.confirm');
-    });
+
 
 
     Route::get('front/home', [

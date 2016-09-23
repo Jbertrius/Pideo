@@ -4,7 +4,7 @@ return [
 	'email-title' => 'Email verification',
 	'email-intro'=> 'To validate your email ',
 	'email-link' => 'click on this link',
-	'message' => 'Thanks for signing up! Please check your email.',
+	'message' => 'Thanks for signing up! You can now <a href="'.url('login').'">log in</a>',
 	'success' => 'You have successfully verified your account! You can now login.',
 	'again' => 'You must verify your email before you can access the site. ' .
                 '<br>If you have not received the confirmation email check your spam folder.'.

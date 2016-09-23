@@ -4,7 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;
-
+use App;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -53,8 +53,16 @@ class Handler extends ExceptionHandler
             {
                 return response()->view('errors.404');
             }
-            return $this->renderHttpException($e);
+
+            if (App::environment('local')) {
+                //return $this->renderHttpException($e);
+                return response()->view('errors.500');
+            }
+            else if(App::environment('production'))
+                return response()->view('errors.500');
+
         }
+
         return parent::render($request, $e);
     }
 }

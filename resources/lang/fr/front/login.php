@@ -4,6 +4,7 @@ return [
 	'connection' => 'Connexion',
 	'text' => 'Pour vous connecter au site il vous suffit de remplir le formulaire suivant :',
 	'email' => 'Votre Email',
+	'confirm' =>  'Confirmation',
 	'password' => 'Votre Mot de passe',
 	'remind' => 'Se rappeler de moi',
 	'forget' => 'J\'ai oublié mon mot de passe !',

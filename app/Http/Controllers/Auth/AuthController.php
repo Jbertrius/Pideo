@@ -112,8 +112,9 @@ class AuthController extends Controller
             $request->all(),
             $confirmation_code = str_random(30)
         );
-        $this->dispatch(new SendMail($user));
-        return redirect('confirm')->with('ok', trans('front/verify.message'));
+      //  $this->dispatch(new SendMail($user));
+       return redirect('confirm')->with('ok', trans('front/verify.message')); 
+
     }
 
     /**

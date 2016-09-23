@@ -4,7 +4,7 @@ return [
 	'email-title' => 'Vérification d\'Email',
 	'email-intro'=> 'Pour valider votre email ',
 	'email-link' => 'Cliquez sur ce lien ',
-	'message' => 'Merci de vous être enregistré ! Regardez dans vos emails en réception.',
+	'message' => 'Merci de vous être enregistré ! Vous pouvez maintenant vous <a href="' . url('login') . '">connecter</a>',
 	'success' => 'Vous avez maintenant confirmé votre compte ! Vous pouvez vous connecter.',
 	'again' => 'Vous devez valider votre email avant de pouvoir accéder à ce site. ' .
                 '<br>Si vous n\'avez pas reçu l\'email de confirmation veuillez consulter votre dossier de spams.' .

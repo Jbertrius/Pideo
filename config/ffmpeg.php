@@ -18,7 +18,7 @@ return array(
     |
     */
 
-   'ffmpeg'        => 'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\bin\ffmpeg.exe',
+   'ffmpeg'        => env('FFMPEG_PATH',  'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\bin\ffmpeg.exe'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,8 +31,7 @@ return array(
     |
     */
 
-   'ffprobe'        => 'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\bin\ffprobe.exe',
-
+   'ffprobe'        => env('FFPROBE_PATH',  'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\bin\ffprobe.exe'),
    /*
     |--------------------------------------------------------------------------
     | Progress monitoring
@@ -67,5 +66,6 @@ return array(
     |
     */
 
-   'tmp_dir'      => 'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\tmp'
+   'tmp_dir'      => env('FFMPEG__TMP',  'C:\Users\Jean.Bertrand\Logiciels\Ffmpeg\tmp'),
+
 );

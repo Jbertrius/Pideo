@@ -47,6 +47,7 @@ class UserRepository extends BaseRepository
 
         if($confirmation_code) {
             $user->confirmation_code = $confirmation_code;
+            $user->confirmed = true;
         } else {
             $user->confirmed = true;
         }
