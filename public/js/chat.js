@@ -12,46 +12,21 @@ $(function() {
 
 
 
-    var
-        socket = io('http://localhost:3000'),
 
-        jqxhr  = $.ajax({
-            url: '/users/' + user_id + '/conversations',
-            type: 'GET',
-            dataType: 'json'
-        });
-
-    jqxhr.done(function(data) {
-        if(data.success && data.result.length > 0) {
-            $.each(data.result, function(index, conversation) {
-                socket.emit('join', { room:  conversation.name });
-            });
-        }
-    });
-
-    /***
-     Socket.io Events
-     ***/
-    scrollToBottom();
-    socket.on('welcome', function (data) {
-        console.log(data.message);
-
-        socket.emit('join', { room:  user_id });
-    });
-
-    socket.on('joined', function(data) {
-        console.log(data.message);
-    });
-
-    socket.on('chat.messages', function(data) {
+    var channel = pusher.subscribe('channel_'+ user_id);
+    channel.bind('message', function(data) {
+        var message         = data.message.body,
+            from_user_id    = data.message.user_id,
+            fullname        = data.message.fullname,
+            img             = data.message.img,
+            conversation    = data.room,
+            consId          = data.message.conserId;
         var
             $messageList  = $("#messageList"),
             $msgContent = $("#mCSB_1_container"),
             $conversation = $("#" + data.room);
 
-        var message      = data.message.body,
-            from_user_id = data.message.user_id,
-            conversation = data.room;
+        appendNotification(conversation, img, fullname, message,consId);
 
         getMessages(conversation).done(function(data) {
 
@@ -68,13 +43,75 @@ $(function() {
         });
     });
 
-    socket.on('chat.conversations', function(data) {
+
+        jqxhr  = $.ajax({
+            url: '/users/' + user_id + '/conversations',
+            type: 'GET',
+            dataType: 'json'
+        });
+
+
+
+    /***
+     Socket.io Events
+     ***/
+    scrollToBottom();
+
+    function appendNotification(conversation, imgPath, fullname, msg, consId) {
+
+        var $counter1 = $('#counter1');
+        var $counter2 = $('#counter2');
+        var $conv = $('#' + consId);
+
+        var $msgNotif = $('#msgNotif').find('a').parent();
+
+
+
+
+        if($counter1.find('.informer').length > 0)
+        {
+            var int = parseInt($counter1.find('.informer').text(), 10) + 1;
+            $counter1.find('.informer').html(int);
+            $counter2.find('span').html(int+' new');
+
+        }
+        else
+        {
+            $counter1.append('<div class="informer informer-danger" >1</div>');
+            $counter2.append('<span class="label label-danger">1 new</span>');
+        }
+
+
+
+        var not = '<a href="/messages/?conversation=' + conversation + '" id=" '+ consId+' " class="list-group-item">'+
+            '<div class="list-group-status status-online"></div>'+
+            '<img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/>'+
+            '<span class="contacts-title">' + fullname + '</span>'+
+            '<p>'+msg +
+            '<span class="label label-danger">1</span>'+
+            '</p>'+
+            '</a>';
+
+        if($conv.length = 0)
+            $msgNotif.append(not);
+        else
+            $conv.html('<div class="list-group-status status-online"></div>'+
+                '<img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/>'+
+                '<span class="contacts-title">' + fullname + '</span>'+
+                '<p>' + msg +
+                '  <span class="label label-danger">1</span>'+
+                '</p>');
+    }
+
+
+
+  /*  socket.on('chat.conversations', function(data) {
         var $conversationList = $("#conversationList");
 
         getConversations(current_conversation).done(function(data) {
             $conversationList.html(data);
         });
-    });
+    });*/
 
     /***
      Functions
@@ -176,7 +213,7 @@ $(function() {
     function updateConversationCounter($conversation) {
         var
             $badge  = $conversation.find('.badge'),
-            counter = Number($badge .text());
+            counter = Number($badge.text());
 
         if($badge.length) {
             $badge.text(counter + 1);

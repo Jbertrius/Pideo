@@ -17,25 +17,25 @@
     </li>
     <!-- END SIGN OUT -->
     <!-- MESSAGES -->
-    <li class="xn-icon-button pull-right">
+    <li class="xn-icon-button pull-right" id="counter1">
         <a href="#"><span class="fa fa-comments"></span></a>
         @if($counter != 0)
-        <div class="informer informer-danger">{{ $counter }}</div>
+        <div class="informer informer-danger" >{{ $counter }}</div>
         @endif
 
         <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
             <div class="panel-heading">
                 <h3 class="panel-title"><span class="fa fa-comments"></span> Messages</h3>
-                <div class="pull-right">
+                <div class="pull-right" id="counter2">
                     @if($counter != 0)
                     <span class="label label-danger">{{ $counter }} new</span>
                     @endif
                 </div>
             </div>
-            <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+            <div class="panel-body list-group list-group-contacts scroll" id="msgNotif" style="height: 200px;">
 
                 @foreach($conversations as $conversation)
-                    <a href="/messages/?conversation={{$conversation->name}}" class="list-group-item">
+                    <a href="/messages/?conversation={{$conversation->name}}" id = "{{ $conversation->id }}" class="list-group-item">
                         <div class="list-group-status status-online"></div>
                         <img src="{{ $conversation->users->first()->image_path }}" class="pull-left" alt="{{ $conversation->users->first()->firstname }} {{ $conversation->users->first()->lastname }}"/>
                         <span class="contacts-title">{{ $conversation->users->first()->firstname }} {{ $conversation->users->first()->lastname }}</span>

@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "intervention/image": "^2.3",
         "anam/phantommagick": "^1.0",
-        "linkthrow/ffmpeg": "dev-master"
+        "linkthrow/ffmpeg": "dev-master",
+        "vinkla/pusher": "^2.4"
 
     },
     "require-dev": {

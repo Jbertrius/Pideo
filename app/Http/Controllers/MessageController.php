@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use DateTime;
-use App\Events\ChatMessagesEvent;
-use Event;
+use App;
 use App\Models\Conversation;
 use App\Models\Message;
 use App\Models\MessageNotification;
@@ -46,6 +45,9 @@ class MessageController extends Controller
      */
     public function store() {
 
+        $pusher = App::make('pusher');
+
+
         $rules     = array('body' => 'required');
         $validator = Validator::make(Input::all(), $rules);
 
@@ -67,26 +69,43 @@ class MessageController extends Controller
             'created_at'      => new DateTime
         );
 
+        $authorMsg = App\Models\User::where('id', Input::get('user_id'))->first();
+        $conversationId = $conversation->id;
+
         $message = Message::create($params);
         $message->type = 'text';
 
         // Create Message Notifications
         $messages_notifications = array();
 
+
+
+
         foreach($conversation->users()->get() as $user) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
+            $fullname = $authorMsg->firstname.' '.$authorMsg->lastname;
+            $img = $user->image_path;
+            $pusher->trigger('channel_'.$user->id, 'message',
+                array(
+                    'room'        => Input::get('conversation'),
+                    'message'  => array( 'body' => Str::words($message->body, 5), 
+                                        'user_id' => Input::get('user_id'),
+                                        'fullname' => $fullname, 
+                                        'img' => $img,
+                                        'conserId' => $conversationId)
+                ));
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);
 
         // Publish Data To Redis
-        $data = array(
+       /* $data = array(
             'room'        => Input::get('conversation'),
             'message'  => array( 'body' => Str::words($message->body, 5), 'user_id' => Input::get('user_id'))
         );
 
         Event::fire(new ChatMessagesEvent(json_encode($data)));
-
+*/
         return Response::json([
             'success' => true,
             'result' => $message

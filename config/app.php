@@ -165,6 +165,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Anam\PhantomMagick\ConverterServiceProvider::class,
         LinkThrow\Ffmpeg\Provider\FfmpegServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -227,7 +228,7 @@ return [
         'Str'      => Illuminate\Support\Str::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Converter' => Anam\PhantomMagick\Facades\Converter::class,
-        'FFMPEG' => 'LinkThrow\Ffmpeg\Facade\FfmpegFacade',
+        'FFMPEG' => Linkthrow\Ffmpeg\Facade\FfmpegFacade::class,  
 
     ],
 

@@ -132,6 +132,7 @@ foreach($conversations as $conversation)
 @endsection
 
 @section('script')
+
     <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
     <script type='text/javascript' src="{{asset('js/plugins/icheck/icheck.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
@@ -139,14 +140,16 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script>
+        Pusher.logToConsole = true;
         var
            current_conversation = "{{ Session::get('current_conversation') }}",
            user_id   = "{{ Auth::user()->id }}",
            image_path =  "{{ Auth::user()->image_path }}",
            user_name =   "{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}";
+      var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" });
     </script>
+
     <script src="{{ asset('js/chat.js')}}"></script>
 
 @endsection

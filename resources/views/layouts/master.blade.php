@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8">
@@ -31,6 +31,9 @@
     <!-- Styles -->
 
     @yield('style')
+    <link rel="stylesheet" type="text/css"   href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+
+
 
 
 
@@ -49,6 +52,9 @@
 
 <!-- Scripts -->
 <script src="{{ elixir('js/app.js') }}"></script>
+<script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 @yield('script')
 </body>
 </html>

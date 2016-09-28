@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.45 on 2016-09-08.
+ * Generated for Laravel 5.2.45 on 2016-09-25.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -13485,6 +13485,302 @@ namespace {
         public static function pickBinary(){
             //Method inherited from \Anam\PhantomMagick\Runner            
             return \Anam\PhantomMagick\Converter::pickBinary();
+        }
+        
+    }
+
+
+    class FFMPEG extends \LinkThrow\Ffmpeg\Facade\FfmpegFacade{
+        
+        /**
+         * Returns installed ffmpeg version
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getConverterVersion(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getConverterVersion();
+        }
+        
+        /**
+         * Returns all formats ffmpeg supports
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getSupportedFormats(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getSupportedFormats();
+        }
+        
+        /**
+         * Returns all audio formats ffmpeg can encode
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getSupportedAudioEncoders(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getSupportedAudioEncoders();
+        }
+        
+        /**
+         * Returns all video formats ffmpeg can encode
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getSupportedVideoEncoders(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getSupportedVideoEncoders();
+        }
+        
+        /**
+         * Returns all audio formats ffmpeg can decode
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getSupportedAudioDecoders(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getSupportedAudioDecoders();
+        }
+        
+        /**
+         * Returns all video formats ffmpeg can decode
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getSupportedVideoDecoders(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getSupportedVideoDecoders();
+        }
+        
+        /**
+         * Returns boolean if ffmpeg is able to encode to this format
+         *
+         * @param string $format ffmpeg format name
+         * @return boolean 
+         * @static 
+         */
+        public static function canEncode($format){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::canEncode($format);
+        }
+        
+        /**
+         * Returns boolean if ffmpeg is able to decode to this format
+         *
+         * @param string $format ffmpeg format name
+         * @return boolean 
+         * @static 
+         */
+        public static function canDecode($format){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::canDecode($format);
+        }
+        
+        /**
+         * Returns array with file information
+         *
+         * @param string $input file input
+         * @param string $type output format
+         * @return \Linkthrow\Ffmpeg\Classes\array, json, xml, csv
+         * @static 
+         */
+        public static function getMediaInfo($input, $type = null){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getMediaInfo($input, $type);
+        }
+        
+        /**
+         * Retrieves video thumbnails
+         *
+         * @param string $input video input
+         * @param string $output output filename
+         * @param integer $count number of thumbnails to generate
+         * @param string $format thumbnail format
+         * @param string $arg user arguments
+         * @return boolean 
+         * @static 
+         */
+        public static function getThumbnails($input, $output, $count = 5, $format = 'png', $arg = null){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getThumbnails($input, $output, $count, $format, $arg);
+        }
+        
+        /**
+         * Retrieves video thumbnails
+         *
+         * @param string $input video input
+         * @param string $output output filename
+         * @param integer $count number of thumbnails to generate
+         * @param integer $duration video duration
+         * @param string $format thumbnail format
+         * @return boolean 
+         * @static 
+         */
+        public static function thumbnify($input, $output, $count, $duration, $format = 'png'){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::thumbnify($input, $output, $count, $duration, $format);
+        }
+        
+        /**
+         * Returns object instance for chainable methods
+         *
+         * @return object 
+         * @static 
+         */
+        public static function convert(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::convert();
+        }
+        
+        /**
+         * Sets the progress ID
+         *
+         * @param string $var progress id
+         * @return null 
+         * @static 
+         */
+        public static function progress($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::progress($var);
+        }
+        
+        /**
+         * Adds an input file
+         *
+         * @param string $var filename
+         * @return boolean 
+         * @static 
+         */
+        public static function input($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::input($var);
+        }
+        
+        /**
+         * Adds an output file
+         *
+         * @param string $var filename
+         * @return boolean 
+         * @static 
+         */
+        public static function output($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::output($var);
+        }
+        
+        /**
+         * Overwrite output file if it exists
+         *
+         * @param boolean $var
+         * @return boolean 
+         * @static 
+         */
+        public static function overwrite($var = true){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::overwrite($var);
+        }
+        
+        /**
+         * Stop running FFMPEG after X seconds
+         *
+         * @param int $var seconds
+         * @return boolean 
+         * @static 
+         */
+        public static function timelimit($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::timelimit($var);
+        }
+        
+        /**
+         * Sets the codec used for the conversion
+         * https://trac.ffmpeg.org/wiki/AACEncodingGuide
+         * https://trac.ffmpeg.org/wiki/Encoding%20VBR%20(Variable%20Bit%20Rate)%20mp3%20audio
+         *
+         * @param string $var ffmpeg codec name
+         * @return boolean 
+         * @static 
+         */
+        public static function codec($var, $type = 'audio'){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::codec($var, $type);
+        }
+        
+        /**
+         * Sets the constant bitrate
+         *
+         * @param int $var bitrate
+         * @return boolean 
+         * @static 
+         */
+        public static function bitrate($var, $type = 'audio'){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::bitrate($var, $type);
+        }
+        
+        /**
+         * Sets the number of audio channels
+         * https://trac.ffmpeg.org/wiki/AudioChannelManipulation
+         *
+         * @param string $var
+         * @return boolean 
+         * @static 
+         */
+        public static function channels($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::channels($var);
+        }
+        
+        /**
+         * Sets audio frequency rate
+         * http://ffmpeg.org/ffmpeg.html#Audio-Options
+         *
+         * @param int $var frequency
+         * @return boolean 
+         * @static 
+         */
+        public static function frequency($var){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::frequency($var);
+        }
+        
+        /**
+         * Performs conversion
+         *
+         * @param string $arg user arguments
+         * @return string tracking code
+         * @return boolean     false on error
+         * @static 
+         */
+        public static function go($arg1 = null, $arg2 = null){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::go($arg1, $arg2);
+        }
+        
+        /**
+         * Returns given job progress
+         *
+         * @param string $job id
+         * @param string $format format to output data
+         * @return array 
+         * @static 
+         */
+        public static function getProgress($job, $format = null){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getProgress($job, $format);
+        }
+        
+        /**
+         * Deletes job temporary file
+         *
+         * @param string $job id
+         * @return boolean 
+         * @static 
+         */
+        public static function destroyProgress($job){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::destroyProgress($job);
+        }
+        
+        /**
+         * Deletes all temporary files
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function destroyAllProgress(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::destroyAllProgress();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getVideoJsonDetails(){
+            return \Linkthrow\Ffmpeg\Classes\FFMPEG::getVideoJsonDetails();
         }
         
     }

@@ -11,6 +11,7 @@
 |
 */
 
+
 // Home
 Route::get('/', [
     'uses' => 'HomeController@index',
