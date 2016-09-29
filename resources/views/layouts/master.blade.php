@@ -55,6 +55,7 @@
 <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+
 @yield('script')
 </body>
 </html>

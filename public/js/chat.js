@@ -23,10 +23,30 @@ $(function() {
             consId          = data.message.conserId;
         var
             $messageList  = $("#messageList"),
-            $msgContent = $("#mCSB_1_container"),
+            $msgContent = $('#messageList').find('.item').parent(),
             $conversation = $("#" + data.room);
 
         appendNotification(conversation, img, fullname, message,consId);
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        toastr.info(fullname + ' send you a message.');
 
         getMessages(conversation).done(function(data) {
 
@@ -66,8 +86,6 @@ $(function() {
         var $msgNotif = $('#msgNotif').find('a').parent();
 
 
-
-
         if($counter1.find('.informer').length > 0)
         {
             var int = parseInt($counter1.find('.informer').text(), 10) + 1;
@@ -81,26 +99,25 @@ $(function() {
             $counter2.append('<span class="label label-danger">1 new</span>');
         }
 
-
-
         var not = '<a href="/messages/?conversation=' + conversation + '" id=" '+ consId+' " class="list-group-item">'+
-            '<div class="list-group-status status-online"></div>'+
-            '<img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/>'+
-            '<span class="contacts-title">' + fullname + '</span>'+
-            '<p>'+msg +
-            '<span class="label label-danger">1</span>'+
-            '</p>'+
-            '</a>';
-
+            '<div class="list-group-status status-online"></div><img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/>'+
+            '<span class="contacts-title">' + fullname + '</span><p>'+msg + '<span class="label label-danger">1</span> </p></a>';
+ 
         if($conv.length = 0)
+        {
             $msgNotif.append(not);
+
+
+        }
         else
-            $conv.html('<div class="list-group-status status-online"></div>'+
-                '<img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/>'+
-                '<span class="contacts-title">' + fullname + '</span>'+
-                '<p>' + msg +
-                '  <span class="label label-danger">1</span>'+
-                '</p>');
+        {
+            if($($('#' + consId).find('p')).find('span').length > 0)
+                $inc = Number($($('#' + consId).find('p')).find('span').html());
+            else
+                $inc = 0;
+
+            document.getElementById(consId).innerHTML = '<div class="list-group-status status-online"></div><img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/><span class="contacts-title">' + fullname + '</span><p>' + msg +'  <span class="label label-danger">' + ($inc+1) + '</span></p>';
+        }
     }
 
 
@@ -174,6 +191,7 @@ $(function() {
 
         pic.append('conversation', conversation);
         pic.append('user_id', user_id);
+        $('#messageList').find('.item').parent().append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
 
         var jqxhr = $.ajax({
             url: '/fileentry/addPic/'+user_id,
@@ -181,7 +199,8 @@ $(function() {
             cache: false,
             contentType: false,
             processData: false,
-            data:  pic
+            data:  pic,
+            dataType : 'html'
         });
 
         return jqxhr;
@@ -197,6 +216,8 @@ $(function() {
 
         pic.append('conversation', conversation);
         pic.append('user_id', user_id);
+        $('#messageList').find('.item').parent().append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
+
 
         var jqxhr = $.ajax({
             url: '/fileentry/addFile/'+user_id,
@@ -204,7 +225,8 @@ $(function() {
             cache: false,
             contentType: false,
             processData: false,
-            data:  pic
+            data:  pic,
+            dataType : 'html'
         });
 
         return jqxhr;
@@ -212,13 +234,13 @@ $(function() {
 
     function updateConversationCounter($conversation) {
         var
-            $badge  = $conversation.find('.badge'),
+            $badge  = $conversation.find('.label'),
             counter = Number($badge.text());
 
-        if($badge.length) {
+        if($badge.length > 0) {
             $badge.text(counter + 1);
         } else {
-            $conversation.prepend('<span class="badge">1</span>');
+            $conversation.find('p').append('<span class="label label-danger">1</span>');
         }
     }
 
@@ -234,10 +256,12 @@ $(function() {
 
     $('#btnSendMessage').on('click', function (evt) {
         var $messageBox  = $("#messageBox");
-        var $messageList  = $("#mCSB_1_container");
+        var $messageList  =   $('#messageList').find('.item').parent();
 
-        evt.preventDefault();
-        $messageList.append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><div class="heading"><a href="#">'+user_name+'</a><span class="date">'+date()+'</span></div>'+$messageBox.val()+'</div></div>');
+        if($messageBox.val() === '')
+            evt.preventDefault();
+        else
+        {  $messageList.append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><div class="heading"><a href="#">'+user_name+'</a><span class="date">'+date()+'</span></div>'+$messageBox.val()+'</div></div>');
         scrollToBottom();
         var msg = $messageBox.val();
         $messageBox.val('');
@@ -249,6 +273,7 @@ $(function() {
             $messageBox.focus();
             
         });
+        }
     });
 
     $('#btnNewMessage').on('click', function() {
@@ -275,23 +300,28 @@ $(function() {
     });
 
     $('#file').change(function() {
-        var $messageList  = $("#mCSB_1_container");
-        $messageList.append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
-        var $inputFile = $('#file');
+
+        var $messageList  =   $('#messageList').find('.item').parent();
+         var $inputFile = $('#file');
         //$('#form').submit();
 
-        sendFile($inputFile, current_conversation, user_id);
+        sendFile($inputFile, current_conversation, user_id).done(function (data) {
+            $messageList.children().last().remove();
+            $messageList.append(data);
+        });
 
     });
 
     $('#pic').change(function() {
 
-        var $messageList  = $("#mCSB_1_container");
-        $messageList.append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
-        var $inputPic = $('#pic');
+        var $messageList  =   $('#messageList').find('.item').parent();
+         var $inputPic = $('#pic');
         //$('#form').submit();
 
-        sendPicture($inputPic, current_conversation, user_id);
+        sendPicture($inputPic, current_conversation, user_id).done(function (data) {
+            $messageList.children().last().remove();
+            $messageList.append(data);
+        });
 
     });
 

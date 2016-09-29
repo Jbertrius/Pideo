@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 use App\Models\MessageNotification;
 use DateTime;
 use App\Repositories\FileEntryRepository;
-use Request;
+use App;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
@@ -51,7 +51,7 @@ class FileEntryController extends Controller
             'user_id'           => $request->input('user_id'),
             'created_at'      => new DateTime
         );
-
+        $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);
   
 
@@ -60,6 +60,7 @@ class FileEntryController extends Controller
 
         foreach($conversation->users()->get() as $user) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
+            $this->sendNotif($user->id, $id, $fileentry->original_filename, $authorMsg, $conversation->id  );
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);
@@ -72,12 +73,13 @@ class FileEntryController extends Controller
                 'pic' => $fileentry->id)
         );
 
-        Event::fire(new ChatMessagesEvent(json_encode($data)));
 
-        return Response::json([
-            'success' => true,
-            'result' => $user
-        ]);
+        $pic = '<div class="item item-visible in "> <div class="image"> <img src="'.$authorMsg->image_path.'" alt="'.$authorMsg->firstname.'"> </div>'.
+                       ' <div class="text boxpic"> <div class="gallery" id="links">'.
+                        '<a href="images/'.$fileentry->filename.'/0 " title=" '.$fileentry->original_filename.' " class="gallery-item apic" data-gallery="">'.
+                            '<div class="image imagebox"> <img src="images/'.$fileentry->filename.'/1 " alt=" '.$fileentry->original_filename.'" class="img"> </div> </a> </div> </div> </div>';
+
+          return response($pic, 200);
 
     }
 
@@ -97,6 +99,7 @@ class FileEntryController extends Controller
             'created_at'      => new DateTime
         );
 
+        $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);
 
 
@@ -105,24 +108,15 @@ class FileEntryController extends Controller
 
         foreach($conversation->users()->get() as $user) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
+            $this->sendNotif($user->id, $id, $fileentry->original_filename, $authorMsg, $conversation->id  );
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);
 
-        // Publish Data To Redis
-        $data = array(
-            'room'        => $request->input('conversation'),
-            'message'  => array( 'body' => 'New File',
-                'user_id' => $request->input('user_id'),
-                'pic' => $fileentry->id)
-        );
 
-        Event::fire(new ChatMessagesEvent(json_encode($data)));
-
-        return Response::json([
-            'success' => true,
-            'result' => $user
-        ]);
+        $file = '<div class="item item-visible in"> <div class="image"> <img src="'.$authorMsg->image_path.'" alt="'.$authorMsg->firstname.'">'.
+        '</div> <div class="text" style="color: white"> <a href="/files/'.$fileentry->filename.'">'.$fileentry->original_filename.'</a> </div></div>';
+        return response($file, 200);
 
     }
 
@@ -141,6 +135,20 @@ class FileEntryController extends Controller
 
         return response()->download($path, $entry->original_filename, $headers);
  
+    }
+
+    private function sendNotif($idest, $room, $message, $user, $conver){
+        $pusher = App::make('pusher');
+
+        $pusher->trigger('channel_'.$idest, 'message',
+            array(
+                'room'        => $room,
+                'message'   => array( 'body' => $message,
+                    'user_id' => $user->id,
+                    'fullname' => $user->firstname.' '.$user->lastname,
+                    'img' => $user->image_path,
+                    'conserId' => $conver),
+            ));
     }
     
     

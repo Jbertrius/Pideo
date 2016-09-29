@@ -274,6 +274,7 @@
 
 
 @section('script')
+
     <script src="{{'js/owl.carousel.min.js'}}"></script>
     <script src="{{'js/wow.min.js'}}"></script>
     <script src="{{'js/typewriter.js'}}"></script>

@@ -134,7 +134,10 @@ foreach($conversations as $conversation)
 @endsection
 
 @section('script')
-
+    <script>
+        Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
+    </script>
+    <script src="{{'js/notif.js'}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
     <script type='text/javascript' src="{{asset('js/plugins/icheck/icheck.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
