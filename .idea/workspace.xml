@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/notif.js" afterPath="$PROJECT_DIR$/public/js/notif.js" />
     </list>
     <ignored path="Pideo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,13 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notif.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="notif.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/notif.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="57" column="54" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="54" />
+            <state relative-caret-position="442">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
-                <element signature="e#2450#2993#0" expanded="false" />
+                <element signature="e#2405#2948#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -133,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env.production" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".env.production" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env.production">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -252,7 +253,6 @@
         <option value="$PROJECT_DIR$/config/pusher.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
-        <option value="$PROJECT_DIR$/public/js/notif.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/accueil.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/edit.blade.php" />
@@ -262,6 +262,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" />
         <option value="$PROJECT_DIR$/public/js/chat.js" />
         <option value="$PROJECT_DIR$/.env.production" />
+        <option value="$PROJECT_DIR$/public/js/notif.js" />
       </list>
     </option>
   </component>
@@ -505,7 +506,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;mes&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;filec&#9;null&#9;null&#10;message&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;navba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;mast&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;messa&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;co&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ChatController.php&#10;ser&#9;FILE&#9;file://C:/laragon/www/Pideo/nodejs/server.js&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;ht&#9;FILE&#9;file://C:/laragon/www/Pideo/public/.htaccess&#10;ker&#9;null&#9;null&#10;kernel&#9;null&#9;null&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;auth&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/Auth/AuthController.php&#10;regi&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;ha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Exceptions/Handler.php&#10;han&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Exceptions/Handler.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;userre&#9;null&#9;null&#10;au&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/Auth/AuthController.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;conver&#9;null&#9;null&#10;chatco&#9;null&#9;null&#10;regis&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;make.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;chat.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;acc&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/accueil.blade.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;messages.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;normali&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/normalize.css&#10;cardio&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/cardio.css&#10;home.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;pide&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Pideo.php" />
+    <property name="SearchEverywhereHistoryKey" value="not&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;mes&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;filec&#9;null&#9;null&#10;message&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;navba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;mast&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;messa&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;co&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ChatController.php&#10;ser&#9;FILE&#9;file://C:/laragon/www/Pideo/nodejs/server.js&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;ht&#9;FILE&#9;file://C:/laragon/www/Pideo/public/.htaccess&#10;ker&#9;null&#9;null&#10;kernel&#9;null&#9;null&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;auth&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/Auth/AuthController.php&#10;regi&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;ha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Exceptions/Handler.php&#10;han&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Exceptions/Handler.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;userre&#9;null&#9;null&#10;au&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/Auth/AuthController.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;conver&#9;null&#9;null&#10;chatco&#9;null&#9;null&#10;regis&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;make.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;chat.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;acc&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/accueil.blade.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;messages.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;normali&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/normalize.css&#10;cardio&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/cardio.css&#10;home.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -849,7 +850,7 @@
       <workItem from="1474996570238" duration="5601000" />
       <workItem from="1475015169996" duration="1851000" />
       <workItem from="1475017933928" duration="10712000" />
-      <workItem from="1475107133263" duration="16057000" />
+      <workItem from="1475107133263" duration="16974000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -935,7 +936,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475125891759</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update  -  Pusher">
+      <created>1475125907333</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1475125907333</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -944,7 +952,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1039168000" />
+    <option name="totallyTimeSpent" value="1040085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -967,7 +975,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30081302" sideWeight="0.50981873" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22583081" sideWeight="0.68557537" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31928688" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31869918" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18126889" sideWeight="0.4050926" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31869918" sideWeight="0.49282297" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.53431374" order="3" side_tool="true" content_ui="tabs" />
@@ -1370,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/notif.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="57" column="54" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="54" />
-          <folding>
-            <element signature="e#2450#2993#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -1437,6 +1435,16 @@
         <state relative-caret-position="357">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/notif.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#2405#2948#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

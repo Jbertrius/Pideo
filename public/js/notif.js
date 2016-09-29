@@ -18,7 +18,18 @@ $(function() {
         var $conv = $('#' + consId);
 
         var $msgNotif = $('#msgNotif').find('a').parent();
+        if($counter1.find('.informer').length > 0)
+        {
+            var int = parseInt($counter1.find('.informer').text(), 10) + 1;
+            $counter1.find('.informer').html(int);
+            $counter2.find('span').html(int+' new');
 
+        }
+        else
+        {
+            $counter1.append('<div class="informer informer-danger" >1</div>');
+            $counter2.append('<span class="label label-danger">1 new</span>');
+        }
 
 
         var not = '<a href="/messages/?conversation=' + conversation + '" id=" '+ consId+' " class="list-group-item">'+
@@ -29,18 +40,6 @@ $(function() {
         {
             $msgNotif.append(not);
 
-            if($counter1.find('.informer').length > 0)
-            {
-                var int = parseInt($counter1.find('.informer').text(), 10) + 1;
-                $counter1.find('.informer').html(int);
-                $counter2.find('span').html(int+' new');
-
-            }
-            else
-            {
-                $counter1.append('<div class="informer informer-danger" >1</div>');
-                $counter2.append('<span class="label label-danger">1 new</span>');
-            }
         }
         else
         {
