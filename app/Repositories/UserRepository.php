@@ -4,6 +4,8 @@ namespace App\Repositories;
 
 use App\Models\User, App\Models\Role, App\Models\Subject;
 use Illuminate\Support\Facades\URL;
+use File;
+use Storage;
 
 class UserRepository extends BaseRepository
 {
@@ -268,6 +270,18 @@ class UserRepository extends BaseRepository
             return ($param1 == 'all') ? User::all() : User::where($lang, $param1)->get();
         else
             return ($param1 == 'all') ? Subject::find($param2)->users : Subject::find($param2)->users->where($lang , $param1);
+    }
+    
+    public function changePic(User $user, $file){
+
+        $extension = $file->getClientOriginalExtension();
+        
+        $path = Storage::put('Pictures/'.$file->getFilename().'.'.$extension, File::get($file) );
+
+        $user->image_path = 'images/'.$file->getFilename().'.'.$extension.'/2';
+        $user->save();
+        
+        return $user;
     }
 
     public function getAllExcept($id)

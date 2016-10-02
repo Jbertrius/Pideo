@@ -59,6 +59,8 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::get('user/roles', 'UserController@getRoles');
     Route::post('user/roles', 'UserController@postRoles');
 
+    Route::post('user/profilePic', 'UserController@editPic');
+
     Route::put('userseen/{user}', 'UserController@updateSeen');
 
     Route::resource('user', 'UserController');
@@ -142,6 +144,10 @@ Route::group( ['middleware' => 'auth' ], function()
             $img->resize(null, 100, function ($constraint) {
                 $constraint->aspectRatio();
             });
+        elseif ($crop == 2)
+            $img->fit(200,200, function ($constraint) {
+                $constraint->upsize();
+            }, 'top-left');
         
         return $img->response();
     });

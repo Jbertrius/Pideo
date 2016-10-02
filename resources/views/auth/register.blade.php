@@ -108,22 +108,26 @@
                                     <div class="form-bottom">
                                         <div class="form-group">
                                             <label class="sr-only" for="firstname">First name</label>
-                                            <input type="text" name="firstname" placeholder="First name..." class="firstname form-control require" value="{{ old('firstname') }}" id="firstname">
+                                            <input type="text" name="firstname" placeholder="First name..." required="required" data-validation="alphanumeric" data-validation-allowing="-"
+                                                   data-validation-error-msg="First name required" class="firstname form-control require" value="{{ old('firstname') }}" id="firstname">
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="lastname">Last name</label>
-                                            <input type="text" name="lastname" placeholder="Last name..." class="lastname form-control require" value="{{ old('lastname') }}" id="lastname" >
+                                            <input type="text" name="lastname" placeholder="Last name..." required="required" data-validation="alphanumeric"
+                                                   data-validation-error-msg="Last name required" class="lastname form-control require" value="{{ old('lastname') }}" id="lastname" >
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="email">Email</label>
-                                            <input type="email" name="email" placeholder="Email..." class="email form-control require" value="{{ old('email') }}" id="email">
+                                            <input type="email" name="email" placeholder="Email..." required="required" data-validation="email"
+                                                   data-validation-error-msg="Email required" class="email form-control require" value="{{ old('email') }}" id="email">
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="number">Phone Number</label>
-                                            <input type="text" name="number" placeholder="Phone Number..." class=" form-control require" value="{{ old('number') }}" id="number">
+                                            <input type="text" name="number" placeholder="Phone Number..."  required="required" data-validation-error-msg="Number required"
+                                                   class=" form-control require" value="{{ old('number') }}" id="number">
                                         </div>
  
                                          
@@ -268,5 +272,11 @@
     <script src="{{asset('js/retina-1.1.0.min.js')}}"></script>
     <script src="{{asset('js/scripts.js')}}"></script>
     <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+        $.validate({
+            modules : 'html5',
+        });
+    </script>
 
 @endsection

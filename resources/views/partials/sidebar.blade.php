@@ -7,12 +7,20 @@
         </li>
         <li class="xn-profile">
             <a href="#" class="profile-mini">
-                <img src="{{asset('img/icons/user.png')}}" alt="{!!$firstname!!}  {!!$lastname!!}"/>
+                <img src="{!! $profilePic !!}" alt="{!!$firstname!!}  {!!$lastname!!}"/>
             </a>
             <div class="profile">
                 <div class="profile-image">
-                    <img src="{{asset('img/icons/user.png')}}" alt="{!!$firstname!!}  {!!$lastname!!}"/>
+                    <img src="{!! $profilePic !!}"   alt="{!!$firstname!!}  {!!$lastname!!}"/>
+
+                    <a class="edit-group" href="#">
+                    <div class="edit-back" ></div>
+                        <span class="fa fa-camera edit"></span>
+                    <div class="edit-banner">Edit picture</div>
+                    </a>
+
                 </div>
+
                 <div class="profile-data">
                     <div class="profile-data-name"><b>{!!$firstname!!}  {!!$lastname!!}</b></div>
                     <div class="profile-data-title"></div>
@@ -33,5 +41,6 @@
             <a href= {{ URL::to('makepideo') }} ><span class="fa fa-film"></span> <span class="xn-text">Make a Pideo</span></a>
         </li>
     </ul>
+    <input type="file" class="pp" >
     <!-- END X-NAVIGATION -->
 </div>

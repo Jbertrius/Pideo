@@ -27,7 +27,7 @@ foreach($conversations as $conversation)
 @section('contenu')
 
     <div class="page-container">
-            @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname, 'page' => 'Map'])
+            @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname, 'page' => 'Map', 'profilePic' => Auth::user()->image_path])
         <div class="page-content">
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 

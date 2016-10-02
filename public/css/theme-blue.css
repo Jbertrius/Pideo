@@ -20,6 +20,59 @@
   zoom: 1;
 }
 
+.edit{
+  color: white;
+  position: absolute;
+  top: 92px;
+  left: 76px;
+  opacity: 0.8;
+}
+
+.edit-banner{
+    position: absolute;
+    border-color: white;
+    color: white;
+    top: 91px;
+    left: 93px;
+    visibility: hidden;
+    font-size: 9px;
+}
+
+.edit-back{
+    visibility: hidden;
+    background-color: rgba(10, 0, 33, 0.59);
+    border: 1px solid rgba(255, 255, 255, 0.59);
+    position: absolute;
+    height: 17px;
+    width: 73px;
+    top: 89px;
+    left: 73px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pp{
+    visibility: hidden;
+}
+
+.profile-image:hover > .edit{
+ opacity: 1;
+}
+
+.edit:hover{
+    color: #fdfdfe;
+    opacity: 1;
+}
+
+.edit-group:hover > .edit-back{
+    visibility: visible;
+}
+
+.edit-group:hover > .edit-banner{
+    visibility: visible;
+}
+
 .fix-height{
     height: 115px !important;
 }

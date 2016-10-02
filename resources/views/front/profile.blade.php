@@ -23,7 +23,7 @@ foreach($conversations as $conversation)
 @section('contenu')
 
     <div class="page-container">
-        @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname])
+        @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname, 'profilePic' => Auth::user()->image_path])
         <div class="page-content">
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 
@@ -42,7 +42,7 @@ foreach($conversations as $conversation)
                     <div class="panel panel-default">
                         <div class="panel-body profile" style="background: url({{asset('img/backgrounds/back.jpg')}}) center center no-repeat;">
                             <div class="profile-image">
-                                <img src="{{asset('img/icons/user.png')}}"  alt="Nadia Ali"/>
+                                <img src="{!! Auth::user()->image_path !!}}"  alt="Nadia Ali"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000">{!!Auth::user()->firstname!!}  {!!Auth::user()->lastname!!}</div>

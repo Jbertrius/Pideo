@@ -53,6 +53,7 @@
 <!-- Scripts -->
 <script src="{{ elixir('js/app.js') }}"></script>
 <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
+<script type="text/javascript" src="{{asset('js/editPic.js')}}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 

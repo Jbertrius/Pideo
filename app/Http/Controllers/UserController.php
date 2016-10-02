@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
+use App\Models\User;
 use Illuminate\Support\Facades\Response;
 use App\Repositories\UserRepository;
 use XMLWriter;
@@ -35,7 +36,6 @@ class UserController extends Controller
 
         return view('index', compact('users', 'links'));
     }
-
 
     public function xml($type1 = 'lang', $param1 = 'all', $type2 = 'sub', $param2 = 'all', $type3 = 'all', $param3 = 'all'){
 
@@ -173,4 +173,16 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+
+    public function editPic(Request $request){
+
+        $id = $request->input('user_id');
+
+        $user = User::where('id',$id)->first();
+
+        $user = $this->userRepository->changePic($user, $request->file('pic'));
+        
+        return response($user->image_path,200) ;
+    }
+
 }
