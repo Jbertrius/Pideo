@@ -82,8 +82,8 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
+            <state relative-caret-position="-45">
+              <caret line="235" column="32" selection-start-line="235" selection-start-column="32" selection-end-line="235" selection-end-column="32" />
               <folding>
                 <element signature="e#4466#7566#0#HTML" expanded="false" />
               </folding>
@@ -877,7 +877,7 @@
       <workItem from="1475176536100" duration="1136000" />
       <workItem from="1475249013136" duration="22323000" />
       <workItem from="1475376814167" duration="382000" />
-      <workItem from="1475451939927" duration="10243000" />
+      <workItem from="1475451939927" duration="10331000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -991,7 +991,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475508583989</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update  #21 - Registration Page&#10;  -  Validation added on inputs&#10;  -  Popover added on Language and Subjects inputs&#10;  -  City automatically detected on the maps&#10;  -  Search input removed on the subjects select&#10;  -  Search input removed in 3rd section">
+      <created>1475510056087</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1475510056087</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1000,7 +1007,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1074782000" />
+    <option name="totallyTimeSpent" value="1074870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1478,8 +1485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
+        <state relative-caret-position="-45">
+          <caret line="235" column="32" selection-start-line="235" selection-start-column="32" selection-end-line="235" selection-end-column="32" />
           <folding>
             <element signature="e#4466#7566#0#HTML" expanded="false" />
           </folding>
