@@ -150,33 +150,35 @@
 
                                         <div class="form-group">
                                             <label class="sr-only" for="password">Password</label>
-                                            <input type="password" name="password" placeholder="Password..." class="password form-control require" id="password">
+                                            <input type="password" name="password" data-validation="length" data-validation-length="min8"
+                                                   placeholder="Password..." class="password form-control require" id="password">
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="repeat-password">Repeat password</label>
-                                            <input type="password" name="repeat-password" placeholder="Repeat password..." 
+                                            <input type="password" name="repeat-password" data-validation="confirmation" data-validation-confirm="password"
+                                                   placeholder="Repeat password..."
                                             class="repeat-password form-control require" id="repeat-password">
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="sr-only" for="city">Repeat password</label>
-                                            <input type="text" name="city" placeholder="City..."
+                                            <label class="sr-only" for="city">City</label>
+                                            <input type="text" name="city" placeholder="City..." required="required"  data-validation-error-msg="City required"
                                                    class="city form-control require" id="city">
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group pop"  data-content="Select your language" rel="popover" data-placement="right"   data-trigger="hover">
                                             <label class="sr-only" for="lang">Subject</label>
-                                            <select  class="selectpicker form-control" name="lang" id="lang"  >
+                                            <select  class="selectpicker form-control" name="lang" id="lang" >
                                                 <option value="Français">Français</option>
                                                 <option value="English">English</option>
                                             </select>
                                         </div>
 
 
-                                        <div class="form-group">
+                                        <div class="form-group pop" data-content="Select 2 subjects you master the most" rel="popover" data-placement="right"   data-trigger="hover">
                                         <label class="sr-only" for="form-subject">Subject</label>
-                                        <select  class="selectpicker form-control" name="form-subject" id="select" multiple data-max-options="2" data-live-search="true" dropupAuto="false" dropup>
+                                        <select  class="selectpicker form-control" name="form-subject" id="select" multiple data-max-options="2"  dropupAuto="false" dropup>
 
                                             @foreach(\App\Models\Subject::all() as $subject)
                                         <option value="{{ $subject->id }}">{{ $subject->subjects }}</option>
@@ -223,16 +225,6 @@
 
                                 <div class="form-bottom">
 
-                                <div class="row">
-
-                                     <div id="address" class="col-xs-9 form-group">
-                                        <label class="sr-only" for="form-address ">Enter your location</label>
-                                        <input type="text" name="form-address" placeholder="Enter your location..." class="form-control" id="form-address">
-                                     </div>
-
-                                    <button type="button" onclick="searchAddress();" class="btn">Search</button>
-
-                                </div>
 
                                 <div class="form-group row">
 
@@ -276,6 +268,23 @@
     <script>
         $.validate({
             modules : 'html5',
+            modules : 'security',
+            onModulesLoaded : function() {
+                var optionalConfig = {
+                    fontSize: '12pt',
+                    padding: '4px',
+                    bad : 'Very bad',
+                    weak : 'Weak',
+                    good : 'Good',
+                    strong : 'Strong'
+                };
+
+                $('input[name="password"]').displayPasswordStrength(optionalConfig);
+            }
+        });
+
+        $('.pop').popover({
+            container: 'body'
         });
     </script>
 

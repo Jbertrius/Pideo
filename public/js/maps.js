@@ -20,7 +20,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
        // This event detects a click on the map.
-    var input = document.getElementById('form-address');
+    var input = document.getElementById('city');
     var autocomplete = new google.maps.places.Autocomplete(input);
     google.maps.event.trigger(map, 'resize');
    google.maps.event.addListener(map, "click", function(event) {
@@ -44,7 +44,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function searchAddress() {
 
-    var addressInput = document.getElementById('form-address').value;
+    var addressInput = document.getElementById('city').value;
 
     var geocoder = new google.maps.Geocoder();
 
@@ -60,7 +60,7 @@ function searchAddress() {
 
       map.setCenter(myResult);
 
-      map.setZoom(17);
+      map.setZoom(13);
         }
     });
 

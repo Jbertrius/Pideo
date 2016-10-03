@@ -94,6 +94,8 @@ jQuery(document).ready(function() {
 
     $('#next2').on('click', function() {
 
+        searchAddress();
+
         if($('#password').val() != $('#repeat-password').val() ){
             next_step = false;
             $('#password').addClass('input-error');
