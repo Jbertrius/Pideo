@@ -32,8 +32,8 @@
             $file = \App\Models\Fileentry::where('id', '=', $message->body)->firstOrFail();
             $url = "/files/".$file->filename;
             ?>
-                <div class="text" style="color: white">
-                     <a href="{{ $url }}">{{ $file->original_filename }}</a>
+                <div class="text" >
+                     <a href="{{ $url }}" @if($message->user->id == $userId) style="color: white" @endif>{{ $file->original_filename }}</a>
                 </div>
         @endif
 

@@ -128,7 +128,9 @@ foreach($conversations as $conversation)
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqF6eRkqctYMhsqU5OEzDj1kweuNUfq0&libraries=places"></script>
         <script>
             var
-                    user_id   = "{{ Auth::user()->id }}";
+                    user_id   = "{{ Auth::user()->id }}",
+                    image_path = "{{ Auth::user()->image_path }}";
+
         </script>
         <script type="text/javascript" src="{{asset('js/studentsMap.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>

@@ -216,7 +216,11 @@
                                 <div class="form-top">
                                     <div class="form-top-left">
                                         <h3>Step 3 / 3</h3>
-                                        <p>Tell us where you live:</p>
+                                        <p> Drag cursor
+                                            <span class="fa fa-map-marker"></span> to where you live <br>
+                                            Zoom in <span class="fa fa-plus-square"></span> to get your precise address
+
+                                        </p>
                                     </div>
                                     <div class="form-top-right">
                                         <i class="fa fa-twitter"></i>

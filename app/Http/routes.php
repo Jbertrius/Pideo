@@ -148,8 +148,18 @@ Route::group( ['middleware' => 'auth' ], function()
             $img->fit(200,200, function ($constraint) {
                 $constraint->upsize();
             }, 'top-left');
-        
-        return $img->response();
+        elseif ($crop == 3)
+        {$img->fit(32,32, function ($constraint) {
+                $constraint->upsize();
+            }, 'top-left');
+            $img->rectangle(0, 0, 32, 32, function ($draw) {
+
+                $draw->border(2, '#FFF');
+            });
+            }
+
+
+            return $img->response();
     });
 
 

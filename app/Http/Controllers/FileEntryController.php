@@ -115,7 +115,7 @@ class FileEntryController extends Controller
 
 
         $file = '<div class="item item-visible in"> <div class="image"> <img src="'.$authorMsg->image_path.'" alt="'.$authorMsg->firstname.'">'.
-        '</div> <div class="text" style="color: white"> <a href="/files/'.$fileentry->filename.'">'.$fileentry->original_filename.'</a> </div></div>';
+        '</div> <div class="text" style="color: white"> <a href="/files/'.$fileentry->filename.'" style="color: white">'.$fileentry->original_filename.'</a> </div></div>';
         return response($file, 200);
 
     }
@@ -123,7 +123,7 @@ class FileEntryController extends Controller
     public function get($filename){
 
         $entry = Fileentry::where('filename', '=', $filename)->firstOrFail();
-        $file = Storage::disk('local')->get($entry->filename);
+       // $file = Storage::disk('local')->get($entry->filename);
         $path = storage_path().'/app/Files/'.$entry->filename;
 
        // return (new Response($file, 200))

@@ -1,3 +1,9 @@
+
+if(image_path.indexOf('/2') == -1)
+    image_path = image_path + '/2';
+else
+    image_path =  image_path.replace('2', '3');
+
 var customIcons = {
     studentOn: {
         url:  '/img/icons/stdon.ico',
@@ -7,6 +13,12 @@ var customIcons = {
     },
     studentOff: {
         url:  '/img/icons/stdoff.ico',
+        size: new google.maps.Size(20, 32),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 32)
+    },
+    studentMe: {
+        url:  image_path,
         size: new google.maps.Size(20, 32),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(0, 32)
@@ -74,10 +86,14 @@ function setupMarker(data,map) {
 
         var html2 = "<button class='btn btn-default SendMessage' onclick='modal("+id+");'><span class='fa fa-comments'></span>Write him a message</button>";
 
+        var icon =  customIcons['studentMe'];
         if(id != user_id)
+        {
             html = html + html2;
+            icon = customIcons['studentOn'] || {};
+        }
         
-        var icon = customIcons['studentOn'] || {};
+
         var marker = new google.maps.Marker({
             map: map,
             position: point,
