@@ -67,7 +67,11 @@ class MessageController extends Controller
             'type'              =>  'text',
             'user_id'           => Input::get('user_id'),
             'created_at'      => new DateTime
+
         );
+
+        $conversation->update_at = new DateTime;
+        $conversation->save();
 
         $authorMsg = App\Models\User::where('id', Input::get('user_id'))->first();
         $conversationId = $conversation->id;
@@ -105,11 +109,21 @@ class MessageController extends Controller
         );
 
         Event::fire(new ChatMessagesEvent(json_encode($data)));
+
+
 */
-        return Response::json([
-            'success' => true,
-            'result' => $message
-        ]);
+
+        $date = $message->created_at->date;
+
+
+        $msg = '<div class="item item-visible in"><div class="image">'.'<img src="'.$authorMsg->image_path.'" alt="'.$authorMsg->firstname.' '.$authorMsg->lastname.'">'.
+        '</div><div class="text"><div class="heading">'.
+                '<a href="#">'.$authorMsg->firstname.' '.$authorMsg->lastname .'</a>' .
+                '<span class="date">'.'</span></div>'.
+         $message->body.
+       ' </div></div>';
+
+        return response($msg, 200);
 
         //return Redirect::route('chat.index', array('conversation', $conversation->name));
     }

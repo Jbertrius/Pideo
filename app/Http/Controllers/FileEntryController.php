@@ -51,6 +51,10 @@ class FileEntryController extends Controller
             'user_id'           => $request->input('user_id'),
             'created_at'      => new DateTime
         );
+
+        $conversation->update_at = new DateTime;
+        $conversation->save();
+        
         $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);
   
@@ -98,6 +102,9 @@ class FileEntryController extends Controller
             'user_id'           => $request->input('user_id'),
             'created_at'      => new DateTime
         );
+
+        $conversation->update_at = new DateTime;
+        $conversation->save();
 
         $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);

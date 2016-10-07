@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class Conversation extends Model
 {
     protected $table    = 'conversations';
-    protected $fillable = array('author_id', 'name', 'created_at');
+    protected $fillable = array('author_id', 'name', 'created_at', 'update_at');
 
     public $timestamps = false;
 

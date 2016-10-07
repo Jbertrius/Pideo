@@ -36,5 +36,8 @@
         </div>
     </div>
     <input type="hidden" name="id" id="id" value="{{ $id }}">
+
+    <input type="file" name="file" id="file" >
+    <input type="file" name="pic" id="pic">
     {{ Form::close() }}
 </div>

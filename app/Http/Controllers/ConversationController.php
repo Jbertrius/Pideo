@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\ChatConversationsEvent;
 use App\Events\ChatConversationsEventHandler;
 use Event;
+use App;
 use App\Models\Conversation;
 use App\Models\Message;
 use App\Models\MessageNotification;
@@ -62,6 +62,8 @@ class ConversationController extends Controller
     public function store()
     {
 
+        $pusher = App::make('pusher');
+
         $rules = array(
             'id' => 'required',
             'body'  =>  'required'
@@ -79,6 +81,7 @@ class ConversationController extends Controller
         // Create Conversation
         $params = array(
             'created_at' => new DateTime,
+            'update_at' => new DateTime, 
             'name'          => str_random(30),
             'author_id'  => Auth::user()->id
         );
@@ -109,16 +112,31 @@ class ConversationController extends Controller
         else
             $users_id = Input::get('id');
 
+        $authorMsg = App\Models\User::where('id', Input::get('id'))->first();
+
         foreach($users_id as $user_id) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user_id, 'read' => false, 'conversation_id' => $conversation->id)));
+            $fullname = $authorMsg->firstname.' '.$authorMsg->lastname;
+            $img = App\Models\User::where('id', $user_id)->first()->image_path;
+
+            $pusher->trigger('channel_'.$user_id, 'message',
+                array(
+                    'room'        => Input::get('conversation'),
+                    'message'  => array( 'body' => Str::words($message->body, 5),
+                        'user_id' => Input::get('user_id'),
+                        'fullname' => $fullname,
+                        'img' => $img,
+                        'conserId' => $conversation->id)
+                ));
+
 
             // Publish Data To Redis
-            $data = array(
+           /* $data = array(
                 'room'    => $user_id,
                 'message' => array('conversation_id' => $conversation->id)
             );
-
-            Event::fire(new ChatConversationsEvent(json_encode($data)));
+*/
+            //Event::fire(new ChatConversationsEvent(json_encode($data)));
 
 
         }

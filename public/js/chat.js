@@ -147,9 +147,9 @@ $(function() {
     
     function date() {
         var d = new Date();
-        var day = d.getDay();
+        var day = d.getDate();
         var y = d.getFullYear();
-        var mm = d.getMonth();
+        var mm = d.getMonth()+1;
         var h = d.getHours();
         var mn = d.getMinutes();
         var s = d.getSeconds();
@@ -174,7 +174,7 @@ $(function() {
             url: '/messages',
             type: 'POST',
             data:  { body: body , conversation: conversation, user_id: user_id },
-            dataType: 'json'
+            dataType: 'html'
         });
 
         return jqxhr;
@@ -271,6 +271,17 @@ $(function() {
             console.log(data);
             $messageBox.val('');
             $messageBox.focus();
+
+            var $conversationList = $("#conversationList");
+            var $notifBar = $('#msgNotif');
+
+            getConversations(current_conversation).done(function(data) {
+                $conversationList.html(data);
+                $notifBar.html(data);
+            });
+
+            $messageList.children().last().remove();
+            $messageList.append(data);
             
         });
         }
@@ -308,6 +319,14 @@ $(function() {
         sendFile($inputFile, current_conversation, user_id).done(function (data) {
             $messageList.children().last().remove();
             $messageList.append(data);
+
+            var $conversationList = $("#conversationList");
+            var $notifBar = $('#msgNotif');
+
+            getConversations(current_conversation).done(function(data) {
+                $conversationList.html(data);
+                $notifBar.html(data);
+            });
         });
 
     });
@@ -321,7 +340,16 @@ $(function() {
         sendPicture($inputPic, current_conversation, user_id).done(function (data) {
             $messageList.children().last().remove();
             $messageList.append(data);
+
+            var $conversationList = $("#conversationList");
+            var $notifBar = $('#msgNotif');
+
+            getConversations(current_conversation).done(function(data) {
+                $conversationList.html(data);
+                $notifBar.html(data);
+            });
         });
+
 
     });
 
