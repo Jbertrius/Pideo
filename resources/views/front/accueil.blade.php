@@ -6,19 +6,19 @@
 @endsection
 
 @section('style')
-    <link rel="stylesheet" type="text/css" href="{{'css/normalize.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{{'css/bootstrap.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
     <!-- Owl -->
-    <link rel="stylesheet" type="text/css" href="{{'css/owl.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/owl.css')}}">
     <!-- Animate.css -->
-    <link rel="stylesheet" type="text/css" href="{{'css/animate.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="{{'fonts/fontawesome/css/font-awesome.min.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/fontawesome/css/font-awesome.min.css')}}">
     <!-- Elegant Icons -->
-    <link rel="stylesheet" type="text/css" href="{{'fonts/eleganticons/et-icons.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/eleganticons/et-icons.css')}}">
     <!-- Main style -->
-    <link rel="stylesheet" type="text/css" href="{{'css/cardio.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/cardio.css')}}">
 @endsection
 
 @section('contenu')
@@ -275,9 +275,9 @@
 
 @section('script')
 
-    <script src="{{'js/owl.carousel.min.js'}}"></script>
-    <script src="{{'js/wow.min.js'}}"></script>
-    <script src="{{'js/typewriter.js'}}"></script>
-    <script src="{{'js/jquery.onepagenav.js'}}"></script>
-    <script src="{{'js/main.js'}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{asset('js/typewriter.js')}}"></script>
+    <script src="{{asset('js/jquery.onepagenav.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 @endsection
