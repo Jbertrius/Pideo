@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Services\Html\HtmlServiceProvider::class,
+        SendPulse\SendPulseLaravel\SendPulseLaravelServiceProvider::class,
          
 
     ],
@@ -228,7 +229,9 @@ return [
         'Str'      => Illuminate\Support\Str::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Converter' => Anam\PhantomMagick\Facades\Converter::class,
-        'FFMPEG' => Linkthrow\Ffmpeg\Facade\FfmpegFacade::class,  
+        'FFMPEG' => Linkthrow\Ffmpeg\Facade\FfmpegFacade::class,
+        'SendPulse' => SendPulse\SendPulseLaravel\SendPulseFacade::class,
+
 
     ],
 

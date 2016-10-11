@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('fonts/eleganticons/et-icons.css')}}">
     <!-- Main style -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/cardio.css')}}">
+
 @endsection
 
 @section('contenu')

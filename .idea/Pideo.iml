@@ -112,6 +112,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -196,6 +198,8 @@
           <root url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
+          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/anam/phantommagick" />
@@ -276,6 +280,8 @@
           <root url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
+          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
         </SOURCES>
       </library>
     </orderEntry>
