@@ -11,9 +11,9 @@ return array(
     |
     */
 
-    'apiUserId' => 'API_USER_ID',
+    'apiUserId' => 'f97d25f6377c3c76fef763b4d03a1027',
 
-    'apiSecret' => 'API_SECRET',
+    'apiSecret' => '40ffb960e49bc3e8fb3d25f250716346',
 
     /*
     |--------------------------------------------------------------------------

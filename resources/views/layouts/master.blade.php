@@ -55,6 +55,18 @@
 <!-- Scripts -->
 <script src="{{ elixir('js/app.js') }}"></script>
 
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err);
+    });
+    }
+</script>
+
 <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
 <script type="text/javascript" src="{{asset('js/editPic.js')}}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
