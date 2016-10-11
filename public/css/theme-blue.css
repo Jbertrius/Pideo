@@ -20,7 +20,9 @@
   zoom: 1;
 }
 
-
+.sendpulse-bar{
+  z-index: 1200;
+}
 
 .edit{
   color: white;
