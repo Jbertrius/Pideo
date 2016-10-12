@@ -26,13 +26,18 @@
 
 .fix-shadow{
    /* text-shadow: 2px 0px 2px rgb(0, 0, 0);*/
-    color: #ffffff;
+    color: #000000;
 }
 .dropzone{
   min-height: 150px !important;
     border: 1px solid rgba(156, 159, 161, 0.8);
-    background: rgba(255, 255, 255, 0.9);
-    margin-bottom: 17px;
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.text-area{
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
@@ -40,6 +45,7 @@
 #post{
 padding-left: 0px !important;
     padding-right: 0px !important;
+    height: 100%;
 }
 
 .post{
@@ -48,7 +54,8 @@ padding-left: 0px !important;
   text-align: center !important;
   padding-left: 50px !important;
     padding-bottom: 50px !important;
-    color: white !important;
+    color: #000000 !important;
+    height: 100%;
 }
 
 .edit{

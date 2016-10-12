@@ -33,29 +33,30 @@ foreach($conversations as $conversation)
         <div class="page-content">
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 
-                    <!-- START BREADCRUMB -->
-            <ul class="breadcrumb">
-                <li>Home</li>
-                <li class="active">Search</li>
-            </ul>
-            <!-- END BREADCRUMB -->
+
 
             <!-- PAGE CONTENT WRAPPER -->
-            <div class="page-content-wrap">
+            <div class="page-content-wrap" style="height:100%;">
                 <div class="col-md-12" id="post">
 
                     <div class="post">
                         <h3 class="fix-shadow"><span class="fa fa-upload fix-shadow" ></span> Post your problem</h3>
 
-                        <p>Add your image or file in the dropzone box</p>
+                        <p>Add your image or file in the dropzone box or Write your problem in the text area</p>
                     <div class="row">
 
-                        <button class="btn btn-default"><span class="fa fa-image"></span> Images/Files</button>
+                        <button class="btn btn-primary images"><span class="fa fa-image"></span> Images/Files</button>
 
-                        <button class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span>Text</button>
+                        <button class="btn btn-default texts"><span class="glyphicon glyphicon-pencil"></span>Text</button>
                     </div>
 
                         <form action="#" class="dropzone"></form>
+
+
+                        <div class="col-md-12 text-area hidden">
+                            <textarea class="form-control" style=" height: 125px;" placeholder="Ex : Hi everyone, I'm looking for a solution for my C++ problem ..."></textarea>
+                        </div>
+
                         <p>
                             <button type="button" class="btn btn-default btn-lg">Post</button>
                         </p>

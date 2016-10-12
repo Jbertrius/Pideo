@@ -576,4 +576,36 @@ Object.size = function(obj) {
     }
     return size;
 };
+
+$('.images').on('click',function () {
+    if($(this).hasClass('btn-default'))
+    {
+        $(this).removeClass('btn-default');
+        $(this).addClass('btn-primary');
+
+        $('.texts').removeClass('btn-primary')
+        $('.texts').addClass('btn-default');
+
+        $('.text-area').addClass('hidden');
+
+        $('.dropzone').removeClass('hidden');
+
+    }
+});
+
+$('.texts').on('click',function () {
+    if($(this).hasClass('btn-default'))
+    {
+        $(this).removeClass('btn-default');
+        $(this).addClass('btn-primary');
+
+        $('.images').removeClass('btn-primary')
+        $('.images').addClass('btn-default');
+
+        $('.text-area').removeClass('hidden');
+
+        $('.dropzone').addClass('hidden');
+
+    }
+});
 /* EOF NEW OBJECT(GET SIZE OF ARRAY) */
