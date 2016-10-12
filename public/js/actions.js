@@ -459,16 +459,24 @@ function x_navigation_minimize(action){
         $(".page-sidebar .x-navigation").removeClass("x-navigation-minimized");
         $(".x-navigation-minimize").find(".fa").removeClass("fa-indent").addClass("fa-dedent");
         $(".page-sidebar.scroll").mCustomScrollbar("update");
+
+        $('.post').backstretch("resize");
+
+        $(".x-navigation li.active").addClass("active");
     }
     
     if(action == 'close'){
+        $('.post').backstretch("resize");
         $(".page-container").addClass("page-container-wide");
         $(".page-sidebar .x-navigation").addClass("x-navigation-minimized");
         $(".x-navigation-minimize").find(".fa").removeClass("fa-dedent").addClass("fa-indent");
         $(".page-sidebar.scroll").mCustomScrollbar("disable",true);
+
+
+        $(".x-navigation li.active").removeClass("active");
     }
     
-    $(".x-navigation li.active").removeClass("active");
+
     
 }
 

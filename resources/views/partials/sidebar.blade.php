@@ -32,8 +32,13 @@
             </div>
         </li>
 
+        <li @if( isset($page) && ($page == 'Search')) class="active" @endif>
+            <a href= {{ URL::to('home') }} >
+                <span class="fa fa-upload"></span> <span class="xn-text">Post a problem</span></a>
+        </li>
+
         <li @if( isset($page) && ($page == 'Map')) class="active" @endif>
-            <a href= {{ URL::to('home') }} ><span class="fa fa-map-marker"></span> <span class="xn-text">Map</span></a>
+            <a href= {{ URL::to('map') }} ><span class="fa fa-map-marker"></span> <span class="xn-text">Map</span></a>
         </li>
 
 

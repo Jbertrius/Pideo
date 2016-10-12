@@ -37,6 +37,10 @@ class HomeController extends Controller
         return view('front.home');
     }
 
+    public function map(){
+        return view('front.map');
+    }
+
     /**
      * Change language.
      *

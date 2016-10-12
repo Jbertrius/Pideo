@@ -186,6 +186,10 @@ Route::group( ['middleware' => 'auth' ], function()
     'uses' => 'HomeController@home',
     'as' => 'home']);
 
+    Route::get('map', [
+        'uses' => 'HomeController@map',
+        'as' => 'map']);
+
     Route::get('profile', [
     'uses' => 'HomeController@profile',
     'as' => 'profile']);
