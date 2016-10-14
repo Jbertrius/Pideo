@@ -58,7 +58,7 @@ foreach($conversations as $conversation)
                         </div>
 
                         <p>
-                            <button type="button" class="btn btn-default btn-lg">Post</button>
+                            <button type="button" class="btn btn-default btn-lg btn-post">Post</button>
                         </p>
                     </div>
                     </div>

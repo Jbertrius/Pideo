@@ -163,7 +163,8 @@ $('#lang, #sub').on('change', function(e){
    function modal(id) {
 
        var $modal = $('#new_message');
-       $modal.html('<div id="spin"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div>');
+       //$modal.html('<div id="spin"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div>');
+       $modal.html('<img  style="display: block; margin: auto;" src="img/ring.svg">');
        $modal.modal('show');
        getModal(id).done(function(data) {
            if(data.indexOf('redirect') != -1)
