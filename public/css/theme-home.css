@@ -19,12 +19,9 @@
 .clearfix {
   zoom: 1;
 }
-.subject_profile{
-  line-height: 2;
-}
 
 .modal-backdrop{
-    z-index: 4;
+    z-index: -1;
 }
 
 .sendpulse-bar{
@@ -575,7 +572,7 @@ body.page-container-boxed .page-container {
   float: left;
   list-style: none;
   display: block;
-  z-index: 3;
+  z-index: 1;
 }
 .x-navigation {
   background: #33414e;
@@ -1801,12 +1798,6 @@ a.list-group-item:focus {
   line-height: 12px;
 }
 
-.panel .panel-heading,
-.panel .panel-footer,
-.panel .panel-body {
-   float: left;
-   width: 100%;
-}
 .panel .panel-body {
   padding: 15px;
   position: relative;
@@ -4157,7 +4148,7 @@ td.dataTables_empty {
 }
 .messages.messages-img .item.in .text:after {
   border-right-color: transparent;
-  border-left-color: #768bc7;
+  border-left-color: #FFF;
 }
 .messages.messages-img .item.in .text:before {
   border-right-color: transparent;

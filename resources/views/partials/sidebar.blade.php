@@ -6,6 +6,9 @@
             <a href="#" class="x-navigation-control"></a>
         </li>
         <li class="xn-profile">
+            <a class="profile-mini" href= {{ URL::to('/') }} >
+                <img src="http://pideo.com/img/favicons/favicon-32x32.png" alt="Charles  XAVIER" style="border:0px">
+            </a>
             <a href="#" class="profile-mini">
                 <img src="{!! $profilePic !!}" alt="{!!$firstname!!}  {!!$lastname!!}"/>
             </a>
@@ -44,6 +47,11 @@
 
         <li @if( isset($page)&& $page == 'MakePideo') class="active" @endif>
             <a href= {{ URL::to('makepideo') }} ><span class="fa fa-film"></span> <span class="xn-text">Make a Pideo</span></a>
+        </li>
+
+
+        <li @if( isset($page)&& $page == 'myrequest') class="active" @endif>
+            <a href= {{ URL::to('myrequest') }} ><span class="fa fa-share-square"></span> <span class="xn-text">My requests</span></a>
         </li>
     </ul>
     <input type="file" class="pp" >

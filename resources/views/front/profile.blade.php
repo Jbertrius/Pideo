@@ -7,6 +7,11 @@
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <style>
+        li{
+            display: block;
+        }
+        </style>
 @endsection
 
 <?php
@@ -42,7 +47,7 @@ foreach($conversations as $conversation)
                     <div class="panel panel-default">
                         <div class="panel-body profile" style="background: url({{asset('img/backgrounds/back.jpg')}}) center center no-repeat;">
                             <div class="profile-image">
-                                <img src="{!! Auth::user()->image_path !!}}"  alt="Nadia Ali"/>
+                                <img src="{!! Auth::user()->image_path !!}"  alt="Nadia Ali"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000">{!!Auth::user()->firstname!!}  {!!Auth::user()->lastname!!}</div>
@@ -66,11 +71,19 @@ foreach($conversations as $conversation)
                         <div class="panel-body list-group border-bottom">
                             <a href="#" class="list-group-item active"><span class="fa fa-location-arrow"></span> Location</a>
                             <a href="#" class="list-group-item"><span class="fa fa-bar-chart-o"></span> Activity</a>
-                            <a href="#" class="list-group-item"><span class="fa fa-book"></span>Subjects
-                                @foreach(Auth::user()->subjects as $subject)
-                                    <span class="badge badge-default">{!! $subject->subjects !!}</span>
-                                @endforeach
-                            </a>
+
+                                <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="list-group-item"><span class="fa fa-book"></span>Subjects
+
+                                        <span class="badge badge-default">2</span>
+
+                                </a>
+                                <ul style=" margin-top: 3px;margin-bottom: 3px;margin-left: -46px;text-align: center;" class="collapse" id="collapseExample">
+                                    @foreach(Auth::user()->subjects as $subject)
+                                    <li class="subject_profile" ><span class="badge badge-success">{!! $subject->subjects!!}</span></li>
+                                    @endforeach
+
+                                </ul>
+
                             <a href="#" class="list-group-item"><span class="fa fa-building-o"></span> City <span class="badge badge-default">{!! Auth::user()->city !!}</span></a>
                             <a href="#" class="list-group-item"><span class="fa fa-phone"></span> Tel <span class="badge badge-default">{!! Auth::user()->number !!}</span></a>
                         </div>

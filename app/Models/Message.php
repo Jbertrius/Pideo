@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Presenters\DatePresenter;
 
 /**
  * App\Models\Message
@@ -14,6 +15,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Message extends Model
 {
+
+    use DatePresenter;
+    
     protected $table = 'messages';
     protected $fillable = array('body', 'created_at','type', 'user_id', 'conversation_id');
 

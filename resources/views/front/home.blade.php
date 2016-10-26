@@ -7,9 +7,13 @@
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
     <style>
         .breadcrumb{
             margin-bottom: 0px !important;
+        }
+        .modal-backdrop {
+            z-index: -1;
         }
     </style>
 @endsection
@@ -50,15 +54,19 @@ foreach($conversations as $conversation)
                         <button class="btn btn-default texts"><span class="glyphicon glyphicon-pencil"></span>Text</button>
                     </div>
 
-                        <form action="#" class="dropzone"></form>
+                        <form action="#" id = "drop" class="dropzone"></form>
 
 
                         <div class="col-md-12 text-area hidden">
-                            <textarea class="form-control" style=" height: 125px;" placeholder="Ex : Hi everyone, I'm looking for a solution for my C++ problem ..."></textarea>
+                            <textarea class="form-control" id="summernote" style=" height: 125px;" placeholder="Ex : Hi everyone, I'm looking for a solution for my C++ problem ...">
+
+
+                            </textarea>
+
                         </div>
 
                         <p>
-                            <button type="button" class="btn btn-default btn-lg btn-post">Post</button>
+                            <button type="button" class="btn-post">Post</button>
                         </p>
                     </div>
                     </div>
@@ -70,9 +78,11 @@ foreach($conversations as $conversation)
             </div>
             <!-- END PAGE CONTENT WRAPPER -->
         </div>
-    </div>
-    <!-- END PAGE CONTAINER -->
 
+    <!-- END PAGE CONTAINER -->
+    <div class="modal" id="postmsg" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true" style="top:20%">
+
+    </div>
 @endsection
 
 
@@ -87,6 +97,8 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/scrolltotop/scrolltopcontrol.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/backstretch/jquery.backstretch.min.js')}}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
@@ -98,4 +110,12 @@ foreach($conversations as $conversation)
 
     </script>
      <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <script>
+        $(".page-container").addClass("page-navigation-toggled");
+        $(".x-navigation-minimize").trigger("click");
+    </script>
+    <script type="text/javascript" src="{{asset('js/sendproblem.js')}}"></script>
 @endsection

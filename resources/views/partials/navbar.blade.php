@@ -65,22 +65,49 @@
         </div>
     </li>
     <!-- END MESSAGES -->
+    <?php
+    $posts = Auth::user()->postNotification();
+    $postCounter = 0;
+
+    foreach($posts as $post)
+    {
+        if($post->read == 0)
+            $postCounter++;
+    }
+
+    ?>
     <!-- TASKS -->
     <li class="xn-icon-button pull-right">
-        <a href="#"><span class="fa fa-bell"></span></a>
-        <div class="informer informer-warning"></div>
+        <a href="#"><span class="fa fa-exclamation-circle"></span></a>
+
+        @if($postCounter != 0)
+            <div class="informer informer-warning" >{{ $postCounter }}</div>
+        @endif
+
         <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
             <div class="panel-heading">
-                <h3 class="panel-title"><span class="fa fa-bell"></span> Notifications</h3>
+                <h3 class="panel-title"><span class="fa fa-exclamation-circle"></span>  Requests</h3>
                 <div class="pull-right">
-
+                    @if($postCounter != 0)
+                        <div class="label label-warning" >{{ $postCounter }} new</div>
+                    @endif
                 </div>
             </div>
             <div class="panel-body list-group scroll" style="height: 200px;">
+                    @foreach($posts as $post)
 
+                <a class="list-group-item" href="/request/{{$post->post->id}}" @if($post->read == 0) style="background-color: #f5f5f5;" @endif>
+                    <strong>{{ $post->post->description }}</strong>
+                    <br>
+                    <span class="label label-success">{{ $post->cat->subjects }}</span>
+                    <p>
+                    <small class="text-muted">{{ $post->post->users->fullname() }}, {{ $post->post->created_at}} </small>
+                    </p>
+                </a>
+                    @endforeach
             </div>
             <div class="panel-footer text-center">
-                <a href= {{ URL::to('notifications') }} >Show all tasks</a>
+                <a href= {{ URL::to('request') }} >Show all requests</a>
             </div>
         </div>
     </li>

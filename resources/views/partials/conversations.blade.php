@@ -22,7 +22,5 @@
             @endif
         </p>
 
-
-
     </a>
     @endforeach

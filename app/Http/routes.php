@@ -180,6 +180,22 @@ Route::group( ['middleware' => 'auth' ], function()
     ]);
 
 
+    Route::post('/post/file', [
+        'uses' => 'PostController@Handlefile'
+    ]);
+
+    Route::post('/post/text', [
+        'uses' => 'PostController@HandleText'
+    ]);
+    
+    Route::get('post', [
+        'uses' => 'PostController@sendModal',
+        'as'  =>  'postmodal'
+    ]);
+
+
+
+
 
 
     Route::get('front/home', [
@@ -197,5 +213,20 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::get('edit', [
     'uses' => 'HomeController@edit',
     'as' => 'edit']);
+
+    Route::get('request/{id?}/{cat?}', [
+        'uses' => 'PostController@index',
+        'as' => 'request']);
+
+    Route::get('myrequest', [
+        'uses' => 'PostController@myrequest',
+        'as' => 'myrequest']);
+    
+    
+    
+    
+    
+    
     
     });
+

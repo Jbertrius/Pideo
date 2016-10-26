@@ -30,7 +30,7 @@ class MessageController extends Controller
     public function index() {
 
         $conversation = Conversation::where('name', Input::get('conversation'))->first();
-        $messages = Message::where('conversation_id', $conversation->id)->orderBy('created_at')->get();
+        $messages = Message::where('conversation_id', $conversation->id)->orderBy('created_at')->take(10)->get();
 
         $response['messages'] = $messages;
         $response['userId'] = Auth::user()->id;

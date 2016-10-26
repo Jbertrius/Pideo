@@ -6,11 +6,11 @@ $(document).ready(function(){
     
     var html_click_avail = true;
     
-    $("html").on("click", function(){
+   $("html").on("click", function(){
         if(html_click_avail)
             $(".x-navigation-horizontal li,.x-navigation-minimized li").removeClass('active');        
     });        
-    
+
     $(".x-navigation-horizontal .panel").on("click",function(e){
         e.stopPropagation();
     });    
@@ -249,7 +249,7 @@ $(document).ready(function(){
             elm.addClass("item-visible");
         },index*300);              
     });
-    /* END MESSAGES LOADING */
+    /* END MESSAGES LOADING */ 
     
     x_navigation();
 });
@@ -432,7 +432,7 @@ function x_navigation_onresize(){
     if(inner_port < 1025){               
         $(".page-sidebar .x-navigation").removeClass("x-navigation-minimized");
         $(".page-container").removeClass("page-container-wide");
-        $(".page-sidebar .x-navigation li.active").removeClass("active");
+       // $(".page-sidebar .x-navigation li.active").removeClass("active");
         
                 
         $(".x-navigation-horizontal").each(function(){            
@@ -460,12 +460,14 @@ function x_navigation_minimize(action){
         $(".x-navigation-minimize").find(".fa").removeClass("fa-indent").addClass("fa-dedent");
         $(".page-sidebar.scroll").mCustomScrollbar("update");
 
+    if($('.post').length)
         $('.post').backstretch("resize");
 
-        $(".x-navigation li.active").addClass("active");
+       // $(".x-navigation li.active").addClass("active");
     }
     
     if(action == 'close'){
+        if($('.post').length)
         $('.post').backstretch("resize");
         $(".page-container").addClass("page-container-wide");
         $(".page-sidebar .x-navigation").addClass("x-navigation-minimized");
@@ -473,7 +475,7 @@ function x_navigation_minimize(action){
         $(".page-sidebar.scroll").mCustomScrollbar("disable",true);
 
 
-        $(".x-navigation li.active").removeClass("active");
+       // $(".x-navigation li.active").removeClass("active");
     }
     
 
@@ -514,7 +516,7 @@ function x_navigation(){
         var li = $(this).parent('li');        
         var ul = li.parent("ul");
         
-        ul.find(" > li").not(li).removeClass("active");    
+      //  ul.find(" > li").not(li).removeClass("active");
         
     });
     
@@ -594,8 +596,13 @@ $('.images').on('click',function () {
 });
 
 $('.texts').on('click',function () {
+
+
     if($(this).hasClass('btn-default'))
     {
+        $('.note-editor').removeClass('panel');
+        $('.note-editor').removeClass('panel-default');
+
         $(this).removeClass('btn-default');
         $(this).addClass('btn-primary');
 
