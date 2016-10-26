@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/myrequest.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" />
     </list>
@@ -80,11 +79,9 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
-              <folding>
-                <element signature="e#3856#4368#0#HTML" expanded="false" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="108" column="62" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,9 +89,11 @@
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
+            <state relative-caret-position="153">
               <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +123,7 @@
       <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
+            <state relative-caret-position="1020">
               <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
               <folding />
             </state>
@@ -507,7 +506,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;post&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;profile&#9;null&#9;null&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;actio&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;p&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;main.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/main.js&#10;accu&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/accueil.blade.php&#10;ho&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;con&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;conver&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/conversations.blade.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/chat.blade.php&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;userc&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/UserController.php&#10;userre&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;sid&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;subje&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Subject.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;navbar&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;post&#9;null&#9;null&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;profile&#9;null&#9;null&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;actio&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;p&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;main.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/main.js&#10;accu&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/accueil.blade.php&#10;ho&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;con&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;conver&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/conversations.blade.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/chat.blade.php&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;userc&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/UserController.php&#10;userre&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;sid&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;subje&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Subject.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;navbar&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -881,7 +880,7 @@
       <workItem from="1477400483453" duration="672000" />
       <workItem from="1477406940330" duration="2550000" />
       <workItem from="1477431379856" duration="26865000" />
-      <workItem from="1477460631110" duration="1313000" />
+      <workItem from="1477460631110" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -1093,7 +1092,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477460879071</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update  #28&#10; -  Minor Changes">
+      <created>1477461980113</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1477461980113</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1102,7 +1108,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1300577000" />
+    <option name="totallyTimeSpent" value="1301060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1545,22 +1551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1617,13 +1607,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
-          <folding>
-            <element signature="e#3856#4368#0#HTML" expanded="false" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="108" column="62" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
