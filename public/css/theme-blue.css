@@ -23,6 +23,21 @@
   line-height: 2;
 }
 
+.dz-message span {
+  font-family: 'Open Sans Extrabold';
+  font-size: 41px;
+}
+
+.dz-message{
+  font-family: 'Open Sans Light';
+  font-size: 33px;
+  font-style: italic;
+  height: 125px;
+  display: flex; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+}
+
 .modal-backdrop{
     z-index: 4;
 }

@@ -11,7 +11,7 @@
             <div class="form-group">
                 <label class="col-md-2 control-label">Description</label>
                 <div class="col-md-10" style="margin-bottom: 12px; margin-top: -7px;">
-                   <input class="form-control" name="title"  required="required"
+                   <input class="form-control" name="title"  placeholder="Ex: First Law of Thermodynamics..." required="required"
                           data-validation-error-msg=" " id="title" type="text">
                 </div>
             </div>

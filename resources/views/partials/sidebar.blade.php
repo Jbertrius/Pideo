@@ -41,7 +41,7 @@
         </li>
 
         <li @if( isset($page) && ($page == 'Map')) class="active" @endif>
-            <a href= {{ URL::to('map') }} ><span class="fa fa-map-marker"></span> <span class="xn-text">Map</span></a>
+            <a href= {{ URL::to('map') }} ><span class="fa fa-map-marker"></span> <span class="xn-text">Find a Tutor</span></a>
         </li>
 
 

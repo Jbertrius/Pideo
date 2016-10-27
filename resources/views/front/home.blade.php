@@ -54,7 +54,9 @@ foreach($conversations as $conversation)
                         <button class="btn btn-default texts"><span class="glyphicon glyphicon-pencil"></span>Text</button>
                     </div>
 
-                        <form action="#" id = "drop" class="dropzone"></form>
+                        <form action="#" id = "drop" class="dropzone">
+                            <div class="dz-message" data-dz-message><span>Snap an Exercise</span> (to solve)</div>
+                        </form>
 
 
                         <div class="col-md-12 text-area hidden">

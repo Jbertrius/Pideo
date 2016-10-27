@@ -78,10 +78,11 @@ $(function() {
 
      function askModal() {
         var $modal = $('#postmsg');
-        $modal.html('<img  style="display: block; margin: auto;" src="img/ring.svg">');
-        $modal.modal('show');
+
+         $('.btn-post').html('<i class="fa fa-spinner fa-spin fa-fw"></i> Post');
 
         postModal().done(function (data) {
+            $('.btn-post').html('Post');
             $modal.html(data);
             $modal.modal('show');
 
@@ -104,11 +105,12 @@ $(function() {
        $category =  $('.selectpicker').val();
        $description = $('#title').val();
 
-        $(".modal").html('<img  style="display: block; margin: auto;" src="img/ring.svg">');
+        $('.send-post').html('<i class="fa fa-spinner fa-spin fa-fw"></i> Send');
 
         if($('.btn-primary').hasClass('texts'))
         {
             sendProblemtext($category, $description).done(function (data) {
+                $('#summernote').summernote('reset')
                 $('.modal').html('');
                 $('.modal').after(data);
 
