@@ -18,27 +18,27 @@ class CreatePostTable extends Migration
             $table->string('type');
             $table->integer('category')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->string('content');
+            $table->string('content', 10000);
             $table->integer('file_id')->unsigned()->nullable();
             $table->boolean('solved');
-            $table->dateTime('created_at');
+            $table->timestamp('created_at');
 
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
 
             $table->foreign('category')
                 ->references('id')
                 ->on('subjects')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
 
             $table->foreign('file_id')
                 ->references('id')
                 ->on('fileentries')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
         });
     }

@@ -20,13 +20,13 @@ class CreatePideosTagsTable extends Migration
 
         Schema::table('pideo_tag', function(Blueprint $table) {
             $table->foreign('pideo_id')->references('id')->on('pideos')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
         });
 
         Schema::table('pideo_tag', function(Blueprint $table) {
             $table->foreign('tag_id')->references('id')->on('tags')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
         });
     }

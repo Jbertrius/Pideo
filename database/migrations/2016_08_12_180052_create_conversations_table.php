@@ -18,7 +18,9 @@ class CreateConversationsTable extends Migration
             $table->dateTime('update_at');
             $table->string('name');
             $table->integer('author_id')->unsigned();
-            $table->foreign('author_id')->references('id')->on('users');
+            $table->foreign('author_id')->references('id')->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('restrict');
         });
     }
 

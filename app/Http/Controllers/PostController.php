@@ -6,6 +6,8 @@ use App;
 use App\Http\Requests;
 use DateTime;
 use Auth;
+use App\Repositories\FileEntryRepository;
+use Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
@@ -14,6 +16,13 @@ use DB;
 
 class PostController extends Controller
 {
+
+    protected $fileentryRepository;
+
+    public function __construct(FileEntryRepository $fileentryRepository)
+    {
+        $this->fileentryRepository = $fileentryRepository;
+    }
 
     public function index($id = null, $cat = null){
         $response = array();
@@ -46,7 +55,11 @@ class PostController extends Controller
             $response['user_id'] = $post->users->id;
             $response['date'] = $post->created_at;
             $response['category'] = $post->cat->subjects;
-            $response['onePost'] = true; 
+            $response['onePost'] = true;
+            $response['type'] = $post->type;
+            
+            if($response['type'] != 'text')
+                $response['filename'] = $post->file->filename;
 
             return View::make('front.post',$response)->render();
         }
@@ -83,6 +96,13 @@ class PostController extends Controller
 
 
             $postNotifications = Auth::user()->postNotification();
+
+            foreach($postNotifications as $postNotification)
+            {
+                $postNotification->read = 1;
+                $postNotification->save();
+            }
+
             $response['onePost'] = false;
             $response['posts'] = $postNotifications;
             $response['number'] = $postNotifications->count();
@@ -94,9 +114,81 @@ class PostController extends Controller
     }
     
     public function Handlefile(){
+        $pusher = App::make('pusher');
+
+        $rules = array(
+            'file' => 'required',
+            'type'  =>  'required',
+            'cat'  =>  'required',
+            'user_id'  =>  'required',
+            'title'  =>  'required'
+        );
+
+        $validator = Validator::make(Request::only('file', 'cat', 'title', 'user_id', 'type'), $rules);
+
+        if($validator->fails()) {
+            return Response::json([
+                'success' => false,
+                'result' => $validator->messages()
+            ]);
+        }
+
+        $type = Request::input('type');
+
+        $file = Request::file('file');
+        
+        if(strpos($type, 'image') !== false)
+            {
+            $type = 'Picture';
+            $fileentry = $this->fileentryRepository->store($file, Request::input('user_id'), 'Pictures');
+        }
+        else
+        {
+            $type = 'File';
+            $fileentry = $this->fileentryRepository->store($file, Request::input('user_id'), 'Files');
+        }
+            
+            
+
+        $params = array(
+
+            'content'  => ' ',
+            'user_id'  => Request::input('user_id'),
+            'description' =>  Request::input('title'),
+            'type' =>  $type,
+            'file_id' => $fileentry->id,
+            'category' =>  Request::input('cat'),
+        );
+
+        $post =   App\Models\Post::create($params);
+
+        $post_notifications = array();
+
+        $users = App\Models\Subject::where('id', Request::input('cat'))->first()->users()->get();
 
 
-         return  view('partials.success');
+        foreach ($users as $user){
+            if($user->id != Auth::user()->id)
+            {
+                array_push($post_notifications, new App\Models\PostNotification(array('user_id' =>  $user->id, 'cat_id' =>  Request::input('cat'),  'read' => false)));
+
+                $pusher->trigger('channel_'.$user->id, 'post',
+                    array(
+                        'message'  => array(
+                            'description' => $post->description,
+                            'category' => $post->cat->subjects,
+                            'date' => $post->created_at,
+                            'author' => $post->users->fullname(),
+                            'id' => $post->id)
+                    ));
+            }
+
+        }
+
+        $post->posts_notifications()->saveMany($post_notifications);
+
+
+        return  view('partials.success');
      }
 
     public function HandleText(){
@@ -120,7 +212,7 @@ class PostController extends Controller
         }
 
         $params = array(
-            'created_at' => new DateTime,
+
             'content'  => Input::get('text'),
             'user_id'  => Auth::user()->id,
             'description' =>  Input::get('title'),
@@ -142,7 +234,12 @@ class PostController extends Controller
 
                 $pusher->trigger('channel_'.$user->id, 'post',
                     array(
-                        'message'  => array()
+                        'message'  => array(
+                            'description' => $post->description,
+                            'category' => $post->cat->subjects,
+                            'date' => $post->created_at,
+                            'author' => $post->users->fullname(),
+                             'id' => $post->id)
                     ));
             }
 
@@ -161,7 +258,7 @@ class PostController extends Controller
     
     public function myrequest(){
 
-        $posts = App\Models\Post::where('user_id', Auth::user()->id)->paginate(6);
+        $posts = App\Models\Post::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(6);
 
         return view('front.request', ['posts' => $posts, 'number' => $posts->count()]);
     }

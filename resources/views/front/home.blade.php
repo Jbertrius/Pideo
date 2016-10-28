@@ -60,10 +60,7 @@ foreach($conversations as $conversation)
 
 
                         <div class="col-md-12 text-area hidden">
-                            <textarea class="form-control" id="summernote" style=" height: 125px;" placeholder="Ex : Hi everyone, I'm looking for a solution for my C++ problem ...">
-
-
-                            </textarea>
+                            <textarea class="form-control" id="summernote" style=" height: 125px;" placeholder="Ex : Hi everyone, I'm looking for a solution for my C++ problem ..."></textarea>
 
                         </div>
 

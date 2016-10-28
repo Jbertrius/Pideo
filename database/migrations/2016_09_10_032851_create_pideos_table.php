@@ -23,13 +23,13 @@ class CreatePideosTable extends Migration
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
 
             $table->foreign('subject_id')
                 ->references('id')
                 ->on('subjects')
-                ->onDelete('restrict')
+                ->onDelete('cascade')
                 ->onUpdate('restrict');
         });
     }

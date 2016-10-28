@@ -77,7 +77,7 @@
 
     ?>
     <!-- TASKS -->
-    <li class="xn-icon-button pull-right">
+    <li class="xn-icon-button pull-right" id="post_counter1">
         <a href="#"><span class="fa fa-exclamation-circle"></span></a>
 
         @if($postCounter != 0)
@@ -93,7 +93,7 @@
                     @endif
                 </div>
             </div>
-            <div class="panel-body list-group scroll" style="height: 200px;">
+            <div class="panel-body list-group scroll" id="postNotif" style="height: 200px;">
                     @foreach($posts as $post)
 
                 <a class="list-group-item" href="/request/{{$post->post->id}}" @if($post->read == 0) style="background-color: #f5f5f5;" @endif>

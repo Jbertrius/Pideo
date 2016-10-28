@@ -23,6 +23,10 @@ class Post extends Model
         return $this->belongsTo('App\Models\Subject', 'category', 'id');
     }
 
+    public function file(){
+        return $this->belongsTo('App\Models\Fileentry', 'file_id', 'id');
+    }
+
     public function posts_notifications() {
         return $this->hasMany('App\Models\PostNotification', 'post_id', 'id');
     }

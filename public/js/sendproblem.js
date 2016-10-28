@@ -121,6 +121,7 @@ $(function() {
         else if($('.btn-primary').hasClass('images'))
         {
             sendProblemfile($category, $description).done(function (data) {
+                $('#drop').get(0).dropzone.removeAllFiles();
                 $('.modal').after(data);
                 $('.modal').html('');
                 $('.message-box-success').show();

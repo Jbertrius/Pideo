@@ -63,6 +63,13 @@ foreach($conversations as $conversation)
                                 <div class="post-date"><span class="fa fa-calendar"></span> {{ $date }}  by {{ $users }} </div>
                                 <div class="post-text">
                                     {!!  $content !!}
+
+                                    @if($type == 'text')
+                                        {!!  $content !!}
+                                    @elseif($type == 'Picture')
+                                        <img src="/images/{{ $filename }}/0" class="img-responsive img-text"/>
+                                    @endif
+
                                 </div>
                                 <div class="post-row">
                                     <button id="respond" data-id="{{ $user_id }}" class="btn btn-default btn-rounded "><span class="fa fa-envelope"></span> Respond</button>
@@ -80,8 +87,7 @@ foreach($conversations as $conversation)
 
                     @if($number > 1)<div class="col-md-9">@else<div class="col-md-9">@endif
 
-                            <div class="panel panel-default">
-                                <div class="panel-body posts">
+
 
                                     <?php
                                     $cpt = 0
@@ -100,6 +106,9 @@ foreach($conversations as $conversation)
 
                                             @if($number > 1)<div class="col-md-6">@else<div class="col-md-12">@endif
 
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-body posts">
+
                                                     <div class="post-item">
 
                                                         <div class="post-title" >
@@ -109,7 +118,14 @@ foreach($conversations as $conversation)
                                                         </div>
                                                         <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->post->created_at }}  by {{ $post->post->users->fullname() }} </div>
                                                         <div class="post-text">
-                                                            {!!  $post->post->content !!}
+
+
+                                                            @if($post->post->type == 'text')
+                                                                {!!  $post->post->content !!}
+                                                            @elseif($post->post->type == 'Picture')
+                                                                <img src="/images/{{ $post->post->file->filename }}/0" class="img-responsive img-text"/>
+                                                            @endif
+
                                                         </div>
                                                         <div class="post-row">
                                                             <button id="respond" data-id = "{{  $post->post->users->id }}" class="btn btn-default btn-rounded "><span class="fa fa-envelope"></span> Respond</button>
@@ -127,40 +143,44 @@ foreach($conversations as $conversation)
 
                                                 </div>
 
+                                                        </div>
+                                                    </div>
+
                                                 @if($cpt%2 == 0)</div>@endif
 
                                             @endforeach
 
-                                        </div>
-                                </div>
+
 
                             </div>
 
 
                             {{ $posts->links() }}
+
+                                            @if(isset($category))
+                                                <div class="col-md-3">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <h3>Categories</h3>
+                                                            <div class="links">
+
+                                                                @for($i=0; $i< count($category); $i++)
+                                                                    <a href="/request/category/{{ $cat_id [$i] }}"> {{ $category [$i] }} <span class="label label-default">{{ $count_category [$i] }}</span></a>
+                                                                @endfor
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            @endif
                         </div>
 
 
 
 
 
-                    @if(isset($category))
-                        <div class="col-md-3">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <h3>Categories</h3>
-                                    <div class="links">
 
-                                        @for($i=0; $i< count($category); $i++)
-                                            <a href="/request/category/{{ $cat_id [$i] }}"> {{ $category [$i] }} <span class="label label-default">{{ $count_category [$i] }}</span></a>
-                                        @endfor
-
-                                    </div>
-                                </div>
-                            </div>
-
-                         </div>
-                    @endif
 
                 @endif
 

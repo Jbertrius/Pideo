@@ -63,8 +63,7 @@ foreach($conversations as $conversation)
 
                 @if($number > 1)<div class="col-md-12">@else<div class="col-md-6">@endif
 
-                    <div class="panel panel-default">
-                        <div class="panel-body posts">
+
 
                             <?php
                             $cpt = 0
@@ -83,6 +82,8 @@ foreach($conversations as $conversation)
 
                                             @if($number > 1)<div class="col-md-6">@else<div class="col-md-12">@endif
 
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body posts">
                                         <div class="post-item">
 
                                             <div class="post-title">
@@ -92,10 +93,16 @@ foreach($conversations as $conversation)
                                             </div>
                                             <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->created_at }}  by {{ $post->users->fullname() }} </div>
                                             <div class="post-text">
-                                                {!!  $post->content !!}
+                                                @if($post->type == 'text')
+                                                    {!!  $post->content !!}
+                                                @elseif($post->type == 'Picture')
+                                                    <img src="images/{{ $post->file->filename }}/0" class="img-responsive img-text"/>
+                                                @endif
                                             </div>
                                             <div class="post-row">
-                                                <button class="btn btn-info  btn-rounded"><span class="fa fa-edit"></span> Edit</button>
+                                                @if($post->type == 'text')
+                                                    <button class="btn btn-info  btn-rounded"><span class="fa fa-edit"></span> Edit</button>
+                                                @endif
                                                 <button class="btn btn-danger btn-rounded"><span class="fa fa-trash-o"></span> Delete</button>
 
                                                 <div class="pull-right">
@@ -117,12 +124,14 @@ foreach($conversations as $conversation)
 
                                     </div>
 
+                                                    </div>
+                                                </div>
+
                                             @if($cpt%2 == 0)</div>@endif
 
                                 @endforeach
 
-                        </div>
-                    </div>
+
 
                 </div>
 

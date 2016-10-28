@@ -110,7 +110,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         foreach ($posts as $post)
         {
-            $post_notifications = $post->posts_notifications()->where('user_id', $this->id)->orderBy('created_at', 'desc')->get();
+            $post_notifications = $post->posts_notifications()->where('user_id', $this->id)->orderBy('created_at', 'asc')->get();
 
             foreach ($post_notifications as $post_notification )
                 array_push($notifications, $post_notification);
@@ -125,7 +125,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
             ->orderBy('post_notification.created_at', 'desc')
             ->paginate(6);*/
 
-        $perPage = 9;
+        rsort($notifications);
+        $perPage = 8;
 
         $pagination = new Paginator($notifications, $perPage);
 
