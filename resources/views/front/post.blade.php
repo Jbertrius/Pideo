@@ -61,13 +61,14 @@ foreach($conversations as $conversation)
                                     <div class="pull-right"><div class="label label-warning" style="font-size: 12px">{{ $category }}</div> </div>
                                 </div>
                                 <div class="post-date"><span class="fa fa-calendar"></span> {{ $date }}  by {{ $users }} </div>
-                                <div class="post-text">
-                                    {!!  $content !!}
+                                <div class="post-text @if($type == 'text') postxt @elseif($type == 'File') post-link @endif" id="links">
 
                                     @if($type == 'text')
                                         {!!  $content !!}
                                     @elseif($type == 'Picture')
-                                        <img src="/images/{{ $filename }}/0" class="img-responsive img-text"/>
+                                        <a href="/images/{{ $filename }}/0" class="post-img"><img src="/images/{{ $filename }}/0" class="img-responsive img-text"/> </a>
+                                    @elseif($type == 'File')
+                                        <a href="/files/{{ $filename }}">{{ $original_filename }}</a>
                                     @endif
 
                                 </div>
@@ -117,13 +118,15 @@ foreach($conversations as $conversation)
                                                             <div class="pull-right"><div class="label label-warning" style="font-size: 12px">{{ $post->cat->subjects }}</div> </div>
                                                         </div>
                                                         <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->post->created_at }}  by {{ $post->post->users->fullname() }} </div>
-                                                        <div class="post-text">
+                                                        <div class="post-text @if($post->post->type == 'text') postxt @elseif($post->post->type == 'File') post-link @endif" id="links">
 
 
                                                             @if($post->post->type == 'text')
                                                                 {!!  $post->post->content !!}
                                                             @elseif($post->post->type == 'Picture')
-                                                                <img src="/images/{{ $post->post->file->filename }}/0" class="img-responsive img-text"/>
+                                                               <a href="/images/{{ $post->post->file->filename }}/0" class="post-img"> <img src="/images/{{ $post->post->file->filename }}/0" class="img-responsive img-text"/> </a>
+                                                            @elseif($type == 'File')
+                                                                <a href="/files/{{ $post->post->file->filename }}">{{ $post->post->file->original_filename }}</a>
                                                             @endif
 
                                                         </div>
@@ -200,6 +203,16 @@ foreach($conversations as $conversation)
         <div class="modal" id="new_message" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
 
         </div>
+
+        <div id="blueimp-gallery" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+        </div>
         @endsection
 
 
@@ -214,11 +227,25 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/plugins/dropzone/dropzone.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/scrolltotop/scrolltopcontrol.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/plugins/blueimp/jquery.blueimp-gallery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/backstretch/jquery.backstretch.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/post.js')}}"></script>
-
+            <script>
+                document.getElementById('links').onclick = function (event) {
+                    event = event || window.event;
+                    var target = event.target || event.srcElement;
+                    var link = target.src ? target.parentNode : target;
+                    var options = {index: link, event: event,onclosed: function(){
+                        setTimeout(function(){
+                            $("body").css("overflow","");
+                        },200);
+                    }};
+                    var links = this.getElementsByTagName('a');
+                    blueimp.Gallery(links, options);
+                };
+            </script>
 
 @endsection

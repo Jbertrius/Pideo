@@ -193,6 +193,10 @@ Route::group( ['middleware' => 'auth' ], function()
         'as'  =>  'postmodal'
     ]);
 
+    Route::get('post/delete/{id}', [
+        'uses' => 'PostController@deletePost'
+    ]);
+
 
 
 

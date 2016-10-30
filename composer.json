@@ -17,7 +17,10 @@
         "anam/phantommagick": "^1.0",
         "linkthrow/ffmpeg": "dev-master",
         "vinkla/pusher": "^2.4",
-        "wensleydale/sendpulse-laravel": "1.*"
+        "wensleydale/sendpulse-laravel": "1.*",
+        "backpack/base": "0.6.x",
+        "backpack/crud": "3.0",
+        "backpack/generators": "^1.1"
 
     },
     "require-dev": {
@@ -54,8 +57,8 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta",
+
+            
             "php artisan optimize"
         ]
     },

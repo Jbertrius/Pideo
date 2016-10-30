@@ -59,7 +59,10 @@ class PostController extends Controller
             $response['type'] = $post->type;
             
             if($response['type'] != 'text')
+            {
                 $response['filename'] = $post->file->filename;
+                $response['original_filename'] = $post->file->original_filename;
+            }
 
             return View::make('front.post',$response)->render();
         }
@@ -261,5 +264,13 @@ class PostController extends Controller
         $posts = App\Models\Post::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(6);
 
         return view('front.request', ['posts' => $posts, 'number' => $posts->count()]);
+    }
+
+    public function deletePost($id)
+    {
+         $post = App\Models\Post::where('id', $id)->first();
+         $post->delete();
+        
+        return redirect('myrequest');
     }
 }

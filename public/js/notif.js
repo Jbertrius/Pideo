@@ -38,7 +38,7 @@ $(function() {
 
         if($conv.length = 0)
         {
-            $msgNotif.append(not);
+            $msgNotif.prepend(not);
 
         }
         else
@@ -116,7 +116,7 @@ $(function() {
         '</p>'+
         '</a>';
 
-        $msgNotif.append(not);
+        $msgNotif.prepend(not);
 
 
 

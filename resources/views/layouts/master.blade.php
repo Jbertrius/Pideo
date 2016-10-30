@@ -22,6 +22,7 @@
     <meta name="msapplication-TileColor" content="#00a8ff">
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+
     <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/bb3da0af76b30bd3cd0143dfee6f15fc_1.js" async></script>
 
     <!--[if lt IE 9]>

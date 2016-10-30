@@ -23,6 +23,35 @@
   line-height: 2;
 }
 
+.post-link{
+  padding: 5px;
+  border: 1px solid #bbbbbb;
+}
+
+.post-link > a{
+    text-decoration: none;
+    color: #33414e;
+    font-size: medium;
+    font-family: "Open Sans Extrabold";
+}
+
+.post-link > a:hover{
+    color: rgba(0, 0, 0, 0.48);
+}
+
+
+
+.postxt{
+  padding: 20px;
+  background: #eeeeee;
+  border: 1px solid #bbbbbb;
+
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+
+}
+
 .dz-message span {
   font-family: 'Open Sans Extrabold';
   font-size: 41px;
@@ -228,7 +257,7 @@ padding-left: 0px !important;
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.first:hover > img {
+.first:hover > img, .post-img:hover > img  {
   filter: brightness(50%);
   -webkit-filter: brightness(50%);
   -moz-filter: brightness(50%);

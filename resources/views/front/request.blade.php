@@ -31,7 +31,7 @@ foreach($conversations as $conversation)
 @section('contenu')
 
     <div class="page-container">
-        @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname,   'profilePic' => Auth::user()->image_path])
+        @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname, 'page' => 'myrequest',  'profilePic' => Auth::user()->image_path])
         <div class="page-content">
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 
@@ -91,19 +91,21 @@ foreach($conversations as $conversation)
 
                                                 <div class="pull-right"><div class="label label-success" style="font-size: 12px">{{ $post->cat->subjects }}</div> </div>
                                             </div>
-                                            <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->created_at }}  by {{ $post->users->fullname() }} </div>
-                                            <div class="post-text">
+                                            <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->created_at }}  </div>
+                                            <div class="post-text @if($post->type == 'text') postxt @elseif($post->type == 'File') post-link @endif " id="links">
                                                 @if($post->type == 'text')
                                                     {!!  $post->content !!}
                                                 @elseif($post->type == 'Picture')
-                                                    <img src="images/{{ $post->file->filename }}/0" class="img-responsive img-text"/>
+                                                   <a href="images/{{ $post->file->filename }}/0" class="post-img"> <img src="images/{{ $post->file->filename }}/0" class="img-responsive img-text"/> </a>
+                                                @elseif($post->type == 'File')
+                                                    <a href="/files/{{ $post->file->filename }}">{{ $post->file->original_filename }}</a>
                                                 @endif
                                             </div>
-                                            <div class="post-row">
+                                            <div class="post-row " data-id ="{{ $post->id }}">
                                                 @if($post->type == 'text')
-                                                    <button class="btn btn-info  btn-rounded"><span class="fa fa-edit"></span> Edit</button>
+                                                    <button class="btn btn-info btn-rounded btn-edit"><span class="fa fa-edit"></span> Edit</button>
                                                 @endif
-                                                <button class="btn btn-danger btn-rounded"><span class="fa fa-trash-o"></span> Delete</button>
+                                                <button class="btn btn-danger btn-rounded mb-control btn-delete" data-box="#message-box-danger"><span class="fa fa-trash-o"></span> Delete</button>
 
                                                 <div class="pull-right">
                                                     <div class="form-group">
@@ -151,6 +153,21 @@ foreach($conversations as $conversation)
 
 
     </div>
+
+            <div class="message-box message-box-danger animated fadeIn" id="message-box-danger">
+                <div class="mb-container">
+                    <div class="mb-middle">
+                        <div class="mb-title"><span class="fa fa-times"></span> Are you sure?</div>
+                        <div class="mb-content">
+                            <p>You will not be able to recover this post !</p>
+                        </div>
+                        <div class="mb-footer text-center">
+                            <button class="btn btn-default btn-lg  mb-control-close alert-delete"  >Yes, delete it !</button>
+                            <button class="btn btn-default btn-lg  mb-control-close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 @endsection
 
 
@@ -165,11 +182,27 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/plugins/dropzone/dropzone.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/scrolltotop/scrolltopcontrol.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/plugins/blueimp/jquery.blueimp-gallery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/backstretch/jquery.backstretch.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+                <script type="text/javascript" src="{{asset('js/editPost.js')}}"></script>
+    <script>
+                    document.getElementById('links').onclick = function (event) {
+                        event = event || window.event;
+                        var target = event.target || event.srcElement;
+                        var link = target.src ? target.parentNode : target;
+                        var options = {index: link, event: event,onclosed: function(){
+                            setTimeout(function(){
+                                $("body").css("overflow","");
+                            },200);
+                        }};
+                        var links = this.getElementsByTagName('a');
+                        blueimp.Gallery(links, options);
+                    };
+                </script>
 
 
 @endsection
