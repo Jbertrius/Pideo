@@ -41,9 +41,10 @@ class PostController extends Controller
         }
         elseif(!is_null($id)){
             $post = App\Models\Post::where('id', $id)->first();
+            $user_id = Auth::user()->id;
 
 
-            $postNotif = $post->posts_notifications->where('user_id', Auth::user()->id)->first();
+            $postNotif = $post->posts_notifications()->where('user_id', $user_id)->first();
             $postNotif->read = 1;
             $postNotif->save();
 

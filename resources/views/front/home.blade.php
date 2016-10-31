@@ -105,7 +105,7 @@ foreach($conversations as $conversation)
         Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
 
 
-        $(".post").backstretch("img/backgrounds/back_3.jpeg");
+        $(".post").backstretch("img/backgrounds/back_3.jpg");
         var
                 user_id   = "{{ Auth::user()->id }}",
                 image_path = "{{ Auth::user()->image_path }}";

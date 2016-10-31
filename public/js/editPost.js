@@ -36,14 +36,20 @@ $(function() {
                 ['height', ['height']],
                 ['insert', ['link']]
             ],
-            height: 300,
+            height: 150,
             minHeight: null,
             maxHeight: null,
             focus: true
         });
-        $(this).html('Ok');
-        $(this).parent().find('.btn-delete').css('display: none');
+        $(this).css('display','none');
+        $(this).parent().find('.btn-delete').css('display','none');
         $('.note-toolbar').removeClass('panel-heading');
+
+        $(this).parent().append('<div class="validation"> <button class="btn btn-primary">Ok</button> <button class="btn btn-default"> Cancel</button> </div>');
+
+
     });
+
+    
 
 });
