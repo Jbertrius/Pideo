@@ -125,7 +125,7 @@ foreach($conversations as $conversation)
                                                                 {!!  $post->post->content !!}
                                                             @elseif($post->post->type == 'Picture')
                                                                <a href="/images/{{ $post->post->file->filename }}/0" class="post-img"> <img src="/images/{{ $post->post->file->filename }}/0" class="img-responsive img-text"/> </a>
-                                                            @elseif($type == 'File')
+                                                            @elseif($post->post->type == 'File')
                                                                 <a href="/files/{{ $post->post->file->filename }}">{{ $post->post->file->original_filename }}</a>
                                                             @endif
 

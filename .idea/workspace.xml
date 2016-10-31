@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/backgrounds/back_3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/editPost.js" afterPath="$PROJECT_DIR$/public/js/editPost.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/post.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/post.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/request.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/request.blade.php" />
     </list>
     <ignored path="Pideo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,36 +34,6 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - pideo@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - pideo@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="post_notification" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -79,8 +44,8 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+            <state relative-caret-position="-850">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
               <folding>
                 <element signature="e#40#48#0#PHP" expanded="true" />
                 <element signature="e#607#3985#0#PHP" expanded="false" />
@@ -92,26 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pideo.post_notification" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.post_notification">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostNotification.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/PostNotification.php">
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,18 +80,52 @@
       <file leaf-file-name="request.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="-1736">
               <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="229" column="112" selection-start-line="229" selection-start-column="112" selection-end-line="229" selection-end-column="112" />
+            <state relative-caret-position="-1627">
+              <caret line="127" column="85" selection-start-line="127" selection-start-column="85" selection-end-line="127" selection-end-column="85" />
+              <folding>
+                <element signature="e#1344#3238#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1874">
+              <caret line="179" column="7" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="7" />
+              <folding>
+                <element signature="e#4125#4882#1#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2487">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="280" column="30" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -153,32 +137,6 @@
             <state relative-caret-position="52">
               <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendproblem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/sendproblem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-              <folding>
-                <element signature="e#49#654#0" expanded="false" />
-                <element signature="e#687#925#0" expanded="false" />
-                <element signature="e#3695#3974#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editPost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/editPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="e#518#1492#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -233,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Repositories/PostRepository.php" />
         <option value="$PROJECT_DIR$/app/Models/Message.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConversationController.php" />
@@ -247,7 +204,6 @@
         <option value="$PROJECT_DIR$/resources/views/front/profile.blade.php" />
         <option value="$PROJECT_DIR$/public/js/actions.js" />
         <option value="$PROJECT_DIR$/resources/views/partials/success.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/PostModal.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/User.php" />
@@ -280,10 +236,12 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/front/home.blade.php" />
         <option value="$PROJECT_DIR$/public/js/editPost.js" />
-        <option value="$PROJECT_DIR$/resources/views/front/post.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/request.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec874e3a-fefd-418e-b515-eeea4903a334/console.sql" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/post.blade.php" />
       </list>
     </option>
   </component>
@@ -590,7 +548,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;aut&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;t&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;not&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;sendpr&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;ba&#9;FILE&#9;file://C:/laragon/www/Pideo/config/backpack/base.php&#10;sendPulse&#9;FILE&#9;file://C:/laragon/www/Pideo/config/sendpulse.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;reque&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;fileen&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;file&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;send&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postm&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/PostModal.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;date&#9;null&#9;null&#10;mess&#9;null&#9;null&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;notif.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;profile&#9;null&#9;null&#10;actio&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js" />
+    <property name="SearchEverywhereHistoryKey" value="userre&#9;null&#9;null&#10;userc&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;aut&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;t&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;not&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;sendpr&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;ba&#9;FILE&#9;file://C:/laragon/www/Pideo/config/backpack/base.php&#10;sendPulse&#9;FILE&#9;file://C:/laragon/www/Pideo/config/sendpulse.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;reque&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;fileen&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;file&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;send&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postm&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/PostModal.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;date&#9;null&#9;null&#10;mess&#9;null&#9;null&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;notif.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -969,7 +927,7 @@
       <workItem from="1477610688215" duration="75000" />
       <workItem from="1477610907853" duration="14598000" />
       <workItem from="1477670487030" duration="27590000" />
-      <workItem from="1477848722841" duration="8448000" />
+      <workItem from="1477848722841" duration="9931000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -1223,7 +1181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477848971237</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Update  #30">
+      <created>1477883530506</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1477883530506</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1232,7 +1197,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1368514000" />
+    <option name="totallyTimeSpent" value="1369997000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1249,14 +1214,14 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23739837" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2984375" sideWeight="0.50981873" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2975078" sideWeight="0.50981873" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22583081" sideWeight="0.68557537" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464174" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20487805" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31869918" sideWeight="0.49282297" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.61563516" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20543806" sideWeight="0.31442463" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854986" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19062027" sideWeight="0.4050926" order="1" side_tool="false" content_ui="tabs" />
@@ -1330,7 +1295,8 @@
     <MESSAGE value="Update  #28&#10; -  Minor Changes" />
     <MESSAGE value="Update  #29" />
     <MESSAGE value="Update  #30" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update  #30" />
+    <MESSAGE value="Update  - Fixing Bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update  - Fixing Bugs" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.5819209" />
   </component>
   <component name="XDebuggerManager">
@@ -1350,20 +1316,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_10_032851_create_pideos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_10_032934_create_pideos_tags_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_18_030914_create_post_notification_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1552,13 +1504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_20_100544_create_fileentries_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1614,16 +1559,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-589">
           <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding>
-            <element signature="e#4125#4882#1#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1723,41 +1659,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="229" column="112" selection-start-line="229" selection-start-column="112" selection-end-line="229" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ec874e3a-fefd-418e-b515-eeea4903a334/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#48#0#PHP" expanded="true" />
-            <element signature="e#607#3985#0#PHP" expanded="false" />
-            <element signature="e#6426#8267#0#PHP" expanded="false" />
-            <element signature="e#8277#8355#0#PHP" expanded="false" />
-            <element signature="e#8365#8603#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1771,6 +1677,72 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#48#0#PHP" expanded="true" />
+            <element signature="e#607#3985#0#PHP" expanded="false" />
+            <element signature="e#6426#8267#0#PHP" expanded="false" />
+            <element signature="e#8277#8355#0#PHP" expanded="false" />
+            <element signature="e#8365#8603#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1874">
+          <caret line="179" column="7" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="7" />
+          <folding>
+            <element signature="e#4125#4882#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2487">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="280" column="30" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1736">
+          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1627">
+          <caret line="127" column="85" selection-start-line="127" selection-start-column="85" selection-end-line="127" selection-end-column="85" />
+          <folding>
+            <element signature="e#1344#3238#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

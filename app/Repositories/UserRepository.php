@@ -278,7 +278,7 @@ class UserRepository extends BaseRepository
         
         $path = Storage::put('Pictures/'.$file->getFilename().'.'.$extension, File::get($file) );
 
-        $user->image_path = 'images/'.$file->getFilename().'.'.$extension.'/2';
+        $user->image_path = '/images/'.$file->getFilename().'.'.$extension.'/2';
         $user->save();
         
         return $user;
