@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/post.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/post.blade.php" />
     </list>
     <ignored path="Pideo.iws" />
@@ -44,7 +43,7 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
+            <state relative-caret-position="-2246">
               <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
               <folding>
                 <element signature="e#40#48#0#PHP" expanded="true" />
@@ -60,7 +59,7 @@
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-124">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -80,7 +79,7 @@
       <file leaf-file-name="request.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1736">
+            <state relative-caret-position="-1722">
               <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
               <folding />
             </state>
@@ -90,11 +89,9 @@
       <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1627">
-              <caret line="127" column="85" selection-start-line="127" selection-start-column="85" selection-end-line="127" selection-end-column="85" />
-              <folding>
-                <element signature="e#1344#3238#0#HTML" expanded="false" />
-              </folding>
+            <state relative-caret-position="-1746">
+              <caret line="120" column="186" selection-start-line="120" selection-start-column="186" selection-end-line="120" selection-end-column="186" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -927,7 +924,7 @@
       <workItem from="1477610688215" duration="75000" />
       <workItem from="1477610907853" duration="14598000" />
       <workItem from="1477670487030" duration="27590000" />
-      <workItem from="1477848722841" duration="9931000" />
+      <workItem from="1477848722841" duration="11558000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -1188,7 +1185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477883530506</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Update  - Fixing Bugs">
+      <created>1477885055272</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1477885055272</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1197,7 +1201,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1369997000" />
+    <option name="totallyTimeSpent" value="1371624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1680,28 +1684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#48#0#PHP" expanded="true" />
-            <element signature="e#607#3985#0#PHP" expanded="false" />
-            <element signature="e#6426#8267#0#PHP" expanded="false" />
-            <element signature="e#8277#8355#0#PHP" expanded="false" />
-            <element signature="e#8365#8603#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1874">
@@ -1728,9 +1710,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2246">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#48#0#PHP" expanded="true" />
+            <element signature="e#607#3985#0#PHP" expanded="false" />
+            <element signature="e#6426#8267#0#PHP" expanded="false" />
+            <element signature="e#8277#8355#0#PHP" expanded="false" />
+            <element signature="e#8365#8603#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1736">
+        <state relative-caret-position="-1722">
           <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
           <folding />
         </state>
@@ -1738,11 +1742,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1627">
-          <caret line="127" column="85" selection-start-line="127" selection-start-column="85" selection-end-line="127" selection-end-column="85" />
-          <folding>
-            <element signature="e#1344#3238#0#HTML" expanded="false" />
-          </folding>
+        <state relative-caret-position="-1746">
+          <caret line="120" column="186" selection-start-line="120" selection-start-column="186" selection-end-line="120" selection-end-column="186" />
+          <folding />
         </state>
       </provider>
     </entry>

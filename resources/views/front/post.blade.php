@@ -61,7 +61,7 @@ foreach($conversations as $conversation)
                                     <div class="pull-right"><div class="label label-warning" style="font-size: 12px">{{ $category }}</div> </div>
                                 </div>
                                 <div class="post-date"><span class="fa fa-calendar"></span> {{ $date }}  by {{ $users }} </div>
-                                <div class="post-text @if($type == 'text') postxt @elseif($type == 'File') post-link @endif" id="links">
+                                <div class="post-text @if($type == 'text') postxt @elseif($type == 'File') post-link @else links @endif">
 
                                     @if($type == 'text')
                                         {!!  $content !!}
@@ -118,7 +118,7 @@ foreach($conversations as $conversation)
                                                             <div class="pull-right"><div class="label label-warning" style="font-size: 12px">{{ $post->cat->subjects }}</div> </div>
                                                         </div>
                                                         <div class="post-date"><span class="fa fa-calendar"></span> {{ $post->post->created_at }}  by {{ $post->post->users->fullname() }} </div>
-                                                        <div class="post-text @if($post->post->type == 'text') postxt @elseif($post->post->type == 'File') post-link @endif" id="links">
+                                                        <div class="post-text @if($post->post->type == 'text') postxt @elseif($post->post->type == 'File') post-link  @else links @endif" >
 
 
                                                             @if($post->post->type == 'text')
@@ -233,7 +233,7 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/post.js')}}"></script>
             <script>
-                document.getElementById('links').onclick = function (event) {
+                $('.links').on('click', function (event) {
                     event = event || window.event;
                     var target = event.target || event.srcElement;
                     var link = target.src ? target.parentNode : target;
@@ -244,7 +244,7 @@ foreach($conversations as $conversation)
                     }};
                     var links = this.getElementsByTagName('a');
                     blueimp.Gallery(links, options);
-                };
+                });
             </script>
 
 @endsection
