@@ -45,11 +45,37 @@ $(function() {
         $(this).parent().find('.btn-delete').css('display','none');
         $('.note-toolbar').removeClass('panel-heading');
 
-        $(this).parent().append('<div class="validation"> <button class="btn btn-primary">Ok</button> <button class="btn btn-default"> Cancel</button> </div>');
+        $(this).parent().append('<div class="validation"> <button class="btn btn-primary" id="editPost">Ok</button> <button class="btn btn-default" id="destroy"> Cancel</button> </div>');
 
 
     });
 
-    
+
+    $('body').on('click', '#destroy', function () {
+
+        $parentValisation = $(this).parent();
+        $parentPostRow = $($parentValisation).parent();
+        $parentPostItem = $($parentPostRow).parent();
+
+        $parentPostRow.find('.btn-delete').removeAttr("style");
+        $parentPostRow.find('.btn-edit').removeAttr("style");
+
+        $parentPostItem.find('.post-text').summernote('destroy');
+
+        $parentValisation.remove();
+
+
+
+    });
+
+    $('body').on('click', '#editPost', function () {
+
+
+
+    });
+
+
+
+
 
 });

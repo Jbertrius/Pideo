@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/post.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/post.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/editPost.js" afterPath="$PROJECT_DIR$/public/js/editPost.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/request.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/request.blade.php" />
     </list>
     <ignored path="Pideo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +60,8 @@
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="782">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,18 +80,30 @@
       <file leaf-file-name="request.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1722">
-              <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+            <state relative-caret-position="134">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editPost.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/editPost.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <element signature="e#1574#1972#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1746">
-              <caret line="120" column="186" selection-start-line="120" selection-start-column="186" selection-end-line="120" selection-end-column="186" />
+            <state relative-caret-position="53">
+              <caret line="112" column="75" selection-start-line="112" selection-start-column="75" selection-end-line="112" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -232,13 +245,13 @@
         <option value="$PROJECT_DIR$/public/js/post.js" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/front/home.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/editPost.js" />
-        <option value="$PROJECT_DIR$/resources/views/front/request.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec874e3a-fefd-418e-b515-eeea4903a334/console.sql" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/front/post.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/request.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/editPost.js" />
       </list>
     </option>
   </component>
@@ -454,80 +467,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pideo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -545,7 +484,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="userre&#9;null&#9;null&#10;userc&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;aut&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;t&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;not&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;sendpr&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;ba&#9;FILE&#9;file://C:/laragon/www/Pideo/config/backpack/base.php&#10;sendPulse&#9;FILE&#9;file://C:/laragon/www/Pideo/config/sendpulse.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;reque&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;fileen&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;file&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;send&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postm&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/PostModal.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;date&#9;null&#9;null&#10;mess&#9;null&#9;null&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;notif.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="ed&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/editPost.js&#10;userre&#9;null&#9;null&#10;userc&#9;null&#9;null&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;re&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;home&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;action&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;aut&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;t&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;fil&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;req&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;not&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;sendpr&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;ba&#9;FILE&#9;file://C:/laragon/www/Pideo/config/backpack/base.php&#10;sendPulse&#9;FILE&#9;file://C:/laragon/www/Pideo/config/sendpulse.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Post.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;reque&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;fileen&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;file&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/FileEntryController.php&#10;send&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;postm&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/PostModal.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;date&#9;null&#9;null&#10;mess&#9;null&#9;null&#10;na&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;notif.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;my&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/myrequest.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;map.b&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;act&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/actions.js&#10;postn&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/PostNotification.php&#10;route&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;sen&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/sendproblem.js&#10;plugins.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/plugins.js&#10;sett&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/settings.js&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;prof&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/profile.blade.php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -924,7 +863,7 @@
       <workItem from="1477610688215" duration="75000" />
       <workItem from="1477610907853" duration="14598000" />
       <workItem from="1477670487030" duration="27590000" />
-      <workItem from="1477848722841" duration="11558000" />
+      <workItem from="1477848722841" duration="14675000" />
     </task>
     <task id="LOCAL-00001" summary="Update #1 - Database issues correction">
       <created>1474470084206</created>
@@ -1192,7 +1131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477885055272</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Update  - Fixing Bugs">
+      <created>1477887088958</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1477887088958</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1201,7 +1147,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1371624000" />
+    <option name="totallyTimeSpent" value="1374741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1621,16 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/editPost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="e#518#1492#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/571c5b0b-ff57-46f8-9190-3f6b901e373a/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1726,25 +1662,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1722">
-          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+        <state relative-caret-position="782">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/post.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1746">
-          <caret line="120" column="186" selection-start-line="120" selection-start-column="186" selection-end-line="120" selection-end-column="186" />
+        <state relative-caret-position="53">
+          <caret line="112" column="75" selection-start-line="112" selection-start-column="75" selection-end-line="112" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/request.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/editPost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#1574#1972#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
