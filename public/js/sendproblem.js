@@ -103,14 +103,17 @@ $(function() {
     $('body').on('click', '.send-post', function () {
         
        $category =  $('.selectpicker').val();
-       $description = $('#title').val();
+       $description = $('#title').val().trim();
+
+        if($description != ""){
 
         $('.send-post').html('<i class="fa fa-spinner fa-spin fa-fw"></i> Send');
+        $('.send-post').attr('disabled','disabled');
 
         if($('.btn-primary').hasClass('texts'))
         {
             sendProblemtext($category, $description).done(function (data) {
-                $('#summernote').summernote('reset')
+                $('#summernote').summernote('reset');
                 $('.modal').html('');
                 $('.modal').after(data);
 
@@ -126,6 +129,7 @@ $(function() {
                 $('.modal').html('');
                 $('.message-box-success').show();
             });
+        }
         }
 
     });

@@ -274,4 +274,27 @@ class PostController extends Controller
         
         return redirect('myrequest');
     }
+
+    public function edit(){
+        $rules = array(
+            'text' => 'required',
+            'post_id'  =>  'required',
+        );
+
+        $validator = Validator::make(Request::only('text', 'post_id'), $rules);
+
+        if($validator->fails()) {
+            return Response::json([
+                'success' => false,
+                'result' => $validator->messages()
+            ]);
+        }
+
+    $post = App\Models\Post::where('id', Request::input('post_id'))->first();
+    $post->content = Request::input('text');
+    $post->save();
+    
+        return $post->content;
+    }
+
 }

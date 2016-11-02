@@ -184,6 +184,10 @@ Route::group( ['middleware' => 'auth' ], function()
         'uses' => 'PostController@Handlefile'
     ]);
 
+    Route::post('/post/edit', [
+        'uses' => 'PostController@edit'
+    ]);
+
     Route::post('/post/text', [
         'uses' => 'PostController@HandleText'
     ]);

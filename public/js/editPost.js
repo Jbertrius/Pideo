@@ -25,7 +25,11 @@ $(function() {
 
     $('.btn-edit').on('click', function () {
 
-        $($(this).parent()).parent().find('.postxt').summernote({
+        $postxt =  $($(this).parent()).parent().find('.postxt');
+
+        $postxt.data('post', $postxt.html().trim() );
+
+        $postxt.summernote({
             toolbar: [
                 // [groupName, [list of button]]
                 ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -60,6 +64,8 @@ $(function() {
         $parentPostRow.find('.btn-delete').removeAttr("style");
         $parentPostRow.find('.btn-edit').removeAttr("style");
 
+        $parentPostItem.find('.post-text').summernote('code',$parentPostItem.find('.post-text').data('post'));
+
         $parentPostItem.find('.post-text').summernote('destroy');
 
         $parentValisation.remove();
@@ -68,11 +74,51 @@ $(function() {
 
     });
 
-    $('body').on('click', '#editPost', function () {
+    $('body').on('click', '#editPost', function (e) {
 
+        $parentValisation = $(this).parent();
+        $parentPostRow = $($parentValisation).parent();
+        $parentPostItem = $($parentPostRow).parent();
+
+        if(!$($.parseHTML($parentPostItem.find('.post-text').summernote('code'))).text().trim())
+        {
+            e.preventDefault();
+
+        }
+        else
+        {
+
+
+        $(this).html('<i class="fa fa-spinner fa-spin fa-fw"></i> Ok');
+        $(this).attr('disabled','disabled');
+
+        editpost($parentPostItem.find('.post-text').summernote('code').trim(), $parentPostRow.data('id')).done(function (data) {
+
+
+            $parentPostItem.find('.post-text').summernote('code', data);
+
+            $parentPostItem.find('.post-text').summernote('destroy');
+            $parentPostRow.find('.btn-delete').removeAttr("style");
+            $parentPostRow.find('.btn-edit').removeAttr("style");
+
+            $parentValisation.remove();
+        });
+            }
 
 
     });
+
+    function  editpost($text, $id){
+
+        var jqxhr = $.ajax({
+            url: '/post/edit',
+            type: 'POST',
+            data: { text : $text, post_id : $id},
+            dataType: 'html'
+        });
+
+        return jqxhr;
+    }
 
 
 
