@@ -66,11 +66,9 @@ class MessageController extends Controller
             'body'               => Input::get('body'),
             'type'              =>  'text',
             'user_id'           => Input::get('user_id'),
-            'created_at'      => new DateTime
-
         );
 
-        $conversation->update_at = new DateTime;
+
         $conversation->save();
 
         $authorMsg = App\Models\User::where('id', Input::get('user_id'))->first();
@@ -113,13 +111,13 @@ class MessageController extends Controller
 
 */
 
-        $date = $message->created_at->date;
+
 
 
         $msg = '<div class="item item-visible in"><div class="image">'.'<img src="'.$authorMsg->image_path.'" alt="'.$authorMsg->firstname.' '.$authorMsg->lastname.'">'.
         '</div><div class="text"><div class="heading">'.
                 '<a href="#">'.$authorMsg->firstname.' '.$authorMsg->lastname .'</a>' .
-                '<span class="date">'.'</span></div>'.
+                '<span class="date">'.$message->created_at.'</span></div>'.
          $message->body.
        ' </div></div>';
 

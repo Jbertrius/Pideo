@@ -15,7 +15,7 @@ class CreateConversationsTable extends Migration
         Schema::create('conversations', function(Blueprint $table) {
             $table->increments('id');
             $table->dateTime('created_at');
-            $table->dateTime('update_at');
+            $table->dateTime('updated_at');
             $table->string('name');
             $table->integer('author_id')->unsigned();
             $table->foreign('author_id')->references('id')->on('users')

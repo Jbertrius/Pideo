@@ -86,7 +86,7 @@ foreach($conversations as $conversation)
 
                 @else
 
-                    @if($number > 1)<div class="col-md-9">@else<div class="col-md-9">@endif
+                     <div class="col-md-9">
 
 
 
@@ -131,8 +131,8 @@ foreach($conversations as $conversation)
 
                                                         </div>
                                                         <div class="post-row">
-                                                            <button id="respond" data-id = "{{  $post->post->users->id }}" class="btn btn-default btn-rounded "><span class="fa fa-envelope"></span> Respond</button>
-                                                            <button id="pideo-respond" class="btn btn-default btn-rounded "><span class="fa fa-film"></span> Respond with a pideo</button>
+                                                            <button   data-id = "{{  $post->post->users->id }}" class="btn btn-default btn-rounded respond "><span class="fa fa-envelope"></span> Respond</button>
+                                                            <button class="btn btn-default btn-rounded pideo-respond"><span class="fa fa-film"></span> Respond with a pideo</button>
 
 
                                                             <div class="pull-right">
@@ -154,11 +154,10 @@ foreach($conversations as $conversation)
                                             @endforeach
 
 
-
+                                                {{ $posts->links() }}
                             </div>
 
-
-                            {{ $posts->links() }}
+                                            @if($number > 1)
 
                                             @if(isset($category))
                                                 <div class="col-md-3">
@@ -177,7 +176,40 @@ foreach($conversations as $conversation)
 
                                                 </div>
                                             @endif
+
+                                        @endif
+
+
+
                         </div>
+
+
+                    @if($number == 1)
+
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h3>Categories</h3>
+                                    <div class="links">
+
+                                        @for($i=0; $i< count($category); $i++)
+                                            <a href="/request/category/{{ $cat_id [$i] }}"> {{ $category [$i] }} <span class="label label-default">{{ $count_category [$i] }}</span></a>
+                                        @endfor
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    @endif
+
+
+
+                    @if($number == 0)
+                        <div class="col-md-12 none">
+                        Any request available
+                        </div>
+                    @endif
 
 
 

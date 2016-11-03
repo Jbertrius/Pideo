@@ -61,6 +61,9 @@ foreach($conversations as $conversation)
                     </div>
                 </div>
 
+
+
+
                 @if($number > 1)<div class="col-md-12">@else<div class="col-md-6">@endif
 
 
@@ -142,7 +145,10 @@ foreach($conversations as $conversation)
              </div>
 
             <div class="row">
-                <div class="col-md-12 ">
+                <div class="col-md-12  @if($number == 0) none @endif">
+
+                    @if($number == 0) Any request available @endif
+
             {{ $posts->links() }}
                     </div>
             </div>

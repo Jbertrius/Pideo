@@ -83,7 +83,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function conversations() {
-        return $this->belongsToMany('App\Models\Conversation', 'conversations_users')->orderBy('update_at','DESC') ;
+        return $this->belongsToMany('App\Models\Conversation', 'conversations_users')->orderBy('updated_at','DESC') ;
     }
 
     public function files(){

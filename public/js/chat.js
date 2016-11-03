@@ -154,7 +154,7 @@ $(function() {
         var mn = d.getMinutes();
         var s = d.getSeconds();
 
-        return y+'-'+mm+'-'+day+' '+h+':'+mn+':'+s;
+        return day+'/'+mm+'/'+y;
 
     }
 

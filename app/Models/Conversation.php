@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 class Conversation extends Model
 {
     protected $table    = 'conversations';
-    protected $fillable = array('author_id', 'name', 'created_at', 'update_at');
+    protected $fillable = array('author_id', 'name');
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function users() {
         return $this->belongsToMany('App\Models\User', 'conversations_users', 'conversation_id', 'user_id')->where('user_id', '<>', Auth::user()->id);

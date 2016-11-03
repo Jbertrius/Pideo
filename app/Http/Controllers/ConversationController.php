@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\ChatConversationsEventHandler;
 use Event;
 use App;
+use Str;
 use App\Models\Conversation;
 use App\Models\Message;
 use App\Models\MessageNotification;
@@ -80,8 +81,6 @@ class ConversationController extends Controller
 
         // Create Conversation
         $params = array(
-            'created_at' => new DateTime,
-            'update_at' => new DateTime, 
             'name'          => str_random(30),
             'author_id'  => Auth::user()->id
         );
@@ -99,7 +98,6 @@ class ConversationController extends Controller
             'body'               => Input::get('body'),
             'type'              => 'text',
             'user_id'           => Auth::user()->id,
-            'created_at'      => new DateTime
         );
 
         $message = Message::create($params);

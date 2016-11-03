@@ -9,11 +9,11 @@ class SubjectTableSeeder extends Seeder {
         DB::table('subjects')->delete();
 
         Subject::create([
-            'subjects' => 'Accountancy, finance, business & management studies'
+            'subjects' => 'Accountancy & finance'
         ]);
 
         Subject::create([
-            'subjects' => 'Agriculture, horticulture & veterinary sciences'
+            'subjects' => 'Agriculture & horticulture'
         ]);
 
         Subject::create([
@@ -29,7 +29,15 @@ class SubjectTableSeeder extends Seeder {
         ]);
 
         Subject::create([
+            'subjects' => 'Business & economics'
+        ]);
+
+        Subject::create([
             'subjects' => 'Cinematics & photography'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Communications & Journalism'
         ]);
 
         Subject::create([
@@ -38,6 +46,10 @@ class SubjectTableSeeder extends Seeder {
 
         Subject::create([
             'subjects' => 'Craft skills'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Culinary Arts & personal services'
         ]);
 
         Subject::create([
@@ -53,10 +65,6 @@ class SubjectTableSeeder extends Seeder {
         ]);
 
         Subject::create([
-            'subjects' => 'English language & literature'
-        ]);
-
-        Subject::create([
             'subjects' => 'Food, leisure & hospitality'
         ]);
 
@@ -69,11 +77,27 @@ class SubjectTableSeeder extends Seeder {
         ]);
 
         Subject::create([
+            'subjects' => 'Law'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Literature'
+        ]);
+
+        Subject::create([
             'subjects' => 'Linguistics & classics'
         ]);
 
         Subject::create([
+            'subjects' => 'Management'
+        ]);
+
+        Subject::create([
             'subjects' => 'Mathematics & statistics'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Mechanic & repair technologies'
         ]);
 
         Subject::create([
@@ -85,28 +109,23 @@ class SubjectTableSeeder extends Seeder {
         ]);
 
         Subject::create([
-            'subjects' => 'Law'
+            'subjects' => 'Music'
         ]);
-
-        Subject::create([
-            'subjects' => 'Modern European languages & cultural studies' ,
-
-        ]);
-
-            Subject::create([
-                'subjects' => 'Music'
-            ]);
 
         Subject::create([
             'subjects' => 'Nursing, health & wellbeing'
         ]);
-
+        
         Subject::create([
             'subjects' => 'Philosophy, theology & religion'
         ]);
 
         Subject::create([
-            'subjects' => 'Physical Sciences'
+            'subjects' => 'Physical sciences'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Psychology'
         ]);
 
         Subject::create([
@@ -118,36 +137,17 @@ class SubjectTableSeeder extends Seeder {
         ]);
 
         Subject::create([
-            'subjects' => 'Mechanic and Repair Technologies'
+            'subjects' => 'Transportation & Distribution'
+        ]);
+
+        Subject::create([
+            'subjects' => 'Veterinary sciences'
         ]);
 
         Subject::create([
             'subjects' => 'World languages & cultural studies'
         ]);
-
-        Subject::create([
-            'subjects' => 'Culinary Arts and Personal Services'
-        ]);
-
-        Subject::create([
-            'subjects' => 'Transportation and Distribution'
-        ]);
-
-        Subject::create([
-            'subjects' => 'Communications and Journalism'
-        ]);
-
-        Subject::create([
-            'subjects' => 'Psychology'
-        ]);
-
-        Subject::create([
-            'subjects' => 'Business and economics'
-        ]);
-
-
-
-
+        
     }
     
 }
