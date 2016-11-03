@@ -184,7 +184,7 @@
                                         <option value="{{ $subject->id }}">{{ $subject->subjects }}</option>
                                             @endforeach
 
-                                        <option value="0">Other...</option>
+
                                         </select>
                                         </div>
 
