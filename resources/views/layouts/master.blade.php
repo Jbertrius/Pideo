@@ -12,6 +12,22 @@
     <meta name="author" content="Jbertrius" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
+
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
+            autoRegister: false,
+            notifyButton: {
+                enable: true
+            }
+        }]);
+    </script>
+
+
+
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('img/favicons/apple-touch-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{asset('img/favicons/apple-touch-icon-60x60.png')}}">
@@ -23,7 +39,8 @@
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/bb3da0af76b30bd3cd0143dfee6f15fc_1.js" async></script>
+
+
 
     <!--[if lt IE 9]>
     {{ Html::style('https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js') }}

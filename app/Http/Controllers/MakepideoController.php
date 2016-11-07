@@ -81,7 +81,7 @@ class MakepideoController extends Controller
             FFMPEG::convert()->input($imgPath)
                 ->input($audioPath)
                 ->output($videopath.'/section'.$i.'.mp4')
-               ->go('-loop 1 -y','-vcodec libx264 -acodec cop -shortest ')
+               ->go('-loop 1 -y','-vcodec libx264 -acodec cop -shortest')
                // ->go('-loop 1','-c:v libx264 -t 30 -pix_fmt yuv420p')
             ;
 
