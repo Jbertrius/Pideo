@@ -13,6 +13,74 @@ $(function() {
 
 
 
+    function appendPost(post_id, author, description, category, date) {
+
+        var $counter1 = $('#post_counter1');
+        var $counter2 = $('#post_counter2');
+
+        var $msgNotif = $('#postNotif').find('a').parent();
+        if($counter1.find('.informer').length > 0)
+        {
+            var int = parseInt($counter1.find('.informer').text(), 10) + 1;
+            $counter1.find('.informer').html(int);
+
+        }
+        else
+        {
+            $counter1.append('<div class="informer informer-warning" >1</div>');
+        }
+
+
+        var not = '<a class="list-group-item" href="/request/'+ post_id+'"  style="background-color: #f5f5f5;" >'+
+            '<strong>'+ description +'</strong>'+
+            '<br>'+
+            '<span class="label label-success">'+ category +'</span>'+
+            '<p>'+
+            '<small class="text-muted">'+ author+', '+ date +' </small>'+
+            '</p>'+
+            '</a>';
+
+        $msgNotif.prepend(not);
+
+
+
+    }
+
+
+
+    channel.bind('post', function(data) {
+        var message         = data.message.description,
+            category    = data.message.category,
+            author        = data.message.author,
+            date             = data.message.date,
+            id = data.message.id;
+
+
+        appendPost(id, author, message, category, date);
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        toastr.info('A problem has been posted !');
+
+    });
+    
+
     var channel = pusher.subscribe('channel_'+ user_id);
     channel.bind('message', function(data) {
         var message         = data.message.body,
@@ -25,6 +93,9 @@ $(function() {
             $messageList  = $("#messageList"),
             $msgContent = $('#messageList').find('.item').parent(),
             $conversation = $("#" + data.room);
+        
+        if(conversation != current_conversation)
+        {
 
         appendNotification(conversation, img, fullname, message,consId);
 
@@ -47,6 +118,8 @@ $(function() {
         };
 
         toastr.info(fullname + ' send you a message.');
+        
+        }
 
         getMessages(conversation).done(function(data) {
 

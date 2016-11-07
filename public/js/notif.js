@@ -51,9 +51,7 @@ $(function() {
             document.getElementById(consId).innerHTML = '<div class="list-group-status status-online"></div><img src="' + imgPath + '" class="pull-left" alt="' + fullname + '"/><span class="contacts-title">' + fullname + '</span><p>' + msg +'  <span class="label label-danger">' + ($inc+1) + '</span></p>';
         }
     }
-
-
-
+    
     var channel = pusher.subscribe('channel_'+ user_id);
 
     channel.bind('message', function(data) {
