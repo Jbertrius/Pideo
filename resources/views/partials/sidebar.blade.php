@@ -7,7 +7,7 @@
         </li>
         <li class="xn-profile">
             <a class="profile-mini" href= {{ URL::to('/') }} >
-                <img src="img/favicons/favicon-32x32.png" alt="Charles  XAVIER" style="border:0px">
+                <img src="/img/favicons/favicon-32x32.png" alt="Charles  XAVIER" style="border:0px">
             </a>
             <a href="#" class="profile-mini">
                 <img src="{!! $profilePic !!}" alt="{!!$firstname!!}  {!!$lastname!!}"/>

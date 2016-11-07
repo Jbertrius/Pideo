@@ -20,6 +20,15 @@
   zoom: 1;
 }
 
+.edit-icon{
+    font-size: 12px;
+}
+
+.edit-style{
+    font-size: 21px;
+    color: #0f81e5;
+}
+
 .none{
     text-align: center;
     font-size: 57px;
@@ -1284,6 +1293,12 @@ body.page-container-boxed .page-container {
   display: none;
   width: 50px;
   padding: 7px;
+}
+
+.x-navigation > li.xn-profile .logo-mini {
+    display: none;
+    width: 50px;
+    padding: 7px;
 }
 .x-navigation > li.xn-profile .profile-mini img {
   width: 36px;

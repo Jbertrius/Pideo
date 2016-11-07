@@ -41,8 +41,7 @@ foreach($conversations as $conversation)
                 <div class="row">
                     <div class="col-md-12">
 
-                        {!! Form::model(Auth::user(), ['route' => ['user.update', Auth::user()->id], 'method' => 'put', 'class' => 'form-horizontal']) !!}
-
+                          <form class="form-horizontal">
                             <div class="panel panel-default tabs">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">Personal Informations</a></li>
@@ -54,70 +53,56 @@ foreach($conversations as $conversation)
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">First Name</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <input type="text" id="firstname" name="firstname" class="form-control" value="{!!  Auth::user()->firstname !!}"/>
+                                            <div class="col-md-6 col-xs-12 edit-style" >
+                                                   {!!  Auth::user()->firstname !!}
                                             </div>
                                          
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Last Name</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <input type="text" id="lastname" name="lastname" class="form-control" value="{!!  Auth::user()->lastname !!}"/>
+                                            <div class="col-md-6 col-xs-12 edit-style" >
+                                               {!!  Auth::user()->lastname !!}
                                             </div>
                                          
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Password</label>
-                                            <div class="col-md-2 col-xs-12">
-                                                <input type="password" id="old" name="old" class="form-control" placeholder="Old" value="" />
-                                            </div>
-                                            <div class="col-md-2 col-xs-12">
-                                                <input type="password" id="new" name="new" class="form-control" placeholder="New" value=""/>
-                                            </div>
-                                            <div class="col-md-2 col-xs-12">
-                                                <input type="password" id="confirm" name="confirm" class="form-control" placeholder="Confirm" value=""/>
-                                            </div>
-                                         
+                                            <div class="col-md-2 col-xs-12 edit-style">
+                                                *******
+                                             </div>
+
                                         </div>
 
                                         <div class="form-group" id="groupsub">
-                                            <label class="col-md-3 col-xs-12 control-label">Subjects</label>
-                                            <div class="col-md-2">
-                                                <select class="form-control select" id="subs" multiple data-max-options="2">
-                                                    @foreach(\App\Models\Subject::all() as $subject)
-                                                    <option value="{!! $subject->id !!}">{!! $subject->subjects!!}</option>
-                                                    @endforeach
-                                                </select>
+
+                                            <label class="col-md-3 col-xs-12 control-label">
+                                                   Subjects</label>
+
+                                            <div class="col-md-6 col-xs-12 edit-style">
+                                            @foreach( Auth::user()->subjects as $subject)
+
+                                                {!! $subject->subjects !!} <a href="#"   data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
+                                                    <br>
+                                            @endforeach
                                             </div>
 
-                                            <div class="col-md-2" id="ctrlsub">
-                                                <button class="btn btn-primary" onclick="add();">Add Subject <span class="fa fa-plus fa-right"></span></button>
-                                            </div>
-
-
-                                            <input type="hidden"  name="sub1" id="sub1" value="" />
-                                            <input type="hidden"  name="sub2" id="sub2" value="" />
-                                         
 
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Language</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <select class="form-control select" name="lang" id="lang">
-                                                     <option value="Français">Français</option>
-                                                    <option value="English">English</option>
-                                                </select>
+                                            <div class="col-md-6 col-xs-12 edit-style">
+                                                {!! Auth::user()->lang !!}
                                             </div>
                                          
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Tel</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <input type="text" class="form-control" value="{!!  Auth::user()->number !!}" id="number" name="number"/>
+                                            <div class="col-md-6 col-xs-12 edit-style">
+                                                {!! Auth::user()->number !!}
                                             </div>
                                          
                                         </div>
@@ -130,8 +115,8 @@ foreach($conversations as $conversation)
 
                                         <div class="form-group">
                                             <label class="col-md-2 col-xs-12 control-label">City</label>
-                                            <div class="col-md-6 col-xs-12">
-                                                <input type="text" id="city" name="city" class="form-control" value="{!!  Auth::user()->city !!}"/>
+                                            <div class="col-md-6 col-xs-12 edit-style">
+                                                 {!!  Auth::user()->city !!}
                                             </div>
                                          
                                         </div>
@@ -149,12 +134,10 @@ foreach($conversations as $conversation)
 
                                     </div>
                                 </div>
-                                <div class="panel-footer">
-                                    <button class="btn btn-primary pull-right save">Save Changes <span class="fa fa-floppy-o fa-right"></span></button>
-                                </div>
+
                             </div>
 
-                        {!! Form::close() !!}
+                        </form>
 
                     </div>
                 </div>

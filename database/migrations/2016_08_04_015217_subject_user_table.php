@@ -27,7 +27,7 @@ class SubjectUserTable extends Migration
 
         Schema::table('subject_user', function(Blueprint $table) {
             $table->foreign('subject_id')->references('id')->on('subjects')
-                ->onDelete('cascade')
+                ->onDelete('no action')
                 ->onUpdate('restrict');
         });
     }
