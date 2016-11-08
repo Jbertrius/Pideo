@@ -96,8 +96,8 @@ class MakepideoController extends Controller
             $str = "file 'section".$i.".mp4'";
             array_push($videoList, $str);
 
-            $this->fileentryRepository->delete('Pideos', $imageSession->id);
-            $this->fileentryRepository->delete('Pideos', $audioSession->id);
+            //$this->fileentryRepository->delete('Pideos', $imageSession->id);
+            //$this->fileentryRepository->delete('Pideos', $audioSession->id);
         
         }
 
@@ -110,7 +110,7 @@ class MakepideoController extends Controller
         $params['path'] = storage_path().'/app/Pideos/'.$userId.'_'.$id.'.mp4';
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
-        Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
+        //Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
 
          $pideo = $this->pideoRepository->store($params);
         
