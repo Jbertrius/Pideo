@@ -37,6 +37,10 @@ class MakepideoController extends Controller
     
     public function make(Request $request){
 
+        $getID3 = new \getID3;
+
+
+
         $logo = storage_path().'/app/public/logo.png';
 
         $params = array();
@@ -71,6 +75,9 @@ class MakepideoController extends Controller
 
             $imgPath = $videopath.'/'.$userId.'_'.$id.'_'.$imgEntry['img'.$i];
             $audioPath = storage_path().'/app/Pideos/'.$audioEntry['audio'.$i];
+
+            $file = $getID3->analyze($audioPath);
+
 
             Storage::makeDirectory('Pideos/'.$userId.'_'.$id);
 

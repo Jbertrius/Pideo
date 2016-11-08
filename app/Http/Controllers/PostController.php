@@ -118,6 +118,10 @@ class PostController extends Controller
     }
     
     public function Handlefile(){
+        $getID3 = new \getID3;
+        $audioPath =  storage_path().'/app/Pideos/'.'1_09hjwGFqMCMyCIZamPjf1CgiRGXFes.mp4';
+        $file = $getID3->analyze($audioPath);
+
         $pusher = App::make('pusher');
 
         $rules = array(

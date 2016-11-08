@@ -48,40 +48,10 @@ $(function() {
 
 
 
-    channel.bind('post', function(data) {
-        var message         = data.message.description,
-            category    = data.message.category,
-            author        = data.message.author,
-            date             = data.message.date,
-            id = data.message.id;
-
-
-        appendPost(id, author, message, category, date);
-
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-bottom-left",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        };
-
-        toastr.info('A problem has been posted !');
-
-    });
     
 
     var channel = pusher.subscribe('channel_'+ user_id);
+    
     channel.bind('message', function(data) {
         var message         = data.message.body,
             from_user_id    = data.message.user_id,
@@ -142,6 +112,39 @@ $(function() {
             type: 'GET',
             dataType: 'json'
         });
+
+    channel.bind('post', function(data) {
+        var message         = data.message.description,
+            category    = data.message.category,
+            author        = data.message.author,
+            date             = data.message.date,
+            id = data.message.id;
+
+
+        appendPost(id, author, message, category, date);
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-left",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        toastr.info('A problem has been posted !');
+
+    });
+
 
 
 
