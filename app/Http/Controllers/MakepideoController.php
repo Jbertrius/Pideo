@@ -77,6 +77,7 @@ class MakepideoController extends Controller
             $audioPath = storage_path().'/app/Pideos/'.$audioEntry['audio'.$i];
 
             $file = $getID3->analyze($audioPath);
+            $time = $file['playtime_seconds'];
 
 
             Storage::makeDirectory('Pideos/'.$userId.'_'.$id);
@@ -88,7 +89,7 @@ class MakepideoController extends Controller
             FFMPEG::convert()->input($imgPath)
                 ->input($audioPath)
                 ->output($videopath.'/section'.$i.'.mp4')
-               ->go('-loop 1 -y','-vcodec libx264 -acodec cop -shortest')
+               ->go('-loop 1 -y','-vcodec libx264 -acodec aac -t '.$time)
                // ->go('-loop 1','-c:v libx264 -t 30 -pix_fmt yuv420p')
             ;
 
@@ -109,7 +110,7 @@ class MakepideoController extends Controller
         $params['path'] = storage_path().'/app/Pideos/'.$userId.'_'.$id.'.mp4';
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
-        //Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
+        Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
 
          $pideo = $this->pideoRepository->store($params);
         
