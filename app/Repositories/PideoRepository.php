@@ -86,7 +86,7 @@ class PideoRepository extends BaseRepository
     }
 
     public function delete($id){
-        $pideo = $this->model->with('filename',$id);
+        $pideo = Pideo::where('filename',$id)->first();
         $pideo->tags()->detach();
         $pideo->delete();
     }

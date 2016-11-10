@@ -1,15 +1,14 @@
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
+
 
 $(function () {
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
 
-    'use strict';
-    
 
     var console = window.console || { log: function () {} };
     var $image = $('#image');
@@ -35,29 +34,7 @@ $(function () {
         }
     };
 
-    $image.on({
-        'build.cropper': function (e) {
-            console.log(e.type);
-        },
-        'built.cropper': function (e) {
-            console.log(e.type);
-        },
-        'cropstart.cropper': function (e) {
-            console.log(e.type, e.action);
-        },
-        'cropmove.cropper': function (e) {
-            console.log(e.type, e.action);
-        },
-        'cropend.cropper': function (e) {
-            console.log(e.type, e.action);
-        },
-        'crop.cropper': function (e) {
-            console.log(e.type, e.x, e.y, e.width, e.height, e.rotate, e.scaleX, e.scaleY);
-        },
-        'zoom.cropper': function (e) {
-            console.log(e.type, e.ratio);
-        }
-    }).cropper(options);
+    $image.cropper(options);
 
     $("#upload").click(function() {
         $("#inputImage").click();
@@ -470,8 +447,29 @@ function sendSection() {
 function deletePideo (filename) {
     var jqxhr = $.ajax({
         type: "POST",
-        url: 'delete/'+filename,
+        url: '/delete/'+filename,
         data: {userId: user_id},
+        dataType: 'html'
+    });
+
+    return jqxhr;
+}
+
+function getUsersList() {
+    var jqxhr = $.ajax({
+        type: "GET",
+        url: '/getUserList',
+        dataType: 'html'
+    });
+
+    return jqxhr;
+}
+
+function sendPideo() {
+    var jqxhr = $.ajax({
+        type: "GET",
+        data : {},
+        url: '/pideo/send',
         dataType: 'html'
     });
 
@@ -536,7 +534,8 @@ $('#go').on('click',function () {
         {
 
 
-            sendSection().done(function (data) {
+            sendSection()
+                .done(function (data) {
 
                 var url = '/pideos/'+data;
                 $('#generateBody').html('');
@@ -553,7 +552,16 @@ $('#go').on('click',function () {
                 });
 
 
-            });
+            })
+                .fail(function () {
+                    var retry = '<div class="text-center">'+
+                        '<i class="fa fa-repeat fa-3x"></i>'+
+                        '</div><div class="row text-center" style="font-size: large;font-weight: bold;">'+
+                        '<span>Retry </span>'+
+                        '</div>';
+
+                    $('#generateBody').html(retry);
+                });
 
 
 
@@ -579,12 +587,31 @@ $('#title').on('change', function () {
 $('.modal').on('click', '#sendPideo', function () {
     var filename = $('video').attr('src').split('/')[2];
 
+    $footer = $($(this).parent());
+
+    if($footer.find('#users').length == 1)
+    {
+        $(this).attr('disabled','disabled');
+        $(this).html('Sending <i class="fa fa-spinner fa-spin"></i>');
+
+    }
+    else{
+        $(this).html('Send <i class="fa fa-spinner fa-spin"></i>');
+        getUsersList().done(function (data) {
+            $('#sendPideo').html('Send');
+            $('#sendPideo').after(data);
+
+            $('.selectpicker').selectpicker();
+        });
+    }
+
 
 
 });
 
 $('.modal').on('click', '#delPideo', function () {
   var filename = $('video').attr('src').split('/')[2];
+    $('#delPideo').attr("disabled","disabled");
     $('#delPideo').html('Deleting <i class="fa fa-spinner fa-spin"></i>');
 
     deletePideo(filename).done(function (data) {

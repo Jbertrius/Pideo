@@ -1,0 +1,7 @@
+{
+  "name": "Piideo",
+  "short_name": "Piideo",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "482941778795"
+}

@@ -229,6 +229,10 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::get('myrequest', [
         'uses' => 'PostController@myrequest',
         'as' => 'myrequest']);
+
+    Route::get('getUserList', [
+        'uses' => 'UserController@getUser',
+        'as' => 'getUser']);
     
     
     

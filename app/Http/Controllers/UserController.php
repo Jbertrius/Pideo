@@ -184,5 +184,9 @@ class UserController extends Controller
         
         return response($user->image_path,200) ;
     }
+    
+    public function getUser(){
+        return  view('partials.userList');
+    }
 
 }

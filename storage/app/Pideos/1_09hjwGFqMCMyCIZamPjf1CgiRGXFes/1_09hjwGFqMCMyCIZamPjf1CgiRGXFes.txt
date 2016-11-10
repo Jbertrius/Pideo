@@ -1,3 +1,0 @@
-#
-file 'section0.mp4'
-file 'section1.mp4'
