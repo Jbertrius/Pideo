@@ -7,6 +7,7 @@
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+
 @endsection
 
 <?php
@@ -45,32 +46,32 @@ foreach($conversations as $conversation)
                             <div class="panel panel-default tabs">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">Personal Informations</a></li>
-                                    <li><a href="#tab-second" onclick="load();" role="tab" data-toggle="tab">Location</a></li>
+                                    <li><a href="#tab-second"  role="tab" data-toggle="tab">Location</a></li>
                                 </ul>
                                 <div class="panel-body tab-content">
                                     <div class="tab-pane active" id="tab-first">
                                         <p>Edit your personnal informations here</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group row">
                                             <label class="col-md-3 col-xs-12 control-label">First Name</label>
-                                            <div class="col-md-6 col-xs-12 edit-style" >
-                                                   {!!  Auth::user()->firstname !!}
+                                            <div class="col-md-4 col-xs-6 edit-style" data-attr="firstname">
+                                                   {!!  Auth::user()->firstname !!} <a href="#" class="simple"  data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                             </div>
                                          
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group row">
                                             <label class="col-md-3 col-xs-12 control-label">Last Name</label>
-                                            <div class="col-md-6 col-xs-12 edit-style" >
-                                               {!!  Auth::user()->lastname !!}
+                                            <div class="col-md-4 col-xs-6 edit-style" data-attr="lastname" >
+                                               {!!  Auth::user()->lastname !!} <a href="#"  class="simple"    data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                             </div>
                                          
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group row">
                                             <label class="col-md-3 col-xs-12 control-label">Password</label>
-                                            <div class="col-md-2 col-xs-12 edit-style">
-                                                *******
+                                            <div class="col-md-4 col-xs-12 edit-style" data-attr="pwd">
+                                                ******* <a href="#"  class="pwd" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                              </div>
 
                                         </div>
@@ -82,9 +83,9 @@ foreach($conversations as $conversation)
 
                                             <div class="col-md-6 col-xs-12 edit-style">
                                             @foreach( Auth::user()->subjects as $subject)
-
-                                                {!! $subject->subjects !!} <a href="#"   data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
-                                                    <br>
+                                                <div class="row">
+                                                {!! $subject->subjects !!} <a href="#"  class="subject" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
+                                                 </div>
                                             @endforeach
                                             </div>
 
@@ -93,16 +94,16 @@ foreach($conversations as $conversation)
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Language</label>
-                                            <div class="col-md-6 col-xs-12 edit-style">
-                                                {!! Auth::user()->lang !!}
+                                            <div class="col-md-4 col-xs-6 edit-style" data-attr="lang">
+                                                {!! Auth::user()->lang !!} <a href="#"  class="lang" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                             </div>
                                          
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-3 col-xs-12 control-label">Tel</label>
-                                            <div class="col-md-6 col-xs-12 edit-style">
-                                                {!! Auth::user()->number !!}
+                                            <div class="col-md-4 col-xs-6 edit-style" data-attr="number">
+                                                {!! Auth::user()->number !!} <a href="#"  class="simple" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                             </div>
                                          
                                         </div>
@@ -115,8 +116,8 @@ foreach($conversations as $conversation)
 
                                         <div class="form-group">
                                             <label class="col-md-2 col-xs-12 control-label">City</label>
-                                            <div class="col-md-6 col-xs-12 edit-style">
-                                                 {!!  Auth::user()->city !!}
+                                            <div class="col-md-4 col-xs-6 edit-style" data-attr="city">
+                                                 {!!  Auth::user()->city !!} <a href="#" class="city"  data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil edit-icon"></span></a>
                                             </div>
                                          
                                         </div>
@@ -155,10 +156,10 @@ foreach($conversations as $conversation)
 @endsection
 
 @section('script')
-    <script>
+          <script>
     Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
     </script>
-    <script src="{{'js/notif.js'}}"></script>
+     <script src="{{'js/notif.js'}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
     <script type='text/javascript' src="{{asset('js/plugins/icheck/icheck.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>

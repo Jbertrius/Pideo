@@ -45,6 +45,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-elfinder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/berkayk/onesignal-laravel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -116,6 +117,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php56" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-util" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/psr-http-message-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
@@ -124,8 +126,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -143,6 +143,7 @@
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-elfinder" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/vendor/berkayk/onesignal-laravel" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -214,6 +215,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-php56" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-util" />
           <root url="file://$MODULE_DIR$/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/psr-http-message-bridge" />
           <root url="file://$MODULE_DIR$/vendor/symfony/routing" />
           <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
           <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
@@ -222,8 +224,6 @@
           <root url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
-          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/almasaeed2010/adminlte" />
@@ -237,6 +237,7 @@
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-elfinder" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
           <root url="file://$MODULE_DIR$/vendor/barryvdh/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/vendor/berkayk/onesignal-laravel" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -308,6 +309,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-php56" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-util" />
           <root url="file://$MODULE_DIR$/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/psr-http-message-bridge" />
           <root url="file://$MODULE_DIR$/vendor/symfony/routing" />
           <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
           <root url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
@@ -316,8 +318,6 @@
           <root url="file://$MODULE_DIR$/vendor/vinkla/pusher" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-laravel" />
-          <root url="file://$MODULE_DIR$/vendor/wensleydale/sendpulse-rest-api-php" />
         </SOURCES>
       </library>
     </orderEntry>

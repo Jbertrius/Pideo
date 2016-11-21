@@ -233,6 +233,18 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::get('getUserList', [
         'uses' => 'UserController@getUser',
         'as' => 'getUser']);
+
+    Route::post('pideo/send', [
+        'uses' => 'MakepideoController@send',
+        'as' => 'sendpideo']);
+
+    Route::post('user/update/{variable}', 'UserController@edit');
+
+    Route::post('user/update_city/{variable}', 'UserController@editCity');
+
+    Route::get('subject', 'UserController@getSubject');
+
+    Route::post('subject/update', 'UserController@updateSubject');
     
     
     

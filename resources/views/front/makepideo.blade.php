@@ -1,14 +1,81 @@
-@extends('layouts.master')
 
-@section('title')
-    Make a Pideo
-@endsection
 
-@section('style')
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make a pideo</title>
+    <meta name="description" content="Pideo" />
+    <meta name="keywords" content="html, pideo, streaming, social network, web design" />
+    <meta name="author" content="Jbertrius" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
+            persistNotification: false,
+            autoRegister: false,
+            notifyButton: {
+                enable: true,
+                displayPredicate: function() {
+                    return OneSignal.isPushNotificationsEnabled()
+                            .then(function(isPushEnabled) {
+                                /* The user is subscribed, so we want to return "false" to hide the notify button */
+                                return !isPushEnabled;
+                            });
+                }
+
+            }
+        }]);
+    </script>
+
+
+
+    <!-- Favicons (created with http://realfavicongenerator.net/)-->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('img/favicons/apple-touch-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('img/favicons/apple-touch-icon-60x60.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('img/favicons/favicon-32x32.png" sizes="32x32')}}">
+    <link rel="icon" type="image/png" href="{{asset('img/favicons/favicon-16x16.png" sizes="16x16')}}">
+    <link rel="manifest" href="{{asset('img/favicons/manifest.json')}}">
+    <link rel="shortcut icon" href="{{asset('img/favicons/favicon.ico')}}">
+    <meta name="msapplication-TileColor" content="#00a8ff">
+    <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+    <!--[if lt IE 9]>
+    {{ Html::style('https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js') }}
+    {{ Html::style('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}
+    <![endif]-->
+
+    <!-- Styles -->
+
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.css')}}"  media="screen,projection"/>
+
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('js/plugins/mediaelement/skin/mediaelementplayer.css')}}"/>
-@endsection
+
+    <link rel="stylesheet" type="text/css"   href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+
+
+
+</head>
+
+
+
 
 
 <?php
@@ -22,8 +89,9 @@ foreach($conversations as  $conversation)
 }
 ?>
 
+<body>
 
-@section('contenu')
+
 
     <div class="page-container">
             @include('partials/sidebar', ['firstname' => Auth::user()->firstname, 'lastname' => Auth::user()->lastname, 'page' => 'MakePideo', 'profilePic' => Auth::user()->image_path])
@@ -31,7 +99,7 @@ foreach($conversations as  $conversation)
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 
                     <!-- START BREADCRUMB -->
-            <ul class="breadcrumb">
+            <ul class="breadcrumb" style="margin-bottom: 0px;">
                 <li>Home</li>
                 <li class="active">Make a Pideo</li>
             </ul>
@@ -44,10 +112,11 @@ foreach($conversations as  $conversation)
                         <h2><span class="fa fa-film"></span> Make a Pideo</h2>
                     </div>
 
-                    <div class="pull-right">
-                        <button type="button" id="upload" class="btn btn-primary btn-sm "><span class="fa fa-picture-o"></span>Upload Picture</button>
-                        <button type="button" id="record" class="btn btn-primary btn-sm disabled" data-toggle="modal" data-target="#recording"><span class="fa fa-microphone"></span>Record Audio</button>
-                       <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span></button>
+                    <div class="pull-right ">
+                        <button type="button" id="upload" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-picture-o"></span>Upload Picture</button>
+                        <button type="button" id="record" class="btn btn-primary btn-sm disabled hidden-xs" data-toggle="modal" data-target="#recording"><span class="fa fa-microphone"></span>Record Audio</button>
+
+                        <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span><span class="badge sectionCounter red"></span></button>
                     </div>
                 </div>
 
@@ -61,7 +130,7 @@ foreach($conversations as  $conversation)
                         </div>
                     </div>
 
-                    <div class=".add" style="width:auto;">
+                    <div class="add" style="width:auto;">
                             <button type="button"  onclick="addsection(this);" class="btn btn-primary btn-sm"><span class="fa fa-plus"></span>Add Section</button>
                     </div>
 
@@ -98,7 +167,7 @@ foreach($conversations as  $conversation)
                 <div class="modal-body">
 
                     <div class="col-xs-4 col-xs-offset-4 text-center">
-                        <a id="start"><span class="fa fa-microphone fa-5x micro"></span></a>
+                        <a id="start" href="#"><span class="fa fa-microphone fa-5x micro"></span></a>
                     </div>
 
                     <div class="row">
@@ -164,13 +233,34 @@ foreach($conversations as  $conversation)
         </div>
     </div>
 
+  <div class="fixed-action-btn hidden-md hidden-lg">
+    <a class="btn-floating btn-large indigo" data-toggle="tooltip" data-placement="left" title="Create">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating green disabled" id="audioRecord" data-toggle="tooltip" data-placement="left" title="Record audio"><i class="material-icons">mic</i></a></li>
+
+      <li><a class="btn-floating yellow darken-1" id="addsection" data-toggle="tooltip" data-placement="left" title="Add section"><i class="material-icons">add</i></a></li>
+
+      <li><a class="btn-floating blue" id="uploadPic" data-toggle="tooltip" data-placement="left" title="Upload picture"><i class="material-icons">panorama</i></a></li>
+    </ul>
+  </div>
+        
+
 <input type="hidden" id='actual' value="">
-
-@endsection
-
+    <div class="basic stopwatch"></div>
 
 
-@section('script')
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/editPic.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script>
         Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
     </script>
@@ -183,6 +273,7 @@ foreach($conversations as  $conversation)
 
     <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/tagsinput/jquery.tagsinput.min.js')}}"></script>
+ 
 
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
@@ -191,6 +282,7 @@ foreach($conversations as  $conversation)
     <script type="text/javascript" src="{{asset('js/plugins/mediaelement/mediaelement.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/mediaelement/mediaelementplayer.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/Recorder/recorder.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/Stopwatch.js')}}"></script>
     <script>
         var
                 user_id   = "{{ Auth::user()->id }}";
@@ -224,4 +316,7 @@ foreach($conversations as  $conversation)
         });
     </script>
 
-@endsection
+
+
+</body>
+</html>

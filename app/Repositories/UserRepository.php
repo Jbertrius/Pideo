@@ -124,8 +124,6 @@ class UserRepository extends BaseRepository
     {
         $user->confirmed = isset($inputs['confirmed']);
 
-       
-
         $this->save($user, $inputs);
         $subjects_id = [];
         if (array_key_exists('sub1', $inputs) && $inputs['sub1'] != '' && array_key_exists('sub2', $inputs) && $inputs['sub2'] != '' ) {
@@ -152,6 +150,43 @@ class UserRepository extends BaseRepository
 
 
     }
+    
+    public function updateAttribute($variable, $value){
+
+       User::where('id', \Auth::user()->id)->update([''.$variable => $value]);;
+
+        return $value;
+    }
+
+    public function updateCity($variable, $value, $lat, $lng){
+
+        User::where('id', \Auth::user()->id)->update([''.$variable => $value, 'latitude' => $lat, 'longitude' => $lng]);;
+
+        return $value;
+    }
+
+    public function updateSubject($old, $new_id){
+        
+        $sub = Subject::where('subjects', $old)->first()->id;
+        $subs = array();
+
+        
+        foreach (\Auth::user()->subjects as $subject)
+        {
+            if($sub == $subject->id)
+                array_push($subs, $new_id);
+            else
+                array_push($subs, $subject->id); 
+
+        }
+
+        \Auth::user()->subjects()->sync($subs);
+        
+        return Subject::where('id',$new_id)->first()->subjects;
+        
+    }
+
+
 
     /**
      * Get users collection paginate.
@@ -288,5 +323,8 @@ class UserRepository extends BaseRepository
     {
         return $this->model->where('id', '<>', $id)->get();
     }
+
+    
+    
 
 }

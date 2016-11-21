@@ -17,11 +17,11 @@
         "anam/phantommagick": "^1.0",
         "linkthrow/ffmpeg": "dev-master",
         "vinkla/pusher": "^2.4",
-        "wensleydale/sendpulse-laravel": "1.*",
         "backpack/base": "0.6.x",
         "backpack/crud": "3.0",
         "backpack/generators": "^1.1",
-        "james-heinrich/getid3": "^1.9"
+        "james-heinrich/getid3": "^1.9",
+        "berkayk/onesignal-laravel": "^0.9.4"
 
     },
     "require-dev": {

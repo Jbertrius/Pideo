@@ -62,7 +62,8 @@ $(function() {
         var
             $messageList  = $("#messageList"),
             $msgContent = $('#messageList').find('.item').parent(),
-            $conversation = $("#" + data.room);
+            $conversation = $("#" + data.room),
+            $consId = $("#" + data.message.conserId);
         
         if(conversation != current_conversation)
         {
@@ -94,6 +95,7 @@ $(function() {
         getMessages(conversation).done(function(data) {
 
             $conversation.find('p').text(message);
+            $consId.find('p').text(message);
 
             if(conversation === current_conversation) {
                 $msgContent.html(data);
@@ -371,7 +373,7 @@ $(function() {
      * Shift+Enter to send message
      */
     $('#messageBox').keypress(function (event) {
-        if (event.keyCode == 13 && event.shiftKey) {
+        if (event.keyCode == 13) {
             event.preventDefault();
 
             $('#btnSendMessage').trigger('click');
@@ -444,3 +446,29 @@ document.getElementById('links').onclick = function (event) {
         links = this.getElementsByTagName('a');
     blueimp.Gallery(links, options);
 };
+
+$('body').on('click','.playsign2',  function(e){
+    e.preventDefault();
+    var url = $(this).data('url');
+
+    $( '#' + $(this).data('modal-id') ).find('video').attr('src',url);
+    $('video').mediaelementplayer({
+        features: ['playpause','current','progress','duration','tracks','volume','fullscreen'],
+        videoVolume: 'horizontal',
+        alwaysShowControls: true
+    });
+
+    $( '#' + $(this).data('modal-id') ).modal();
+    setInterval(function(){checkvideo()},3000);
+});
+
+function checkvideo() {
+    var height = $('.mejs-video').height();
+    if(height == 0)
+        $('#videoPlayer').get(0).player.load();
+}
+
+/*
+$('.modal-header').on('click', 'button', function () {
+   $('#videoPlayer').get(0).player.pause();
+});*/

@@ -16,6 +16,8 @@ class Conversation extends Model
         return $this->belongsToMany('App\Models\User', 'conversations_users', 'conversation_id', 'user_id')->where('user_id', '<>', Auth::user()->id);
     }
 
+  
+
     public function messages() {
         return $this->hasMany('App\Models\Message', 'conversation_id', 'id');
     }

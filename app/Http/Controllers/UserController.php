@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use View;
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
+use App\Models\Subject;
 use App\Models\User;
 use Illuminate\Support\Facades\Response;
 use App\Repositories\UserRepository;
@@ -120,12 +122,26 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($variable, Request $request)
     {
-        $user = $this->userRepository->getById($id);
+        $value = $request->get('value');
+        $attribute = $this->userRepository->updateAttribute($variable, $value);
 
-        return view('edit',  compact('user'));
+        return $attribute;
     }
+
+
+    public function editCity($variable, Request $request)
+    {
+        $value = $request->get('value');
+        $lat = $request->get('lat');
+        $lng = $request->get('lng');
+
+        $attribute = $this->userRepository->updateCity($variable, $value, $lat, $lng);
+
+        return $attribute;
+    }
+
 
     /**
      * Update the specified resource in storage.
@@ -187,6 +203,23 @@ class UserController extends Controller
     
     public function getUser(){
         return  view('partials.userList');
+    }
+
+    public function getSubject(Request $request)
+    {
+        $cur = $request->get('subject');
+        $cur = Subject::where('subjects',$cur)->first();
+        
+        return View::make('partials.subjectList', ['current' => $cur->subjects, 'id' => $cur->id]);
+    }
+
+    public function updateSubject(Request $request)
+    {
+        $curent = $request->get('current');
+        $update = $request->get('update'); 
+        
+        return $this->userRepository->updateSubject($curent,$update);
+ 
     }
 
 }

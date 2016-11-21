@@ -7,6 +7,8 @@
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/pideo.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('js/plugins/mediaelement/skin/mediaelementplayer.css')}}"/>
 @endsection
 
 
@@ -129,6 +131,25 @@ foreach($conversations as $conversation)
         <a class="play-pause"></a>
         <ol class="indicator"></ol>
     </div>
+
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="  ">
+                            <video id="videoPlayer" width="640" height="360" style="width: 100%; height: 100%;"  ></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('script')
@@ -140,6 +161,9 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
+
+    <script type="text/javascript" src="{{asset('js/plugins/mediaelement/mediaelement.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/plugins/mediaelement/mediaelementplayer.js')}}"></script>
     <script>
         Pusher.logToConsole = true;
         var

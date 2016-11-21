@@ -20,6 +20,30 @@
   zoom: 1;
 }
 
+.sectionCounter{
+    border-radius: 50% !important;
+    height: 19px;
+    min-width: 0 !important;
+    margin-left: 1px !important;
+    margin-right: -5px;
+}
+
+.timer{
+    color: white;
+    margin-left: 50%;
+    font-size: 15px;
+    font-family: Roboto;
+}
+
+.pideo{
+    height: 100px;
+}
+
+.frame{
+    border: 6px solid white;
+    height: 100px;
+}
+
 .edit-icon{
     font-size: 12px;
 }
@@ -200,7 +224,7 @@ padding-left: 0px !important;
 }
 
 .fix-height{
-    height: 115px !important;
+    height: 155px !important;
 }
 
 .mejs-container {
@@ -255,25 +279,40 @@ padding-left: 0px !important;
   visibility:hidden;
 }
 
+.playsign2{
+    position: absolute;
+    left: 76px;
+    top: 40px;
+    color: white;
+}
+
+ .video{
+    width: 25%;
+}
+
+.in > .video{
+    float: right;
+}
+
 .first:hover > .playsign{
   visibility:visible;
 }
 
-.playsign:hover{
+.playsign:hover, .playsign2:hover{
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
   transform: scale(1.5);
 }
 
-.first > img, .playsign{
+.first > img, .playsign, .playsign2, .video > img{
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.first:hover > img, .post-img:hover > img  {
+.video:hover > img, .first:hover > img, .post-img:hover > img  {
   filter: brightness(50%);
   -webkit-filter: brightness(50%);
   -moz-filter: brightness(50%);
@@ -468,6 +507,7 @@ body {
 }
 .page-container .page-sidebar.page-sidebar-fixed {
   position: fixed;
+    margin-bottom: -20px;
 }
 .page-container.page-container-wide .page-sidebar {
   width: 50px;
@@ -7550,6 +7590,17 @@ li.ext_zip {
     padding: 0px 10px;
   }
 
+  .text-area{
+      padding-left: 0 !important;
+      margin-left: -33px !important;
+      padding-right: 0 !important;
+      margin-right: -33px !important;
+  }
+
+    .video{
+        width: 33%;
+    }
+
   .edit-banner{
       left : 305px;
   }
@@ -7646,6 +7697,7 @@ li.ext_zip {
     height: 50px;
     max-height: auto;
     overflow: visible;
+
   }
   .x-navigation.x-navigation-panel li.xn-icon-button {
     width: 50px;

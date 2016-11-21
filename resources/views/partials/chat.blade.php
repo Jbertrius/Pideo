@@ -35,6 +35,15 @@
                 <div class="text" >
                      <a href="{{ $url }}" @if($message->user->id == $userId) style="color: white" @endif>{{ $file->original_filename }}</a>
                 </div>
+        @elseif($message->type == 'pideo')
+            <?php
+                $pideo =  \App\Models\Pideo::where('id', '=', $message->body)->firstOrFail();
+                $filename =  str_replace('.mp4', '.jpg', $pideo->filename);
+            ?>
+            <div class="text video" @if($message->user->id == $userId) style="margin-right: 12px;" @endif >
+                        <img src="/images/{{ $filename }}/0" class="frame" style="height: 100px; ">
+                 <span class="fa fa-4x fa-play-circle-o playsign2" data-url = "/pideos/{{ $pideo->filename }}" data-modal-id="modal-video"></span>
+             </div>
         @endif
 
 

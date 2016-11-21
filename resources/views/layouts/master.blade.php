@@ -14,16 +14,37 @@
 
 
     <link rel="manifest" href="/manifest.json">
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
+            persistNotification: false,
             autoRegister: false,
-            notifyButton: {
-                enable: true
-            }
+            promptOptions: {
+                /* Change bold title, limited to 30 characters */
+                siteName: 'Piideo',
+                /* Subtitle, limited to 90 characters */
+                actionMessage: "We'd like to show you notifications for the latest posts and messages.",
+                /* Example notification title */
+                exampleNotificationTitle: 'Example notification',
+                /* Example notification message */
+                exampleNotificationMessage: 'This is an example notification',
+                /* Text below example notification, limited to 50 characters */
+                exampleNotificationCaption: 'You can unsubscribe anytime',
+                /* Accept button text, limited to 15 characters */
+                acceptButtonText: "ALLOW",
+                /* Cancel button text, limited to 15 characters */
+                cancelButtonText: "NO THANKS"
+            },
+
         }]);
+
+        OneSignal.push(function() {
+            OneSignal.registerForPushNotifications({
+                modalPrompt: true
+            });
+        });
     </script>
 
 
@@ -74,13 +95,19 @@
 
 <!-- Scripts -->
 <script src="{{ elixir('js/app.js') }}"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 
 
+  <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
 
-<script src="//js.pusher.com/3.2.0/pusher.min.js"></script>
-<script type="text/javascript" src="{{asset('js/editPic.js')}}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+<script type="text/javascript" src="{{asset('js/editPic.js')}}"></script>
 
 @yield('script')
 </body>

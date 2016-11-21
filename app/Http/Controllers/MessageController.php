@@ -30,9 +30,15 @@ class MessageController extends Controller
     public function index() {
 
         $conversation = Conversation::where('name', Input::get('conversation'))->first();
-        $messages = Message::where('conversation_id', $conversation->id)->orderBy('created_at')->take(10)->get();
+        $messages = Message::where('conversation_id', $conversation->id)->orderBy('created_at', 'desc')->take(20)->get();
 
-        $response['messages'] = $messages;
+        $result  = array();
+        foreach ($messages as $message)
+            array_push($result, $message);
+
+        krsort($result);
+        $response['messages'] = $result;
+
         $response['userId'] = Auth::user()->id;
 
         return View::make('partials/chat',$response)->render();

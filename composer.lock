@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1d3240155cb892627f8383e205f6dad",
-    "content-hash": "dcf9728043b41142ab4edd175e750507",
+    "hash": "3bc4aaaab1e34003369045fce7ed7f6e",
+    "content-hash": "0066797149bacc6f01719dcfd9980e74",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
-            "version": "v2.3.7",
+            "version": "v2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/almasaeed2010/AdminLTE.git",
-                "reference": "797b65b3ca90525a4e048de5b8d02ba6878ea239"
+                "reference": "ced14b133daed8c163863a497c43dcf69eea4340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/797b65b3ca90525a4e048de5b8d02ba6878ea239",
-                "reference": "797b65b3ca90525a4e048de5b8d02ba6878ea239",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/ced14b133daed8c163863a497c43dcf69eea4340",
+                "reference": "ced14b133daed8c163863a497c43dcf69eea4340",
                 "shasum": ""
             },
             "type": "library",
@@ -45,7 +45,7 @@
                 "theme",
                 "web"
             ],
-            "time": "2016-10-19 15:34:25"
+            "time": "2016-11-04 14:42:55"
         },
         {
             "name": "anam/phantommagick",
@@ -624,6 +624,56 @@
                 }
             ],
             "time": "2016-06-13 19:28:20"
+        },
+        {
+            "name": "berkayk/onesignal-laravel",
+            "version": "v0.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/berkayk/laravel-onesignal.git",
+                "reference": "e228f4501dff5674cffc162fbbcbe1de0f2e8592"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/berkayk/laravel-onesignal/zipball/e228f4501dff5674cffc162fbbcbe1de0f2e8592",
+                "reference": "e228f4501dff5674cffc162fbbcbe1de0f2e8592",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/support": "4.*|5.*",
+                "php": ">=5.4.0",
+                "symfony/psr-http-message-bridge": "^0.2.0"
+            },
+            "require-dev": {
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Berkayk\\OneSignal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Berkay Kaya",
+                    "email": "berkayk@gmail.com",
+                    "homepage": "http://berkaykaya.com"
+                }
+            ],
+            "description": "OneSignal Push Wrapper Laravel",
+            "keywords": [
+                "WebPush",
+                "laravel",
+                "laravel 5",
+                "onesignal",
+                "push"
+            ],
+            "time": "2016-10-19 08:44:29"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -3254,6 +3304,60 @@
             "time": "2016-07-28 11:13:34"
         },
         {
+            "name": "symfony/psr-http-message-bridge",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/psr-http-message-bridge.git",
+                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/dc7e308e1dc2898a46776e2221a643cb08315453",
+                "reference": "dc7e308e1dc2898a46776e2221a643cb08315453",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "psr/http-message": "~1.0",
+                "symfony/http-foundation": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7|~3.0"
+            },
+            "suggest": {
+                "zendframework/zend-diactoros": "To use the Zend Diactoros factory"
+            },
+            "type": "symfony-bridge",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "PSR HTTP message bridge",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr-7"
+            ],
+            "time": "2015-05-29 17:57:12"
+        },
+        {
             "name": "symfony/routing",
             "version": "v3.0.9",
             "source": {
@@ -3617,87 +3721,6 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
-        },
-        {
-            "name": "wensleydale/sendpulse-laravel",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/garethtdavies/sendpulse-laravel.git",
-                "reference": "359b79656ca60e391eaaa1dd7c621d57216f5ad9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/garethtdavies/sendpulse-laravel/zipball/359b79656ca60e391eaaa1dd7c621d57216f5ad9",
-                "reference": "359b79656ca60e391eaaa1dd7c621d57216f5ad9",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.*",
-                "wensleydale/sendpulse-rest-api-php": "1.*"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SendPulse\\SendPulseLaravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gareth Davies",
-                    "email": "hello@garethtdavies.com"
-                }
-            ],
-            "description": "A minimal service provider to set up and use the SendPulse PHP library in Laravel 5",
-            "keywords": [
-                "laravel",
-                "sendpulse"
-            ],
-            "time": "2016-01-19 22:00:49"
-        },
-        {
-            "name": "wensleydale/sendpulse-rest-api-php",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/garethtdavies/sendpulse-rest-api-php.git",
-                "reference": "b9d3cb8d182bf20ff396e4521b53641e0d537657"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/garethtdavies/sendpulse-rest-api-php/zipball/b9d3cb8d182bf20ff396e4521b53641e0d537657",
-                "reference": "b9d3cb8d182bf20ff396e4521b53641e0d537657",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SendPulse\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gareth Davies",
-                    "email": "hello@garethtdavies.com"
-                }
-            ],
-            "description": "Composer enabled version of the SendPulse REST client library",
-            "keywords": [
-                "sendpulse"
-            ],
-            "time": "2016-02-06 05:15:39"
         }
     ],
     "packages-dev": [

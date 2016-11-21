@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Subject;
+use App\Models\Conversation;
 use App\Repositories\PideoRepository;
 use Illuminate\Http\Request;
+use App\Models\Pideo;
 use Anam\PhantomMagick\Converter;
 use View;
 use Linkthrow\Ffmpeg\Classes\FFMPEG;
 use Image;
+use App\Models\MessageNotification;
 use File;
-use App\Models\Pideo;
+ use App\Models\User;
+ use App\Models\Message;
 use Storage;
 use App\Http\Requests;
 use App\Repositories\FileEntryRepository;
@@ -26,15 +30,15 @@ class MakepideoController extends Controller
         $this->fileentryRepository = $fileentryRepository;
         $this->pideoRepository = $pideoRepository;
     }
-    
+
      public function index(){
         return View::make('front/makepideo');
      }
-    
+
     public function back($result){
         return View::make('layouts.back', $result);
     }
-    
+
     public function make(Request $request){
 
         $getID3 = new \getID3;
@@ -49,10 +53,10 @@ class MakepideoController extends Controller
 
         $params['title'] = $request->input('title');
         $params['cat'] = $request->input('category');
-        
+
         if($request->has('tags'))
         $params['tags'] = $request->input('tags');
-        
+
         $params['userId'] = $userId;
 
 
@@ -84,6 +88,9 @@ class MakepideoController extends Controller
 
             $img = Image::make(storage_path().'/app/Pideos/'.$imgEntry['img'.$i])->resize(1280, 720)->insert($logo)->save($imgPath);
 
+            if($i == 0)
+                copy( storage_path().'/app/Pideos/'.$imgEntry['img'.$i] , storage_path().'/app/Pictures/'.$userId.'_'.$id.'.jpg');
+
 
 
             FFMPEG::convert()->input($imgPath)
@@ -98,7 +105,7 @@ class MakepideoController extends Controller
 
             $this->fileentryRepository->delete('Pideos', $imageSession->id);
             $this->fileentryRepository->delete('Pideos', $audioSession->id);
-        
+
         }
 
         File::put($videopath.'/'.$userId.'_'.$id.'.txt',implode(PHP_EOL, $videoList));
@@ -110,20 +117,32 @@ class MakepideoController extends Controller
         $params['path'] = storage_path().'/app/Pideos/'.$userId.'_'.$id.'.mp4';
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
-        Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
+
+
 
          $pideo = $this->pideoRepository->store($params);
-        
+
+        try{
+        Storage::deleteDirectory('Pideos/'.$userId.'_'.$id);
+        }catch (\Exception $e){
+
+        }
+
         return $pideo->filename;
 
 
+
+
+
     }
-    
+
     public function delete($filename){
 
         Storage::delete('Pideos/'.$filename);
         $this->pideoRepository->delete($filename);
 
+        $filename =  str_replace('.mp4', '.jpg', $filename);
+        Storage::delete('Pictures/'.$filename);
     }
 
     public function getPideos($filename){
@@ -138,6 +157,77 @@ class MakepideoController extends Controller
         return response("File doesn't exists", 404);
 
     }
+    
+    public function send(Request $request){
+        
+        $rules = array(
+            'id' => 'required',
+            'pideo'  =>  'required',
+            'conversation'  =>  'required',
+
+        );
+
+        $validator = \Validator::make($request->all() , $rules);
+
+        if($validator->fails()) {
+            return \Response::json([
+                'success' => false,
+                'result' => $validator->messages()
+            ]);
+        }
+
+        $id = $request->input('conversation');
+        $conversation = Conversation::where('name', $id)->first();
+
+        $pideo_name = $request->input('pideo');
+        $pideo = Pideo::where('filename', $pideo_name)->first();
+
+        $params = array(
+            'conversation_id' => $conversation->id,
+            'body'               =>   $pideo->id,
+            'type'              =>  'pideo',
+            'user_id'           => \Auth::user()->id,
+        );
+        
+        $conversation->save();
+
+        $authorMsg = \Auth::user();
+        $message = Message::create($params);
+
+
+        // Create Message Notifications
+        $messages_notifications = array();
+
+        foreach($conversation->users()->get() as $user) {
+            array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
+            $this->sendNotif($user->id, $id, 'Pideo :'.$pideo->title, $authorMsg, $conversation->id  );
+        }
+
+        $message->messages_notifications()->saveMany($messages_notifications);
+
+
+         return   redirect()->route('chat.index');
+        
+        
+    }
+
+    private function sendNotif($idest, $room, $message, $user, $conver){
+        $pusher = \App::make('pusher');
+
+        $pusher->trigger('channel_'.$idest, 'message',
+            array(
+                'room'        => $room,
+                'message'   => array( 'body' => $message,
+                    'user_id' => $user->id,
+                    'fullname' => $user->firstname.' '.$user->lastname,
+                    'img' => $user->image_path,
+                    'conserId' => $conver),
+            ));
+    }
 
 
 }
+
+
+
+

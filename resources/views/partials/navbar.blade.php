@@ -46,6 +46,8 @@
 
                             @if( $last->type == 'text')
                                 {{ Str::words($last->body, 5) }}
+                            @elseif($last->type == 'pideo')
+                              Pideo : {{ \App\Models\Pideo::where('id', '=', $last->body)->firstOrFail()->title }}
                             @else
                                 {{ \App\Models\Fileentry::where('id', '=', $last->body)->firstOrFail()->original_filename }}
                             @endif

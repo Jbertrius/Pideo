@@ -29,13 +29,10 @@ function initialize() {
       // This method returns the position of the click on the map.
       var lat = event.latLng.lat().toFixed(6);
       var lng = event.latLng.lng().toFixed(6);
-
       // Call createMarker() function to create a marker on the map.
       createMarker(lat, lng);
-
       // getCoords() function inserts lat and lng values into text boxes.
       getCoords(lat, lng);
-
    });
 
 }
@@ -125,4 +122,3 @@ function getCoords(lat, lng) {
 }
 
 
- 

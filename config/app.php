@@ -175,10 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Services\Html\HtmlServiceProvider::class,
-        SendPulse\SendPulseLaravel\SendPulseLaravelServiceProvider::class,
         Backpack\Base\BaseServiceProvider::class,
         Backpack\CRUD\CrudServiceProvider::class,
         Backpack\Generators\GeneratorsServiceProvider::class,
+        Berkayk\OneSignal\OneSignalServiceProvider::class,
          
 
     ],
@@ -233,7 +233,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Converter' => Anam\PhantomMagick\Facades\Converter::class,
         'FFMPEG' => Linkthrow\Ffmpeg\Facade\FfmpegFacade::class,
-        'SendPulse' => SendPulse\SendPulseLaravel\SendPulseFacade::class,
+        'OneSignal' => Berkayk\OneSignal\OneSignalFacade::class
 
 
     ],

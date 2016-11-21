@@ -1,4 +1,4 @@
-
+var Timer;
 
 $(function () {
 
@@ -155,16 +155,26 @@ function doneEncoding( blob ) {
 function toggleRecording( e ) {
     if (e.classList.contains("recording")) {
         // stop recording
+        $('.progress').remove();
+        Timer.stop();
+        Timer.reset();
+        $('.basic').html('');
         audioRecorder.stop();
         e.classList.remove("recording");
         audioRecorder.getBuffers( gotBuffers );
     } else {
+
+        $('.content-frame-body').prepend('<div class="progress" style="background-color: #e25e5e;margin-bottom: 0px;"><span class="timer"></span><div class="indeterminate" style="background-color: #ff0a0a;"></div></div>');
+        var elems = document.getElementsByClassName("basic");
+        Timer =   new Stopwatch(elems[0]);
+
         // start recording
         if (!audioRecorder)
             return;
         e.classList.add("recording");
 
         audioRecorder.clear();
+        Timer.start();
         audioRecorder.record();
     }
 }
@@ -301,10 +311,17 @@ function createPlayer() {
 
 window.addEventListener('load', initAudio );
 
-$("#start").click(function() {
-   toggleRecording(this);
+$("#start").click(function(e) {
+    e.preventDefault();
+
+
+    toggleRecording(this);
     $(this).find('span').toggleClass('shine');
 });
+
+function refreshCount(){
+    $('.content-frame-right-toggle').find('.badge').text($('.content-frame-right').find('.panel-default').length);
+}
 
  function addsection (e) {
     var result;
@@ -325,14 +342,15 @@ $("#start").click(function() {
             $dataScaleY.val(e.scaleY);
         }
     };
-
-
+     
     url = result.toDataURL("image/jpeg", 1.0);
 
 
         
         e.remove();
-        
+
+
+
         $(".content-frame-right").append('<div class="panel panel-default" style="width:auto;">'+
             '<div class="panel-body">'+
             '<div class="first" style="width: 250px; height: 140.625px;">'+
@@ -344,7 +362,7 @@ $("#start").click(function() {
             '</div>');
 
         $(".content-frame-right").append(
-            '<div class=".add" style="width:auto;">'+
+            '<div class="add" style="width:auto;">'+
             '<button type="button"  onclick="addsection(this);" class="btn btn-primary btn-sm"><span class="fa fa-plus"></span>Add Section</button>'+
             '</div>');
 
@@ -355,11 +373,17 @@ $("#start").click(function() {
 
 
      $('#record').removeClass('disabled');
+     $('#audioRecord').removeClass('disabled');
      $('.player').find('audio').remove();
      
      if(!$('.content-frame-top').find('.pull-right').find('#generate').length)
-     $('.content-frame-top').find('.pull-right').prepend('<button type="button" id="generate" data-toggle="modal" data-target="#pideo"" class="btn btn-primary btn-sm "><span class="fa fa-video-camera"></span>Generate Pideo</button>');
+     {
+         $('.content-frame-top').find('.pull-right').prepend('<button type="button" id="generate" data-toggle="modal" data-target="#pideo"" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-video-camera"></span>Generate Pideo</button>');
+         $('.fixed-action-btn').find('ul').prepend('<li><a class="btn-floating red" data-toggle="tooltip" id="float-generate" data-placement="left" title="Generate Pideo"><i class="material-icons">videocam</i></a></li>');
+     }
 
+     refreshCount();
+ 
 }
 
 
@@ -466,9 +490,13 @@ function getUsersList() {
 }
 
 function sendPideo() {
+    var id,conversation;
+    id = $('.selectpicker').val().split('_')[0];
+    conversation = $('.selectpicker').val().split('_')[1];
+
     var jqxhr = $.ajax({
-        type: "GET",
-        data : {},
+        type: "POST",
+        data : {id : id, pideo :  $('#generateBody').data('pideo'), conversation : conversation },
         url: '/pideo/send',
         dataType: 'html'
     });
@@ -491,6 +519,7 @@ function getBlob(url) {
 
 function erase (e) {
     $(e).parent().parent().parent().remove();
+    refreshCount();
 }
 
 function dataURItoBlob(dataURI) {
@@ -538,17 +567,20 @@ $('#go').on('click',function () {
                 .done(function (data) {
 
                 var url = '/pideos/'+data;
+                    
+                $('#generateBody').data('pideo', data);
                 $('#generateBody').html('');
 
                 $('#generateBody').append('<div id="video-container"></div>')
-                $('#generateBody').find('div').html('<video controls="" src='+url+' width="500" height="281"></video>');
+                $('#generateBody').find('div').html('<video controls="" src='+url+' width="500" height="281" style="width: 100%; height: 100%;"></video>');
                 $('#generateBody').after('<div class="modal-footer">'+
                     '<button type="button" class="btn btn-primary pull-left" id="sendPideo" >Send</button>'+
                     '<button type="button" class="btn btn-primary pull-right" id="delPideo" >Delete</button>'+
                     '</div>');
                 $('video').mediaelementplayer({
                     features: ['playpause','current','progress','duration','tracks','volume','fullscreen'],
-                    videoVolume: 'horizontal'
+                    videoVolume: 'horizontal',
+                    alwaysShowControls: true
                 });
 
 
@@ -594,13 +626,18 @@ $('.modal').on('click', '#sendPideo', function () {
         $(this).attr('disabled','disabled');
         $(this).html('Sending <i class="fa fa-spinner fa-spin"></i>');
 
+        sendPideo().done(function () {
+
+        });
+
     }
     else{
+        $(this).attr('disabled','disabled');
         $(this).html('Send <i class="fa fa-spinner fa-spin"></i>');
         getUsersList().done(function (data) {
             $('#sendPideo').html('Send');
             $('#sendPideo').after(data);
-
+            $('#sendPideo').removeAttr('disabled');
             $('.selectpicker').selectpicker();
         });
     }
@@ -618,4 +655,20 @@ $('.modal').on('click', '#delPideo', function () {
         location.reload();
     });
 
+});
+
+$('#uploadPic').on('click', function () {
+    $('#upload').trigger('click');
+});
+
+$('#addsection').on('click', function () {
+    $('.add').find('button').trigger('click');
+});
+
+$('#audioRecord').on('click', function () {
+    $('#start').trigger('click');
+});
+
+$('body').on('click', '#float-generate', function () {
+    $('#generate').trigger('click');
 });
