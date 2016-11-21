@@ -21,30 +21,18 @@
             appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
             persistNotification: false,
             autoRegister: false,
-            promptOptions: {
-                /* Change bold title, limited to 30 characters */
-                siteName: 'Piideo',
-                /* Subtitle, limited to 90 characters */
-                actionMessage: "We'd like to show you notifications for the latest posts and messages.",
-                /* Example notification title */
-                exampleNotificationTitle: 'Example notification',
-                /* Example notification message */
-                exampleNotificationMessage: 'This is an example notification',
-                /* Text below example notification, limited to 50 characters */
-                exampleNotificationCaption: 'You can unsubscribe anytime',
-                /* Accept button text, limited to 15 characters */
-                acceptButtonText: "ALLOW",
-                /* Cancel button text, limited to 15 characters */
-                cancelButtonText: "NO THANKS"
-            },
+            notifyButton: {
+                enable: true,
+                displayPredicate: function() {
+                    return OneSignal.isPushNotificationsEnabled()
+                            .then(function(isPushEnabled) {
+                                /* The user is subscribed, so we want to return "false" to hide the notify button */
+                                return !isPushEnabled;
+                            });
+                }
 
+            }
         }]);
-
-        OneSignal.push(function() {
-            OneSignal.registerForPushNotifications({
-                modalPrompt: true
-            });
-        });
     </script>
 
 
