@@ -53,6 +53,11 @@
         <li @if( isset($page)&& $page == 'myrequest') class="active" @endif>
             <a href= {{ URL::to('myrequest') }} ><span class="fa fa-share-square"></span> <span class="xn-text">My requests</span></a>
         </li>
+
+        <li  class="hidden-md hidden-sm hidden-lg hidden-desktop">
+            <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> <span class="xn-text">Logout</span></a>
+        </li>
+
     </ul>
     <input type="file" class="pp" >
     <!-- END X-NAVIGATION -->

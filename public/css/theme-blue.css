@@ -7590,6 +7590,10 @@ li.ext_zip {
     padding: 0px 10px;
   }
 
+    .x-navigation-horizontal{
+        padding-right: 0px !important;
+    }
+
   .text-area{
       padding-left: 0 !important;
       margin-left: -33px !important;

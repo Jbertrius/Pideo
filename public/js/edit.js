@@ -1,5 +1,5 @@
 
-//google.maps.event.addDomListener(window, 'load', load);
+google.maps.event.addDomListener(window, 'load', load);
 
 var googleMaps = null;
 var marker;

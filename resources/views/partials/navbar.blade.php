@@ -12,7 +12,7 @@
     </li>
     <!-- END SEARCH -->
     <!-- SIGN OUT -->
-    <li class="xn-icon-button pull-right">
+    <li class="xn-icon-button pull-right hidden-xs">
         <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
     </li>
     <!-- END SIGN OUT -->
