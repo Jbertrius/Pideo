@@ -20,19 +20,22 @@
         OneSignal.push(["init", {
             appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
             persistNotification: false,
-            autoRegister: false,
-            notifyButton: {
-                enable: true,
-                displayPredicate: function() {
-                    return OneSignal.isPushNotificationsEnabled()
-                            .then(function(isPushEnabled) {
-                                /* The user is subscribed, so we want to return "false" to hide the notify button */
-                                return !isPushEnabled;
-                            });
+            autoRegister: true,
+            promptOptions: {
+                    /* These prompt options values configure both the HTTP prompt and the HTTP popup. */
+                    /* actionMessage limited to 90 characters */
+                    actionMessage: "We'd like to show you notifications for the latest news and updates.",
+                    /* acceptButtonText limited to 15 characters */
+                    acceptButtonText: "ALLOW",
+                    /* cancelButtonText limited to 15 characters */
+                    cancelButtonText: "NO THANKS"
                 }
-
-            }
         }]);
+
+          OneSignal.getUserId(function(userId) {
+    console.log("OneSignal User ID:", userId);
+    // (Output) OneSignal User ID: 270a35cd-4dda-4b3f-b04e-41d7463a2316    
+  });
     </script>
 
 
