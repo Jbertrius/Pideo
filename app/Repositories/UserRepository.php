@@ -329,7 +329,7 @@ class UserRepository extends BaseRepository
 
     public function sendWebPush($id, $msg, $url){
 
-        $user = User::where('id', 1)->first();
+        $user = User::where('id', $id)->first();
 
         foreach ($user->webpushid as $userId)
         {

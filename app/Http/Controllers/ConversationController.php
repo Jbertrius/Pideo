@@ -127,6 +127,9 @@ class ConversationController extends Controller
                         'conserId' => $conversation->id)
                 ));
 
+            $this->userRepository->sendWebPush(Input::get('user_id'), $fullname .' send you : ' . Str::words($message->body, 5) , '/messages/?conversation='.Input::get('conversation'));
+
+
 
             // Publish Data To Redis
            /* $data = array(

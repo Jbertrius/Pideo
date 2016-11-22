@@ -23,7 +23,7 @@
         </div>
         <div class="modal-footer">
 
-            <div class="pull-left">
+            <div class="pull-left hidden">
                 <button type="button"  class="btn btn-default"><span class="fa fa-camera"></span></button>
                 <button type="button"  class="btn btn-default"><span class="fa fa-chain"></span></button>
             </div>

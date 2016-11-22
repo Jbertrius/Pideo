@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.secondmaster')
 
 @section('title')
     {{ trans('front/site.register') }}

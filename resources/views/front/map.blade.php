@@ -109,6 +109,9 @@ foreach($conversations as $conversation)
     <div class="modal" id="new_message" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
 
     </div>
+@if(isset($data))
+    {!! $data !!}
+    @endif
 
     @endsection
 
