@@ -119,15 +119,15 @@ class ConversationController extends Controller
 
             $pusher->trigger('channel_'.$user_id, 'message',
                 array(
-                    'room'        => Input::get('conversation'),
+                    'room'        => $conversation->name,
                     'message'  => array( 'body' => Str::words($message->body, 5),
-                        'user_id' => Input::get('user_id'),
+                        'user_id' => Input::get('id'),
                         'fullname' => $fullname,
                         'img' => $img,
                         'conserId' => $conversation->id)
                 ));
 
-            $this->userRepository->sendWebPush(Input::get('user_id'), $fullname .' send you : ' . Str::words($message->body, 5) , '/messages/?conversation='.Input::get('conversation'));
+            $this->userRepository->sendWebPush(Input::get('id'), $fullname .' send you : ' . Str::words($message->body, 5) , '/messages/?conversation='.$conversation->name);
 
 
 
