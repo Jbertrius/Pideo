@@ -20,6 +20,22 @@
   zoom: 1;
 }
 
+.main-footer {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+    z-index: 820;
+}
+
+.main-footer {
+    background: rgb(45, 57, 69);
+    padding: 15px;
+    color: #fff;
+    border-top: 1px solid #d2d6de;
+}
+
 .sectionCounter{
     border-radius: 50% !important;
     height: 19px;

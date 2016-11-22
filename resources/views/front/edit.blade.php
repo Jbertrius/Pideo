@@ -147,8 +147,10 @@ foreach($conversations as $conversation)
 
 
         </div>
+        @include('partials/footer')
         <!-- END PAGE CONTENT WRAPPER -->
     </div>
+
     </div>
     <!-- END PAGE CONTAINER -->
 

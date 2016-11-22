@@ -104,37 +104,40 @@ foreach($conversations as $conversation)
             </div>
             <!-- END PAGE CONTENT WRAPPER -->
         </div>
-    </div>
-    <!-- END PAGE CONTAINER -->
-    <div class="modal" id="new_message" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
-
-    </div>
-@if(isset($data))
-    {!! $data !!}
-    @endif
-
-    @endsection
 
 
-    @section('script')
-        <script>
-            Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
-        </script>
-        <script src="{{'js/notif.js'}}"></script>
-        <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
-        <script type='text/javascript' src="{{asset('js/plugins/icheck/icheck.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/plugins/scrolltotop/scrolltopcontrol.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqF6eRkqctYMhsqU5OEzDj1kweuNUfq0&libraries=places"></script>
-        <script>
-            var
-                    user_id   = "{{ Auth::user()->id }}",
-                    image_path = "{{ Auth::user()->image_path }}";
+    @include('partials/footer')
+       </div>
+       <!-- END PAGE CONTAINER -->
+       <div class="modal" id="new_message" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
 
-        </script>
-        <script type="text/javascript" src="{{asset('js/studentsMap.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>
-    @endsection
+       </div>
+   @if(isset($data))
+       {!! $data !!}
+       @endif
+
+       @endsection
+
+
+       @section('script')
+           <script>
+               Pusher.logToConsole = true; var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" }), user_id   = "{{ Auth::user()->id }}";
+           </script>
+           <script src="{{'js/notif.js'}}"></script>
+           <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
+           <script type='text/javascript' src="{{asset('js/plugins/icheck/icheck.min.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/plugins/scrolltotop/scrolltopcontrol.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
+           <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqF6eRkqctYMhsqU5OEzDj1kweuNUfq0&libraries=places"></script>
+           <script>
+               var
+                       user_id   = "{{ Auth::user()->id }}",
+                       image_path = "{{ Auth::user()->image_path }}";
+
+           </script>
+           <script type="text/javascript" src="{{asset('js/studentsMap.js')}}"></script>
+           <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>
+       @endsection

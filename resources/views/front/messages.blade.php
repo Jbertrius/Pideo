@@ -116,8 +116,10 @@ foreach($conversations as $conversation)
             <!-- END PAGE CONTENT FRAME -->
 
 
-
+      
         </div>
+
+
         <!-- END PAGE CONTENT WRAPPER -->
     </div>
 

@@ -150,6 +150,7 @@ foreach($conversations as  $conversation)
 
         </div>
         <!-- END PAGE CONTENT WRAPPER -->
+
     </div>
 
     <div class="modal centerModal" id="recording" tabindex="-1" role="dialog" aria-labelledby="defModalHead" aria-hidden="true">
