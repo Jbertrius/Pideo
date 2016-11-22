@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/WebPushController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Webpushid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_11_22_013726_create_webpushid_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/webpush.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/secondmaster.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/onesignal.php" afterPath="$PROJECT_DIR$/config/onesignal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/theme-blue.css" afterPath="$PROJECT_DIR$/public/css/theme-blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/chat.js" afterPath="$PROJECT_DIR$/public/js/chat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/makepideo.js" afterPath="$PROJECT_DIR$/public/js/makepideo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/accueil.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/accueil.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
     </list>
     <ignored path="Pideo.iws" />
@@ -40,89 +60,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/front/edit.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="161" column="46" selection-start-line="161" selection-start-column="46" selection-end-line="161" selection-end-column="46" />
+            <state relative-caret-position="214">
+              <caret line="75" column="25" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessageController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="118" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/edit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="-153">
+              <caret line="29" column="77" selection-start-line="17" selection-start-column="3" selection-end-line="29" selection-end-column="77" />
               <folding>
-                <element signature="e#990#1419#0" expanded="false" />
-                <element signature="e#1468#2103#0" expanded="false" />
-                <element signature="e#2153#2621#0" expanded="false" />
-                <element signature="n#!!block;n#editProfile#0" expanded="false" />
-                <element signature="e#2877#3604#0" expanded="false" />
-                <element signature="e#3653#4182#0" expanded="false" />
-                <element signature="e#4230#5012#0" expanded="false" />
-                <element signature="e#5067#6047#0" expanded="false" />
-                <element signature="e#6099#6759#0" expanded="false" />
-                <element signature="n#!!block;n#createMarker#0" expanded="false" />
-                <element signature="n#!!block;n#createSimpleMarker#0" expanded="false" />
-                <element signature="n#!!block;n#getCoords#0" expanded="false" />
-                <element signature="n#!!block;n#editProfileCity#0" expanded="false" />
-                <element signature="n#!!block;n#refreshName#0" expanded="false" />
-                <element signature="n#!!block;n#add#0" expanded="false" />
-                <element signature="n#!!block;n#add2#0" expanded="false" />
-                <element signature="n#!!block;n#remove#0" expanded="false" />
-                <element signature="n#!!block;n#remove2#0" expanded="false" />
-                <element signature="e#12601#13160#0" expanded="false" />
-                <marker date="1479745356797" expanded="true" signature="3211:3357" placeholder="..." />
-                <marker date="1479745356797" expanded="true" signature="4395:4776" placeholder="..." />
-                <marker date="1479745356797" expanded="true" signature="4427:4516" placeholder="..." />
-                <marker date="1479745356797" expanded="true" signature="4549:4639" placeholder="..." />
-                <marker date="1479745356797" expanded="true" signature="4672:4769" placeholder="..." />
-                <marker date="1479745356797" expanded="true" signature="4858:4876" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/sidebar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme-blue.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129081">
-              <caret line="7593" column="38" selection-start-line="7593" selection-start-column="38" selection-end-line="7593" selection-end-column="38" />
-              <folding>
-                <element signature="e#165085#168172#0" expanded="false" />
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -131,18 +95,87 @@
       <file leaf-file-name="makepideo.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+            <state relative-caret-position="43">
+              <caret line="221" column="27" selection-start-line="221" selection-start-column="27" selection-end-line="221" selection-end-column="27" />
+              <folding>
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+              <folding>
+                <element signature="e#36#93#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileEntryController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+              <folding>
+                <marker date="1479800465555" expanded="true" signature="4610:4622" placeholder="..." />
+                <marker date="1479800465555" expanded="true" signature="4674:4686" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakepideoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="231" column="147" selection-start-line="231" selection-start-column="115" selection-end-line="231" selection-end-column="147" />
+              <folding>
+                <element signature="e#40#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pideo.conversations" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.conversations">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/navbar.blade.php">
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="98" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="98" />
+            <state relative-caret-position="357">
+              <caret line="436" column="1" selection-start-line="436" selection-start-column="1" selection-end-line="436" selection-end-column="1" />
+              <folding>
+                <element signature="e#12934#13344#0" expanded="false" />
+                <marker date="1479798621115" expanded="true" signature="814:840" placeholder="..." />
+                <marker date="1479798621115" expanded="true" signature="7960:7972" placeholder="..." />
+                <marker date="1479798621115" expanded="true" signature="8864:8876" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Webpushid.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Webpushid.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -161,12 +194,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="artisan make:migration create_post_table" />
-      <command text="artisan make:model Post" />
-      <command text="artisan make:migration problem_notifications" />
-      <command text="artisan make:model PostNotification" />
-      <command text="artisan migrate" />
-      <command text="artisan migrate:refresh" />
       <command text="artisan migrate" />
       <command text="artisan migrate:install" />
       <command text="artisan migrate" />
@@ -186,6 +213,12 @@
       <command text="php artisan vendor:publish" />
       <command text="artisan migrate" />
       <command text="artisan db:seed" />
+      <command text="artisan make:migration create_webpushid_table" />
+      <command text="artisan make:model Webpushid" />
+      <command text="artisan make:controller WebPushController" />
+      <command text="artisan migrate" />
+      <command text="artisan db:seed" />
+      <command text="composer dump-autoload" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -196,18 +229,13 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/front/home.blade.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ec874e3a-fefd-418e-b515-eeea4903a334/console.sql" />
-        <option value="$PROJECT_DIR$/public/js/sendproblem.js" />
-        <option value="$PROJECT_DIR$/public/js/editPost.js" />
-        <option value="$PROJECT_DIR$/public/js/studentsMap.js" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_12_184551_create_messages_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ConversationController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_12_180052_create_conversations_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/resources/views/front/request.blade.php" />
         <option value="$PROJECT_DIR$/public/js/post.js" />
         <option value="$PROJECT_DIR$/resources/views/front/post.blade.php" />
@@ -216,40 +244,48 @@
         <option value="$PROJECT_DIR$/database/seeds/SubjectTableSeeder.php" />
         <option value="$PROJECT_DIR$/public/js/notif.js" />
         <option value="C:/Xampp/php/php.ini" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/vendor/linkthrow/ffmpeg/src/Classes/FFMPEG.php" />
         <option value="$PROJECT_DIR$/config/ffmpeg.php" />
         <option value="$PROJECT_DIR$/app/Repositories/PideoRepository.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/partials/userList.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" />
         <option value="$PROJECT_DIR$/app/Models/Conversation.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/conversations.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/pideo.blade.php" />
         <option value="$PROJECT_DIR$/public/css/pideo.css" />
         <option value="$PROJECT_DIR$/resources/views/partials/chat.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" />
-        <option value="$PROJECT_DIR$/public/js/chat.js" />
         <option value="$PROJECT_DIR$/resources/views/front/messages.blade.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/config/onesignal.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/langList.blade.php" />
         <option value="$PROJECT_DIR$/public/css/materialize.css" />
         <option value="$PROJECT_DIR$/public/js/maps.js" />
         <option value="$PROJECT_DIR$/public/js/Stopwatch.js" />
-        <option value="$PROJECT_DIR$/public/js/makepideo.js" />
         <option value="$PROJECT_DIR$/resources/views/partials/subjectList.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/front/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/theme-blue.css" />
         <option value="$PROJECT_DIR$/resources/views/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/public/js/edit.js" />
         <option value="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_11_22_013726_create_webpushid_table.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/accueil.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/secondmaster.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/webpush.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Models/Webpushid.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WebPushController.php" />
+        <option value="$PROJECT_DIR$/config/onesignal.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/chat.js" />
+        <option value="$PROJECT_DIR$/public/css/theme-blue.css" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" />
+        <option value="$PROJECT_DIR$/public/js/makepideo.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" />
       </list>
     </option>
   </component>
@@ -369,9 +405,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -475,7 +512,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="edit&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/editPost.js&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;makepideo&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;sideba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;userR&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/UserController.php&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ed&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;userre&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;maps.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/maps.js&#10;m&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;mak&#9;null&#9;null&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;me&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/chat.blade.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;n&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;conver&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/conversations.blade.php&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/chat.blade.php&#10;ro&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;fil&#9;null&#9;null&#10;make&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;co&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Conversation.php&#10;messa&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;navbar.blade&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;navbar.b&#9;null&#9;null&#10;userc&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/UserController.php&#10;pideo&#9;null&#9;null&#10;makepideo.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;file&#9;null&#9;null&#10;MA&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MakepideoController.php&#10;notif&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;notif.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js" />
+    <property name="SearchEverywhereHistoryKey" value="use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;make&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MakepideoController.php&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;mes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/User.php&#10;env&#9;FILE&#9;file://C:/laragon/www/Pideo/.env&#10;us&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;userre&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/edit.js&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;makepideo&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;sideba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;userR&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ed&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;post.&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;maps.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/maps.js&#10;m&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;mak&#9;null&#9;null&#10;po&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/PostController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;me&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/messages.blade.php&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/chat.blade.php&#10;n&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;conver&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/conversations.blade.php&#10;ro&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;fil&#9;null&#9;null&#10;co&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Conversation.php&#10;messa&#9;null&#9;null&#10;con&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;master&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;navbar.blade&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;navbar.b&#9;null&#9;null&#10;userc&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/UserController.php&#10;pideo&#9;null&#9;null" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -496,19 +533,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Pideo\resources\views\front" />
-      <recent name="C:\laragon\www\Pideo\public\css" />
-      <recent name="C:\laragon\www\Pideo\public\js\plugins" />
-      <recent name="C:\laragon\www\Pideo\public\js\plugins\perfect-scrollbar" />
-      <recent name="C:\laragon\www\Pideo\public\css\perfect-scrollbar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Pideo\app\Models" />
       <recent name="C:\laragon\www\Pideo\storage\app" />
       <recent name="C:\laragon\www\Pideo\public\css" />
       <recent name="C:\laragon\www\Pideo\public\css\cropper" />
       <recent name="C:\laragon\www\Pideo\nodejs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Pideo\resources\views\layouts" />
+      <recent name="C:\laragon\www\Pideo\resources\views\front" />
+      <recent name="C:\laragon\www\Pideo\public\css" />
+      <recent name="C:\laragon\www\Pideo\public\js\plugins" />
+      <recent name="C:\laragon\www\Pideo\public\js\plugins\perfect-scrollbar" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Web Application.Pideo">
@@ -876,14 +913,7 @@
       <workItem from="1479600371165" duration="16437000" />
       <workItem from="1479670156879" duration="21507000" />
       <workItem from="1479740296586" duration="6603000" />
-      <workItem from="1479776544292" duration="788000" />
-    </task>
-    <task id="LOCAL-00008" summary="Update #7">
-      <created>1474679269377</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1474679269378</updated>
+      <workItem from="1479776544292" duration="23372000" />
     </task>
     <task id="LOCAL-00009" summary="Update  -  Pusher">
       <created>1475029344485</created>
@@ -1221,7 +1251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479776650229</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="- Many Updates">
+      <created>1479777386724</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1479777386724</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1230,7 +1267,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1639369000" />
+    <option name="totallyTimeSpent" value="1661953000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1242,28 +1279,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4075235" sideWeight="0.5030211" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36520377" sideWeight="0.50907713" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40438873" sideWeight="0.49697885" order="11" side_tool="false" content_ui="tabs" x="550" y="234" width="266" height="194" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22583081" sideWeight="0.68557537" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31347963" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20487805" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49282297" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.61563516" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3306581" sideWeight="0.31442463" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267776" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12783661" sideWeight="0.4050926" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19288956" sideWeight="0.31442463" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32526475" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12783661" sideWeight="0.4050926" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.53431374" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36677116" sideWeight="0.49018127" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36520377" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40595612" sideWeight="0.49697885" order="11" side_tool="false" content_ui="tabs" x="550" y="234" width="266" height="194" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1313,250 +1350,26 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/berkayk/onesignal-laravel/src/OneSignalClient.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/PostController.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="283" />
+      <option name="time" value="298" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ConversationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.conversations_users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Conversation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="116" column="43" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.pideos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/conversations.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/pideo.blade.php" />
-    <entry file="file://$PROJECT_DIR$/public/css/pideo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.conversations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.messages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/chat.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="202" column="53" selection-start-line="202" selection-start-column="53" selection-end-line="202" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/messages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="145" column="51" selection-start-line="145" selection-start-column="51" selection-end-line="145" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1215">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sendpulse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
-          <caret line="234" column="64" selection-start-line="234" selection-start-column="64" selection-end-line="234" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/onesignal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/userList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/studentsMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/profileMaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2940">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5349" column="13" selection-start-line="5349" selection-start-column="13" selection-end-line="5349" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="217" column="24" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/makepideo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="384" column="20" selection-start-line="384" selection-start-column="20" selection-end-line="384" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/Stopwatch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.subject_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1587,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-691">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1594,6 +1408,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="64" column="55" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1601,22 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4165">
-          <caret line="254" column="7" selection-start-line="254" selection-start-column="7" selection-end-line="254" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="180" column="9" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1636,70 +1435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/accueil.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129081">
-          <caret line="7593" column="38" selection-start-line="7593" selection-start-column="38" selection-end-line="7593" selection-end-column="38" />
-          <folding>
-            <element signature="e#165085#168172#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#990#1419#0" expanded="false" />
-            <element signature="e#1468#2103#0" expanded="false" />
-            <element signature="e#2153#2621#0" expanded="false" />
-            <element signature="n#!!block;n#editProfile#0" expanded="false" />
-            <element signature="e#2877#3604#0" expanded="false" />
-            <element signature="e#3653#4182#0" expanded="false" />
-            <element signature="e#4230#5012#0" expanded="false" />
-            <element signature="e#5067#6047#0" expanded="false" />
-            <element signature="e#6099#6759#0" expanded="false" />
-            <element signature="n#!!block;n#createMarker#0" expanded="false" />
-            <element signature="n#!!block;n#createSimpleMarker#0" expanded="false" />
-            <element signature="n#!!block;n#getCoords#0" expanded="false" />
-            <element signature="n#!!block;n#editProfileCity#0" expanded="false" />
-            <element signature="n#!!block;n#refreshName#0" expanded="false" />
-            <element signature="n#!!block;n#add#0" expanded="false" />
-            <element signature="n#!!block;n#add2#0" expanded="false" />
-            <element signature="n#!!block;n#remove#0" expanded="false" />
-            <element signature="n#!!block;n#remove2#0" expanded="false" />
-            <element signature="e#12601#13160#0" expanded="false" />
-            <marker date="1479745356797" expanded="true" signature="3211:3357" placeholder="..." />
-            <marker date="1479745356797" expanded="true" signature="4395:4776" placeholder="..." />
-            <marker date="1479745356797" expanded="true" signature="4427:4516" placeholder="..." />
-            <marker date="1479745356797" expanded="true" signature="4549:4639" placeholder="..." />
-            <marker date="1479745356797" expanded="true" signature="4672:4769" placeholder="..." />
-            <marker date="1479745356797" expanded="true" signature="4858:4876" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="98" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1736,11 +1475,393 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/UserSubject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_10_032812_create_tags_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_15_041625_create_post_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_11_22_013726_create_webpushid_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/accueil.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/secondmaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/webpush.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="365" column="18" selection-start-line="365" selection-start-column="15" selection-end-line="365" selection-end-column="18" />
+          <folding>
+            <element signature="e#990#1419#0" expanded="false" />
+            <element signature="e#1468#2103#0" expanded="false" />
+            <element signature="e#2153#2621#0" expanded="false" />
+            <element signature="n#!!block;n#editProfile#0" expanded="false" />
+            <element signature="e#2877#3604#0" expanded="false" />
+            <element signature="e#3653#4182#0" expanded="false" />
+            <element signature="e#4230#5012#0" expanded="false" />
+            <element signature="e#5067#6047#0" expanded="false" />
+            <element signature="e#6099#6759#0" expanded="false" />
+            <element signature="n#!!block;n#createMarker#0" expanded="false" />
+            <element signature="n#!!block;n#createSimpleMarker#0" expanded="false" />
+            <element signature="n#!!block;n#getCoords#0" expanded="false" />
+            <element signature="n#!!block;n#editProfileCity#0" expanded="false" />
+            <element signature="n#!!block;n#refreshName#0" expanded="false" />
+            <element signature="n#!!block;n#add#0" expanded="false" />
+            <element signature="n#!!block;n#add2#0" expanded="false" />
+            <element signature="n#!!block;n#remove#0" expanded="false" />
+            <element signature="n#!!block;n#remove2#0" expanded="false" />
+            <element signature="e#12601#13160#0" expanded="false" />
+            <marker date="1479745356797" expanded="true" signature="3211:3357" placeholder="..." />
+            <marker date="1479745356797" expanded="true" signature="4395:4776" placeholder="..." />
+            <marker date="1479745356797" expanded="true" signature="4427:4516" placeholder="..." />
+            <marker date="1479745356797" expanded="true" signature="4549:4639" placeholder="..." />
+            <marker date="1479745356797" expanded="true" signature="4672:4769" placeholder="..." />
+            <marker date="1479745356797" expanded="true" signature="4858:4876" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WebPushController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="false" />
+            <element signature="e#180#576#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/berkayk/onesignal-laravel/config/onesignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/berkayk/onesignal-laravel/src/OneSignalFacade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="235" column="15" selection-start-line="235" selection-start-column="15" selection-end-line="235" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/linkthrow/ffmpeg/src/Classes/FFMPEG.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-867">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/berkayk/onesignal-laravel/src/OneSignalServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/berkayk/onesignal-laravel/src/OneSignalClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/onesignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="72" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="137" column="62" selection-start-line="137" selection-start-column="62" selection-end-line="137" selection-end-column="62" />
+          <folding>
+            <element signature="e#2167#3257#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.webpushid">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="201" column="118" selection-start-line="201" selection-start-column="118" selection-end-line="201" selection-end-column="118" />
+          <folding>
+            <element signature="e#756#4308#0#PHP" expanded="false" />
+            <element signature="e#8896#8974#0#PHP" expanded="false" />
+            <element signature="e#8984#9222#0#PHP" expanded="false" />
+            <element signature="e#9228#9405#0#PHP" expanded="false" />
+            <element signature="e#9411#9992#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="57" column="97" selection-start-line="57" selection-start-column="97" selection-end-line="57" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="-153">
+          <caret line="29" column="77" selection-start-line="17" selection-start-column="3" selection-end-line="29" selection-end-column="77" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Webpushid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="7576" column="17" selection-start-line="7576" selection-start-column="17" selection-end-line="7576" selection-end-column="17" />
+          <folding>
+            <element signature="e#163794#165084#0" expanded="false" />
+            <element signature="e#165085#168172#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="75" column="25" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="436" column="1" selection-start-line="436" selection-start-column="1" selection-end-line="436" selection-end-column="1" />
+          <folding>
+            <element signature="e#12934#13344#0" expanded="false" />
+            <marker date="1479798621115" expanded="true" signature="814:840" placeholder="..." />
+            <marker date="1479798621115" expanded="true" signature="7960:7972" placeholder="..." />
+            <marker date="1479798621115" expanded="true" signature="8864:8876" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/748f2cd1/ec874e3a-fefd-418e-b515-eeea4903a334/pideo.conversations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/makepideo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="636" column="44" selection-start-line="636" selection-start-column="44" selection-end-line="636" selection-end-column="44" />
+          <folding>
+            <element signature="e#1219#2063#0" expanded="false" />
+            <element signature="n#!!block;n#doneEncoding#0" expanded="false" />
+            <element signature="n#!!block;n#initAudio#0" expanded="false" />
+            <element signature="e#9826#10233#0" expanded="false" />
+            <marker date="1479800069030" expanded="true" signature="4702:4747" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="4810:4836" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="9325:9343" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="10404:10415" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="10499:10531" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="10577:10590" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="10922:10933" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="15468:15503" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="16159:16185" placeholder="..." />
+            <marker date="1479800069030" expanded="true" signature="17032:17067" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="221" column="27" selection-start-line="221" selection-start-column="27" selection-end-line="221" selection-end-column="27" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+          <folding>
+            <element signature="e#36#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="231" column="147" selection-start-line="231" selection-start-column="115" selection-end-line="231" selection-end-column="147" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <marker date="1479800465555" expanded="true" signature="4610:4622" placeholder="..." />
+            <marker date="1479800465555" expanded="true" signature="4674:4686" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

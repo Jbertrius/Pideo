@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Repositories\UserRepository;
 use DateTime;
 use App;
 use App\Models\Conversation;
@@ -25,8 +27,18 @@ class MessageController extends Controller
     /**
      * Display a listing of messages.
      *
-     * @return Response
+     * @return
      */
+
+
+    protected $userRepository;
+
+    public function __construct( UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
+
     public function index() {
 
         $conversation = Conversation::where('name', Input::get('conversation'))->first();
@@ -102,6 +114,10 @@ class MessageController extends Controller
                                         'img' => $img,
                                         'conserId' => $conversationId)
                 ));
+
+            $this->userRepository->sendWebPush($user->id, $fullname .' send you : ' . Str::words($message->body, 5) , '/messages/?conversation='.Input::get('conversation'));
+
+
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);

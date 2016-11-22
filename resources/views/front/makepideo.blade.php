@@ -16,25 +16,20 @@
 
     <link rel="manifest" href="/manifest.json">
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(["init", {
-            appId: "974a88e2-bae1-4e31-a47a-f698c53d388e",
-            persistNotification: false,
-            autoRegister: false,
-            notifyButton: {
-                enable: true,
-                displayPredicate: function() {
-                    return OneSignal.isPushNotificationsEnabled()
-                            .then(function(isPushEnabled) {
-                                /* The user is subscribed, so we want to return "false" to hide the notify button */
-                                return !isPushEnabled;
-                            });
-                }
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        }]);
+        });
+
+        var UserId = "{{ Auth::user()->webpushid->count()  }}";
+
     </script>
+
+    <script type="text/javascript" src="{{asset('js/webpush.js')}}"></script>
 
 
 
@@ -238,9 +233,10 @@ foreach($conversations as  $conversation)
       <i class="large material-icons">mode_edit</i>
     </a>
     <ul>
+        <li><a class="btn-floating red disabled" data-toggle="tooltip" id="float-generate" data-placement="left" title="Generate Pideo"><i class="material-icons">videocam</i></a></li>
         <li><a class="btn-floating green disabled" id="audioRecord" data-toggle="tooltip" data-placement="left" title="Record audio"><i class="material-icons">mic</i></a></li>
 
-      <li><a class="btn-floating yellow darken-1" id="addsection" data-toggle="tooltip" data-placement="left" title="Add section"><i class="material-icons">add</i></a></li>
+      <li><a class="btn-floating yellow darken-1 disabled" id="addsection" data-toggle="tooltip" data-placement="left" title="Add section"><i class="material-icons">add</i></a></li>
 
       <li><a class="btn-floating blue" id="uploadPic" data-toggle="tooltip" data-placement="left" title="Upload picture"><i class="material-icons">panorama</i></a></li>
     </ul>
@@ -254,7 +250,7 @@ foreach($conversations as  $conversation)
 
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     <script type="text/javascript" src="{{asset('js/materialize.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="//js.pusher.com/3.2.0/pusher.min.js"></script>

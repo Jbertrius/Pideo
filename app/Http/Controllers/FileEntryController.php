@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\UserRepository;
 use App\Models\Conversation;
 use App\Models\Fileentry;
 use App\Models\Message;
@@ -23,10 +24,12 @@ use App\Http\Requests\FileRequest;
 class FileEntryController extends Controller
 {
     protected $fileentryRepository;
+    protected $userRepository;
     
-    public function __construct(FileEntryRepository $fileentryRepository)
+    public function __construct(FileEntryRepository $fileentryRepository, UserRepository $userRepository)
     {
         $this->fileentryRepository = $fileentryRepository;
+        $this->userRepository = $userRepository;
     }
 
     
@@ -115,6 +118,7 @@ class FileEntryController extends Controller
         foreach($conversation->users()->get() as $user) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
             $this->sendNotif($user->id, $id, $fileentry->original_filename, $authorMsg, $conversation->id  );
+
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);
@@ -155,6 +159,8 @@ class FileEntryController extends Controller
                     'img' => $user->image_path,
                     'conserId' => $conver),
             ));
+
+        $this->userRepository->sendWebPush($user->id, $user->firstname.' '.$user->lastname.' send you a File' , '/messages/?conversation='.$room );
     }
     
     

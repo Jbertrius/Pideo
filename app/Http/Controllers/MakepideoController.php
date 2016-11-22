@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Subject;
 use App\Models\Conversation;
 use App\Repositories\PideoRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Models\Pideo;
 use Anam\PhantomMagick\Converter;
@@ -24,11 +25,13 @@ class MakepideoController extends Controller
 
     protected $fileentryRepository;
     protected $pideoRepository;
+    protected $userRepository;
 
-    public function __construct(FileEntryRepository $fileentryRepository, PideoRepository $pideoRepository )
+    public function __construct(FileEntryRepository $fileentryRepository, PideoRepository $pideoRepository, UserRepository $userRepository )
     {
         $this->fileentryRepository = $fileentryRepository;
         $this->pideoRepository = $pideoRepository;
+        $this->userRepository = $userRepository;
     }
 
      public function index(){
@@ -201,12 +204,14 @@ class MakepideoController extends Controller
         foreach($conversation->users()->get() as $user) {
             array_push($messages_notifications, new MessageNotification(array('user_id' => $user->id, 'conversation_id' => $conversation->id, 'read' => false)));
             $this->sendNotif($user->id, $id, 'Pideo :'.$pideo->title, $authorMsg, $conversation->id  );
+
+
         }
 
         $message->messages_notifications()->saveMany($messages_notifications);
 
 
-         return   redirect()->route('chat.index');
+         return   $conversation->name;
         
         
     }
@@ -223,6 +228,9 @@ class MakepideoController extends Controller
                     'img' => $user->image_path,
                     'conserId' => $conver),
             ));
+
+        $this->userRepository->sendWebPush($user->id, $user->firstname.' '.$user->lastname .' send you a Pideo'  , '/messages/?conversation='.$room);
+
     }
 
 

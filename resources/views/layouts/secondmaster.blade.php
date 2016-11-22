@@ -14,7 +14,7 @@
 
 
     <link rel="manifest" href="/manifest.json">
-   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+
     <script src="{{ elixir('js/app.js') }}"></script>
     <script>
         $.ajaxSetup({
@@ -23,11 +23,8 @@
             }
         });
 
-        var UserId = "{{ Auth::user()->webpushid->count()  }}";
-
      </script>
 
-    <script type="text/javascript" src="{{asset('js/webpush.js')}}"></script>
 
 
 

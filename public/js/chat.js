@@ -433,8 +433,8 @@ $(function() {
 
 });
 
-
-document.getElementById('links').onclick = function (event) {
+if( document.getElementById('links') != null)
+ document.getElementById('links').onclick = function (event) {
     event = event || window.event;
     var target = event.target || event.srcElement,
         link = target.src ? target.parentNode : target,

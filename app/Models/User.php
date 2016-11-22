@@ -133,5 +133,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $pagination;
     }
 
+    public function webpushid()
+    {
+        return $this->hasMany('App\Models\Webpushid', 'user_id');
+    }
+
 
 }

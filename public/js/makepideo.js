@@ -69,6 +69,7 @@ $(function () {
                     window.alert('Please choose an image file.');
                 }
             }
+            $('#addsection').removeClass('disabled');
         });
     } else {
         $inputImage.prop('disabled', true).parent().addClass('disabled');
@@ -162,6 +163,7 @@ function toggleRecording( e ) {
         audioRecorder.stop();
         e.classList.remove("recording");
         audioRecorder.getBuffers( gotBuffers );
+        $('#float-generate').removeClass('disabled');
     } else {
 
         $('.content-frame-body').prepend('<div class="progress" style="background-color: #e25e5e;margin-bottom: 0px;"><span class="timer"></span><div class="indeterminate" style="background-color: #ff0a0a;"></div></div>');
@@ -379,7 +381,7 @@ function refreshCount(){
      if(!$('.content-frame-top').find('.pull-right').find('#generate').length)
      {
          $('.content-frame-top').find('.pull-right').prepend('<button type="button" id="generate" data-toggle="modal" data-target="#pideo"" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-video-camera"></span>Generate Pideo</button>');
-         $('.fixed-action-btn').find('ul').prepend('<li><a class="btn-floating red" data-toggle="tooltip" id="float-generate" data-placement="left" title="Generate Pideo"><i class="material-icons">videocam</i></a></li>');
+
      }
 
      refreshCount();
@@ -626,8 +628,8 @@ $('.modal').on('click', '#sendPideo', function () {
         $(this).attr('disabled','disabled');
         $(this).html('Sending <i class="fa fa-spinner fa-spin"></i>');
 
-        sendPideo().done(function () {
-
+        sendPideo().done(function (data) {
+            window.location.replace("/messages/?conversation="+data);
         });
 
     }
@@ -658,6 +660,7 @@ $('.modal').on('click', '#delPideo', function () {
 });
 
 $('#uploadPic').on('click', function () {
+
     $('#upload').trigger('click');
 });
 

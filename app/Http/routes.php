@@ -245,6 +245,8 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::get('subject', 'UserController@getSubject');
 
     Route::post('subject/update', 'UserController@updateSubject');
+
+    Route::post('webpush', 'WebPushController@addWebPushId');
     
     
     

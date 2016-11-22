@@ -7778,6 +7778,20 @@ li.ext_zip {
     width: 300px;
   }
 }
+
+
+@media only screen and (max-width: 325px) {
+    .video {
+        width: 64%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .video {
+        width: 54%;
+    }
+}
+
 .x-navigation-minimized .xn-logo{
 display:none;
 }

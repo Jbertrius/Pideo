@@ -3,9 +3,12 @@
 namespace App\Repositories;
 
 use App\Models\User, App\Models\Role, App\Models\Subject;
+ 
+use   Berkayk\OneSignal\OneSignalFacade;
 use Illuminate\Support\Facades\URL;
 use File;
 use Storage;
+
 
 class UserRepository extends BaseRepository
 {
@@ -324,6 +327,16 @@ class UserRepository extends BaseRepository
         return $this->model->where('id', '<>', $id)->get();
     }
 
+    public function sendWebPush($id, $msg, $url){
+
+        $user = User::where('id', 1)->first();
+
+        foreach ($user->webpushid as $userId)
+        {
+            OneSignalFacade::sendNotificationToUser($msg, $userId->webpushid, $url);
+        }
+
+    }
     
     
 

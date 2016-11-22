@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\UserRepository;
 use App;
 use App\Http\Requests;
 use DateTime;
@@ -18,10 +19,12 @@ class PostController extends Controller
 {
 
     protected $fileentryRepository;
+    protected $userRepository;
 
-    public function __construct(FileEntryRepository $fileentryRepository)
+    public function __construct(FileEntryRepository $fileentryRepository, UserRepository $userRepository)
     {
         $this->fileentryRepository = $fileentryRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function index($id = null, $cat = null){
@@ -43,10 +46,18 @@ class PostController extends Controller
             $post = App\Models\Post::where('id', $id)->first();
             $user_id = Auth::user()->id;
 
+            if($user_id == $post->user_id)
+                return redirect()->route('myrequest');
+
 
             $postNotif = $post->posts_notifications()->where('user_id', $user_id)->first();
-            $postNotif->read = 1;
-            $postNotif->save();
+
+            if(!is_null($postNotif))
+            {
+                $postNotif->read = 1;
+                $postNotif->save();
+            }
+
 
             $response['description'] = $post->description;
             $title = 'Request - '.$response['description'];
@@ -173,6 +184,7 @@ class PostController extends Controller
 
 
         foreach ($users as $user){
+
             if($user->id != Auth::user()->id)
             {
                 array_push($post_notifications, new App\Models\PostNotification(array('user_id' =>  $user->id, 'cat_id' =>  Request::input('cat'),  'read' => false)));
@@ -186,6 +198,8 @@ class PostController extends Controller
                             'author' => $post->users->fullname(),
                             'id' => $post->id)
                     ));
+
+                $this->userRepository->sendWebPush($user->id, 'Post : '.$post->description.' - '.$post->cat->subjects  ,'/request/'.$post->id);
             }
 
         }
@@ -246,6 +260,8 @@ class PostController extends Controller
                             'author' => $post->users->fullname(),
                              'id' => $post->id)
                     ));
+
+                $this->userRepository->sendWebPush($user->id, 'Post : '.$post->description.' - '.$post->cat->subjects ,'/request/'.$post->id);
             }
 
         }
