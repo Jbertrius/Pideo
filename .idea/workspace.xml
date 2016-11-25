@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/Stopwatch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/materialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/materialize.min.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/tour/bootstro.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Message.php" afterPath="$PROJECT_DIR$/app/Models/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Subject.php" afterPath="$PROJECT_DIR$/app/Models/Subject.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_12_184551_create_messages_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_12_184551_create_messages_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/theme-blue.css" afterPath="$PROJECT_DIR$/public/css/theme-blue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/chat.js" afterPath="$PROJECT_DIR$/public/js/chat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/edit.js" afterPath="$PROJECT_DIR$/public/js/edit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/makepideo.js" afterPath="$PROJECT_DIR$/public/js/makepideo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/maps.js" afterPath="$PROJECT_DIR$/public/js/maps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/studentsMap.js" afterPath="$PROJECT_DIR$/public/js/studentsMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/webpush.js" afterPath="$PROJECT_DIR$/public/js/webpush.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/post.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/post.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/PostModal.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/PostModal.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/subjectList.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/subjectList.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/post.js" afterPath="$PROJECT_DIR$/public/js/post.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" />
     </list>
     <ignored path="Pideo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,33 +44,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="notif.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/notif.js">
+      <file leaf-file-name="theme-blue.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding>
-                <marker date="1478533445481" expanded="true" signature="3645:3671" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/front/messages.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-blue.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
+      <file leaf-file-name="bootstro.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/tour/bootstro.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state relative-caret-position="550">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,24 +74,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="576">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding>
-                <marker date="1480048963805" expanded="true" signature="800:829" placeholder="..." />
+                <marker date="1480050957405" expanded="true" signature="800:829" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="makepideo.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
+      <file leaf-file-name="makepideo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/makepideo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="272" column="80" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
-              <folding />
+            <state relative-caret-position="562">
+              <caret line="636" column="4" selection-start-line="636" selection-start-column="4" selection-end-line="636" selection-end-column="4" />
+              <folding>
+                <marker date="1480050593655" expanded="true" signature="8746:8764" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="9656:9667" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="9751:9783" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="9829:9842" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="10175:10186" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="14602:14637" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="15293:15319" placeholder="..." />
+                <marker date="1480050593655" expanded="true" signature="16166:16201" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,14 +135,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+      <file leaf-file-name="makepideo.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="426" column="11" selection-start-line="426" selection-start-column="11" selection-end-line="426" selection-end-column="11" />
+            <state relative-caret-position="374">
+              <caret line="112" column="134" selection-start-line="112" selection-start-column="130" selection-end-line="112" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentsMap.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/studentsMap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
               <folding>
-                <marker date="1480045417862" expanded="true" signature="814:840" placeholder="..." />
-                <marker date="1480045417862" expanded="true" signature="1321:1369" placeholder="..." />
+                <marker date="1476413419089" expanded="true" signature="4696:4725" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -169,8 +163,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jade File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -214,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/partials/langList.blade.php" />
         <option value="$PROJECT_DIR$/public/css/materialize.css" />
         <option value="$PROJECT_DIR$/public/js/maps.js" />
         <option value="$PROJECT_DIR$/public/js/Stopwatch.js" />
@@ -234,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" />
-        <option value="$PROJECT_DIR$/public/js/makepideo.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileEntryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChatController.php" />
         <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
@@ -262,9 +254,11 @@
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Message.php" />
         <option value="$PROJECT_DIR$/public/js/chat.js" />
+        <option value="$PROJECT_DIR$/public/css/tour/bootstro.css" />
         <option value="$PROJECT_DIR$/public/css/theme-blue.css" />
-        <option value="$PROJECT_DIR$/public/js/post.js" />
+        <option value="$PROJECT_DIR$/public/js/makepideo.js" />
         <option value="$PROJECT_DIR$/resources/views/front/makepideo.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/post.js" />
       </list>
     </option>
   </component>
@@ -491,7 +485,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="make&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ChatController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;them&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;chat.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Message.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;footer&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/footer.blade.php&#10;sub&#9;null&#9;null&#10;post.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;reques&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;conver&#9;null&#9;null&#10;Convers&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;authc&#9;null&#9;null&#10;webpus&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/webpush.js&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;maste&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;me&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;userr&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;we&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/WebPushController.php&#10;regis&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;userR&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ChatController.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;mes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;env&#9;FILE&#9;file://C:/laragon/www/Pideo/.env&#10;us&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;userre&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/edit.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;makepideo&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;sideba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;ed&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php&#10;theme&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css" />
+    <property name="SearchEverywhereHistoryKey" value="stude&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/studentsMap.js&#10;chat&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;makepi&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;make&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;post&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;cha&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ChatController.php&#10;routes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;them&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;chat.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;pos&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/post.blade.php&#10;mess&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Models/Message.php&#10;noti&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;footer&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/footer.blade.php&#10;sub&#9;null&#9;null&#10;post.js&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/post.js&#10;reques&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/request.blade.php&#10;conver&#9;null&#9;null&#10;Convers&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/ConversationController.php&#10;user&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;authc&#9;null&#9;null&#10;webpus&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/webpush.js&#10;the&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;map&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;maste&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;mas&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/layouts/master.blade.php&#10;side&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;me&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;userr&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;rou&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;we&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/WebPushController.php&#10;regis&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/auth/register.blade.php&#10;userR&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;map.&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/map.blade.php&#10;use&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;rout&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/routes.php&#10;th&#9;FILE&#9;file://C:/laragon/www/Pideo/public/css/theme-blue.css&#10;ch&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/chat.js&#10;ma&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/makepideo.js&#10;hom&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/home.blade.php&#10;mes&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Http/Controllers/MessageController.php&#10;env&#9;FILE&#9;file://C:/laragon/www/Pideo/.env&#10;us&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;userre&#9;FILE&#9;file://C:/laragon/www/Pideo/app/Repositories/UserRepository.php&#10;edit&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/edit.js&#10;si&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;nav&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/navbar.blade.php&#10;makepideo&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/makepideo.blade.php&#10;sideba&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/partials/sidebar.blade.php&#10;no&#9;FILE&#9;file://C:/laragon/www/Pideo/public/js/notif.js&#10;ed&#9;FILE&#9;file://C:/laragon/www/Pideo/resources/views/front/edit.blade.php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
@@ -897,14 +891,7 @@
       <workItem from="1479853215477" duration="2374000" />
       <workItem from="1479967004317" duration="2379000" />
       <workItem from="1480006998074" duration="721000" />
-      <workItem from="1480022141298" duration="12913000" />
-    </task>
-    <task id="LOCAL-00014" summary="Update  -  Pusher">
-      <created>1475126835307</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1475126835307</updated>
+      <workItem from="1480022141298" duration="14374000" />
     </task>
     <task id="LOCAL-00015" summary="Update  -  ProfilePic">
       <created>1475377044916</created>
@@ -1242,7 +1229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479854554056</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="- Fix Post Buttons problems">
+      <created>1480049465416</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1480049465533</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1251,7 +1245,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1690454000" />
+    <option name="totallyTimeSpent" value="1691915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1267,6 +1261,7 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22583081" sideWeight="0.68557537" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31347963" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
@@ -1274,13 +1269,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49282297" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.61563516" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3836276" sideWeight="0.31442463" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2708018" sideWeight="0.31442463" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3237519" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18154311" sideWeight="0.4050926" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.53431374" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19905956" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1374,20 +1368,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/confirm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/404.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1437,13 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="118" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/studentsMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1692,17 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="426" column="11" selection-start-line="426" selection-start-column="11" selection-end-line="426" selection-end-column="11" />
-          <folding>
-            <marker date="1480045417862" expanded="true" signature="814:840" placeholder="..." />
-            <marker date="1480045417862" expanded="true" signature="1321:1369" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/messages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1727,14 +1689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1751,21 +1705,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/post.js">
+    <entry file="file://$PROJECT_DIR$/public/css/tour/bootstro.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state relative-caret-position="550">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/theme-blue.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/makepideo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="636" column="4" selection-start-line="636" selection-start-column="4" selection-end-line="636" selection-end-column="4" />
           <folding>
-            <marker date="1480048963805" expanded="true" signature="800:829" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="8746:8764" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="9656:9667" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="9751:9783" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="9829:9842" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="10175:10186" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="14602:14637" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="15293:15319" placeholder="..." />
+            <marker date="1480050593655" expanded="true" signature="16166:16201" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="426" column="11" selection-start-line="426" selection-start-column="11" selection-end-line="426" selection-end-column="11" />
+          <folding>
+            <marker date="1480045417862" expanded="true" signature="814:840" placeholder="..." />
+            <marker date="1480045417862" expanded="true" signature="1321:1369" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/makepideo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="272" column="80" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
+        <state relative-caret-position="374">
+          <caret line="112" column="134" selection-start-line="112" selection-start-column="130" selection-end-line="112" selection-end-column="134" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/studentsMap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+          <folding>
+            <marker date="1476413419089" expanded="true" signature="4696:4725" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <marker date="1480050957405" expanded="true" signature="800:829" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

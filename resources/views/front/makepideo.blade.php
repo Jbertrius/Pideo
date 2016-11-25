@@ -110,7 +110,7 @@ foreach($conversations as  $conversation)
                     <div class="pull-right ">
                         <button type="button" id="upload" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-picture-o"></span>Upload Picture</button>
                         <button type="button" id="record" class="btn btn-primary btn-sm disabled hidden-xs" data-toggle="modal" data-target="#recording"><span class="fa fa-microphone"></span>Record Audio</button>
-
+                        <button type="button" class="help btn btn-info hidden-xs hidden-sm" data-toggle="tooltip" data-placement="left" title="Help" id="help"><i class="fa fa-question"></i></button>
                         <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span><span class="badge sectionCounter red"></span></button>
                     </div>
                 </div>
@@ -270,6 +270,7 @@ foreach($conversations as  $conversation)
 
     <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap-select.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/tagsinput/jquery.tagsinput.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/plugins/tour/bootstro.min.js')}}"></script>
  
 
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>

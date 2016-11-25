@@ -11,6 +11,7 @@
 @import "fullcalendar/fullcalendar.css";
 @import "blueimp/blueimp-gallery.min.css";
 @import "rickshaw/rickshaw.css";
+@import "tour/bootstro.css";
 @import "dropzone/dropzone.css";
 @import "animate/animate.min.css";
 @import "cropper/cropper.min.css";
@@ -18,6 +19,13 @@
 /* PREDEFINED CLASSES */
 .clearfix {
   zoom: 1;
+}
+
+.help{
+    border-radius: 50%;
+    width: 37px;
+    font-weight: initial;
+    padding-left: 12px;
 }
 
 .request{

@@ -44,4 +44,14 @@ $(function() {
         });
     }
 
+    function send () {
+        $val = $('#messageBox').val();
+        $form = $('#form');
+
+        if($val != '')
+            $form.submit();
+        else
+            event.preventDefault();
+    }
+
 });
