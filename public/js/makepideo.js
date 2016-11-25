@@ -634,6 +634,6 @@ $('.modal').on('click', '#delPideo', function () {
 
 $('#help').on('click', function (e) {
     e.preventDefault();
-    
+    bootstro.start();
 
 });

@@ -178,7 +178,11 @@ $('#lang, #sub').on('change', function(e){
        });
    }
 
-function send () {
+$('body').on('click', '.send-msg', function (e) {
+    e.preventDefault();
+
+    $(this).text('Send'+'<i class="fa fa-spinner fa-spin fa-fw"></i>');
+
     $val = $('#messageBox').val();
     $form = $('#form');
 
@@ -186,7 +190,7 @@ function send () {
         $form.submit();
     else
         event.preventDefault();
-}
+});
 
 
         //evt.preventDefault();

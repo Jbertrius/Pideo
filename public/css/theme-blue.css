@@ -22,10 +22,10 @@
 }
 
 .help{
-    border-radius: 50%;
+    border-radius: 50% !important;
     width: 37px;
-    font-weight: initial;
-    padding-left: 12px;
+    font-weight: initial !important;
+    padding-left: 12px !important;
 }
 
 .request{

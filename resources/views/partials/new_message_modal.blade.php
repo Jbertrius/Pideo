@@ -30,7 +30,7 @@
 
             <div class="pull-right">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" onclick="send();" class="btn btn-primary">Send</button>
+            <button type="button"   class="btn btn-primary send-msg">Send</button>
             </div>
 
         </div>

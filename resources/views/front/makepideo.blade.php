@@ -107,10 +107,22 @@ foreach($conversations as  $conversation)
                         <h2><span class="fa fa-film"></span> Make a Pideo</h2>
                     </div>
 
-                    <div class="pull-right ">
-                        <button type="button" id="upload" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-picture-o"></span>Upload Picture</button>
-                        <button type="button" id="record" class="btn btn-primary btn-sm disabled hidden-xs" data-toggle="modal" data-target="#recording"><span class="fa fa-microphone"></span>Record Audio</button>
-                        <button type="button" class="help btn btn-info hidden-xs hidden-sm" data-toggle="tooltip" data-placement="left" title="Help" id="help"><i class="fa fa-question"></i></button>
+                    <div class="pull-right">
+                        <div  class="bootstro"  style="display: inline-block" data-bootstro-title="Final Step"
+                              data-bootstro-content="After uploading the first pictures, a new button will appear here. You can click can it generate the pideo.
+                              NB : Don't forget,  Every section must have a Picture and an audio"
+                              data-bootstro-width="400px" data-bootstro-placement="bottom" data-bootstro-step="3"></div>
+
+                        <button type="button" id="upload" class="btn btn-primary btn-sm hidden-xs bootstro" data-bootstro-title="First Step"
+                                data-bootstro-content="To create a pideo, you must first upload a picture by clicking this button"
+                                data-bootstro-width="400px" data-bootstro-placement="left" data-bootstro-step="0"><span class="fa fa-picture-o"></span>Upload Picture</button>
+
+                        <button type="button" id="record" class="btn btn-primary btn-sm disabled hidden-xs bootstro"
+                                data-bootstro-title="Second Step"
+                                data-bootstro-content="After that, you must record an audio for the picture you just upload. Click this button to record audio"
+                                data-bootstro-width="400px" data-bootstro-placement="bottom" data-bootstro-step="1"
+                                data-toggle="modal" data-target="#recording"><span class="fa fa-microphone"></span>Record Audio</button>
+                        <button type="button" class="help btn btn-info hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title="Help" id="help"><i class="fa fa-question"></i></button>
                         <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span><span class="badge sectionCounter red"></span></button>
                     </div>
                 </div>
@@ -126,7 +138,11 @@ foreach($conversations as  $conversation)
                     </div>
 
                     <div class="add" style="width:auto;">
-                            <button type="button"  onclick="addsection(this);" class="btn btn-primary btn-sm"><span class="fa fa-plus"></span>Add Section</button>
+                            <button type="button"  onclick="addsection(this);"
+                                    class="btn btn-primary btn-sm bootstro"
+                                    data-bootstro-title="Third Step"
+                                    data-bootstro-content="You can add another section which will allow you to upload a picture again."
+                                    data-bootstro-width="400px" data-bootstro-placement="left" data-bootstro-step="2"><span class="fa fa-plus"></span>Add Section</button>
                     </div>
 
                 </div>
