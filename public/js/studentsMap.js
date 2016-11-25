@@ -1,14 +1,8 @@
 
-if(image_path.indexOf('/user.png') == -1)
-{
-    if(image_path.indexOf('/2') == -1)
-        image_path = image_path + '/2';
-    else
-        image_path =  image_path.replace('2', '3');
-    }
+if(image_path.indexOf('/2') == -1)
+    image_path = image_path + '/2';
 else
-    image_path = '/images/user.png/3';
-
+    image_path =  image_path.replace('2', '3');
 
 var customIcons = {
     studentOn: {

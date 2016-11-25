@@ -32,6 +32,10 @@ class Subject extends Model
     public function posts(){
         return $this->hasMany('App\Models\Post');
     }
+    
+    public static function getAll(){
+        return Subject::orderBy('subjects')->get();
+    }
 
  
     

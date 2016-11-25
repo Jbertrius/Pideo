@@ -1,4 +1,4 @@
-var Timer;
+
 
 $(function () {
 
@@ -69,7 +69,6 @@ $(function () {
                     window.alert('Please choose an image file.');
                 }
             }
-            $('#addsection').removeClass('disabled');
         });
     } else {
         $inputImage.prop('disabled', true).parent().addClass('disabled');
@@ -156,27 +155,16 @@ function doneEncoding( blob ) {
 function toggleRecording( e ) {
     if (e.classList.contains("recording")) {
         // stop recording
-        $('.progress').remove();
-        Timer.stop();
-        Timer.reset();
-        $('.basic').html('');
         audioRecorder.stop();
         e.classList.remove("recording");
         audioRecorder.getBuffers( gotBuffers );
-        $('#float-generate').removeClass('disabled');
     } else {
-
-        $('.content-frame-body').prepend('<div class="progress" style="background-color: #e25e5e;margin-bottom: 0px;"><span class="timer"></span><div class="indeterminate" style="background-color: #ff0a0a;"></div></div>');
-        var elems = document.getElementsByClassName("basic");
-        Timer =   new Stopwatch(elems[0]);
-
         // start recording
         if (!audioRecorder)
             return;
         e.classList.add("recording");
 
         audioRecorder.clear();
-        Timer.start();
         audioRecorder.record();
     }
 }
@@ -313,17 +301,10 @@ function createPlayer() {
 
 window.addEventListener('load', initAudio );
 
-$("#start").click(function(e) {
-    e.preventDefault();
-
-
-    toggleRecording(this);
+$("#start").click(function() {
+   toggleRecording(this);
     $(this).find('span').toggleClass('shine');
 });
-
-function refreshCount(){
-    $('.content-frame-right-toggle').find('.badge').text($('.content-frame-right').find('.panel-default').length);
-}
 
  function addsection (e) {
     var result;
@@ -344,15 +325,14 @@ function refreshCount(){
             $dataScaleY.val(e.scaleY);
         }
     };
-     
+
+
     url = result.toDataURL("image/jpeg", 1.0);
 
 
         
         e.remove();
-
-
-
+        
         $(".content-frame-right").append('<div class="panel panel-default" style="width:auto;">'+
             '<div class="panel-body">'+
             '<div class="first" style="width: 250px; height: 140.625px;">'+
@@ -364,7 +344,7 @@ function refreshCount(){
             '</div>');
 
         $(".content-frame-right").append(
-            '<div class="add" style="width:auto;">'+
+            '<div class=".add" style="width:auto;">'+
             '<button type="button"  onclick="addsection(this);" class="btn btn-primary btn-sm"><span class="fa fa-plus"></span>Add Section</button>'+
             '</div>');
 
@@ -375,17 +355,11 @@ function refreshCount(){
 
 
      $('#record').removeClass('disabled');
-     $('#audioRecord').removeClass('disabled');
      $('.player').find('audio').remove();
      
      if(!$('.content-frame-top').find('.pull-right').find('#generate').length)
-     {
-         $('.content-frame-top').find('.pull-right').prepend('<button type="button" id="generate" data-toggle="modal" data-target="#pideo"" class="btn btn-primary btn-sm hidden-xs"><span class="fa fa-video-camera"></span>Generate Pideo</button>');
+     $('.content-frame-top').find('.pull-right').prepend('<button type="button" id="generate" data-toggle="modal" data-target="#pideo"" class="btn btn-primary btn-sm "><span class="fa fa-video-camera"></span>Generate Pideo</button>');
 
-     }
-
-     refreshCount();
- 
 }
 
 
@@ -521,7 +495,6 @@ function getBlob(url) {
 
 function erase (e) {
     $(e).parent().parent().parent().remove();
-    refreshCount();
 }
 
 function dataURItoBlob(dataURI) {
@@ -628,8 +601,8 @@ $('.modal').on('click', '#sendPideo', function () {
         $(this).attr('disabled','disabled');
         $(this).html('Sending <i class="fa fa-spinner fa-spin"></i>');
 
-        sendPideo().done(function (data) {
-            window.location.replace("/messages/?conversation="+data);
+        sendPideo().done(function () {
+
         });
 
     }
@@ -657,21 +630,4 @@ $('.modal').on('click', '#delPideo', function () {
         location.reload();
     });
 
-});
-
-$('#uploadPic').on('click', function () {
-
-    $('#upload').trigger('click');
-});
-
-$('#addsection').on('click', function () {
-    $('.add').find('button').trigger('click');
-});
-
-$('#audioRecord').on('click', function () {
-    $('#start').trigger('click');
-});
-
-$('body').on('click', '#float-generate', function () {
-    $('#generate').trigger('click');
 });

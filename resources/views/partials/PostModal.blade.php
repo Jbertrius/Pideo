@@ -21,7 +21,7 @@
                 <label class="col-md-2 control-label">Category</label>
                 <div class="col-md-10">
                 <select class="form-control selectpicker"  title="Choose one of the following category" >
-                    @foreach(\App\Models\Subject::all() as $subject)
+                    @foreach(\App\Models\Subject::getAll() as $subject)
                         <option value="{{ $subject->id }}">{{ $subject->subjects }}</option>
                     @endforeach
                 </select>

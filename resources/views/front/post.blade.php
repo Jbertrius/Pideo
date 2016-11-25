@@ -73,8 +73,8 @@ foreach($conversations as $conversation)
 
                                 </div>
                                 <div class="post-row">
-                                    <button id="respond" data-id="{{ $user_id }}" class="btn btn-default btn-rounded "><span class="fa fa-envelope"></span> Respond</button>
-                                    <button id="pideo-respond" class="btn btn-default btn-rounded "><span class="fa fa-film"></span> Respond with a pideo</button>
+                                    <button   data-id="{{ $user_id }}" class="btn btn-default btn-rounded respond"><span class="fa fa-envelope"></span> Respond</button>
+                                    <button  class="btn btn-default btn-rounded pideo-respond"><span class="fa fa-film"></span> Respond with a pideo</button>
                                 </div>
                             </div>
 

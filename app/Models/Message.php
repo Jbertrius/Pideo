@@ -19,7 +19,7 @@ class Message extends Model
     use DatePresenter;
     
     protected $table = 'messages';
-    protected $fillable = array('body', 'created_at','type', 'user_id', 'conversation_id');
+    protected $fillable = array('body', 'created_at','type', 'user_id', 'conversation_id', 'post_id');
 
     public $timestamps = false;
 

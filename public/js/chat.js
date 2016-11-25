@@ -47,7 +47,9 @@ $(function() {
     }
 
 
-
+    var $loading = '<div class="item item-visible in"><div class="image"><img src="/img/icons/user.png" alt="Pietro MAXIMOFF"></div><div class="text" style="margin-left: 080% !important;text-align: center;">'+
+        '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>'+
+        '</div></div>';
     
 
     var channel = pusher.subscribe('channel_'+ user_id);
@@ -269,7 +271,6 @@ $(function() {
 
         pic.append('conversation', conversation);
         pic.append('user_id', user_id);
-        $('#messageList').find('.item').parent().append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
 
         var jqxhr = $.ajax({
             url: '/fileentry/addPic/'+user_id,
@@ -294,7 +295,6 @@ $(function() {
 
         pic.append('conversation', conversation);
         pic.append('user_id', user_id);
-        $('#messageList').find('.item').parent().append('<div class="item item-visible in "><div class="image"><img src="'+ image_path +'" alt="'+user_name+'"></div><div class="text"><span class="fa fa-spinner fa-spin fa-5x fa-fw" style="color: white"></span></div></div>');
 
 
         var jqxhr = $.ajax({
@@ -392,11 +392,15 @@ $(function() {
 
         var $messageList  =   $('#messageList').find('.item').parent();
          var $inputFile = $('#file');
+
+        $messageList.append($loading);
+        scrollToBottom();
         //$('#form').submit();
 
         sendFile($inputFile, current_conversation, user_id).done(function (data) {
             $messageList.children().last().remove();
             $messageList.append(data);
+            scrollToBottom();
 
             var $conversationList = $("#conversationList");
             var $notifBar = $('#msgNotif');
@@ -405,6 +409,8 @@ $(function() {
                 $conversationList.html(data);
                 $notifBar.html(data);
             });
+
+
         });
 
     });
@@ -414,11 +420,14 @@ $(function() {
         var $messageList  =   $('#messageList').find('.item').parent();
          var $inputPic = $('#pic');
         //$('#form').submit();
+        $messageList.append($loading);
+        scrollToBottom();
 
         sendPicture($inputPic, current_conversation, user_id).done(function (data) {
             $messageList.children().last().remove();
             $messageList.append(data);
 
+            scrollToBottom();
             var $conversationList = $("#conversationList");
             var $notifBar = $('#msgNotif');
 
@@ -433,8 +442,8 @@ $(function() {
 
 });
 
-if( document.getElementById('links') != null)
- document.getElementById('links').onclick = function (event) {
+if($('#links').length == 0 )
+document.getElementById('links').onclick = function (event) {
     event = event || window.event;
     var target = event.target || event.srcElement,
         link = target.src ? target.parentNode : target,

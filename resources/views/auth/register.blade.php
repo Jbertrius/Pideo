@@ -180,7 +180,7 @@
                                         <label class="sr-only" for="form-subject">Subject</label>
                                         <select  class="selectpicker form-control" name="form-subject" id="select" multiple data-max-options="2"  dropupAuto="false" dropup>
 
-                                            @foreach(\App\Models\Subject::all() as $subject)
+                                            @foreach(\App\Models\Subject::getAll() as $subject)
                                         <option value="{{ $subject->id }}">{{ $subject->subjects }}</option>
                                             @endforeach
 

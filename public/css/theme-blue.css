@@ -20,6 +20,23 @@
   zoom: 1;
 }
 
+.request{
+    background-color: #fffdfd;
+    border: #768bc7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    margin-bottom: 3px;
+}
+
+.request a{
+    margin-left: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .main-footer {
     -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
     -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
