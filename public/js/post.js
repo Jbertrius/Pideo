@@ -47,7 +47,7 @@ $(function() {
     $('body').on('click', '.send-msg', function (e) {
         e.preventDefault();
 
-        $(this).text('Send'+'<i class="fa fa-spinner fa-spin fa-fw"></i>');
+        $(this).html('Send'+'<i class="fa fa-spinner fa-spin fa-fw"></i>');
 
         $val = $('#messageBox').val();
         $form = $('#form');
