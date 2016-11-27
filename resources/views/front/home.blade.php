@@ -55,7 +55,7 @@ foreach($conversations as $conversation)
                     </div>
 
                         <form action="#" id = "drop" class="dropzone">
-                            <div class="dz-message" data-dz-message><span>Snap an Exercise</span></div>
+                            <div class="dz-message" data-dz-message><span> {{ trans('front/home.snap') }}</span></div>
                         </form>
 
 

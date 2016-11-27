@@ -7,7 +7,7 @@ OneSignal.push(["init", {
     autoRegister: true,
     promptOptions: {
 
-        actionMessage: "We'd like to show you notifications for the latest news and updates.",
+        actionMessage: "Receive your Solutions INSTANTLY with piideo notification",
 
         acceptButtonText: "ALLOW",
 

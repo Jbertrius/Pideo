@@ -11,5 +11,6 @@ return [
 	'warning-name' => '30 caractères alphabétiques maximum',
 	'warning-password' => 'Au moins 8 caractères',
 	'ok' => 'Vous avez bien été enregistré !',
-	'error'=> 'Ces informations ne correspondent pas à celles que nous avons dans notre base de données.'
+	'error'=> 'Ces informations ne correspondent pas à celles que nous avons dans notre base de données.',
+	'subject-help'=> 'Choisissez  deux matières tu maitrise bien',
 ];

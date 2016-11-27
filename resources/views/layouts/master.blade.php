@@ -13,6 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 
+
     <link rel="manifest" href="/manifest.json">
    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script src="{{ elixir('js/app.js') }}"></script>
@@ -24,6 +25,7 @@
         });
 
         var UserId = "{{ Auth::user()->webpushid->count()  }}";
+        var permission = '{{ trans('notification.actionMessage') }}';
 
      </script>
 

@@ -56,7 +56,7 @@ class FileEntryController extends Controller
         );
 
 
-        $conversation->save();
+        $conversation->touch();
         
         $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);
@@ -106,7 +106,7 @@ class FileEntryController extends Controller
 
         );
 
-        $conversation->save();
+        $conversation->touch();
 
         $authorMsg = App\Models\User::where('id', $request->input('user_id'))->first();
         $message = Message::create($params);

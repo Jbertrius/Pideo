@@ -249,6 +249,8 @@ $(function() {
         return jqxhr;
     }
 
+
+
     function sendMessage(body, conversation, user_id) {
         var jqxhr = $.ajax({
             url: '/messages',

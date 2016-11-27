@@ -18,15 +18,10 @@ var paths = {
 };
 
 elixir(function(mix) {
-     mix.sass('*.scss', 'public/css/')
-        .sass('style.scss', 'public/css/style.css')
-        .copy(paths.bootstrap + 'fonts/bootstrap/**', 'public/fonts/bootstrap')
-        .copy(paths.fontawesome + 'fonts/**', 'public/fonts/fontawesome')
-        .browserify('app.js')
-        .styles([
-            'style.css',
-            'style-responsive.min.css'
-        ])
+     mix
+
+
+ 
  
         .version([
             'css/app.css',

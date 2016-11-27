@@ -3,7 +3,7 @@
         <div class="mb-middle">
             <div class="mb-title"><span class="fa fa-check"></span> Success</div>
             <div class="mb-content">
-                <p>You’ll receive your solution in 10 mins .</p>
+                <p>  {{ trans('partials/success.successMsg') }}</p>
             </div>
             <div class="mb-footer">
                 <button class="btn btn-default btn-lg pull-right mb-control-close close-success">Close</button>

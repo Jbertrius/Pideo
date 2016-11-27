@@ -1,4 +1,8 @@
 
+
+
+
+
     @foreach($conversations as $conversation)
     <a href="/messages/?conversation={{$conversation->name}}" id="{{ $conversation->name }}" class="list-group-item {{ Session::get('current_conversation') == $conversation->name  ? 'active' : '' }}">
 

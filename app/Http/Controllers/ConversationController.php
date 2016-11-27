@@ -50,7 +50,7 @@ class ConversationController extends Controller
         }
 
         $viewData['current_conversation'] = $this->conversationRepository->getByName(Input::get('conversation'));
-        $viewData['conversations'] = Auth::user()->conversations()->take(8)->get();
+        $viewData['conversations'] = Auth::user()->conversations()->take(8)->orderBy('updated_at')->get();
 
         return View::make('partials/conversations', $viewData);
     }

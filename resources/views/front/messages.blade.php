@@ -56,14 +56,16 @@ foreach($conversations as $conversation)
                 <!-- START CONTENT FRAME RIGHT -->
                 <div class="content-frame-right">
 
-                    <div class="list-group list-group-contacts border-bottom push-down-10" id="conversationList">
+                    <div class="list-group list-group-contacts border-bottom push-down-10" >
                         <div class="input-group" style="margin-bottom: 12px">
                             <input type="text" class="form-control" placeholder="Search "/>
                                                 <span class="input-group-btn">
                                                     <button class="btn btn-default" type="button"><span class="fa fa-search"></span> </button>
                                                 </span>
                         </div>
+                        <div id="conversationList">
                     @include('partials.conversations', array('conversations' => $conversations, 'current_conversation' => $current_conversation))
+                        </div>
                     </div>
 
                     <div class="block">

@@ -87,7 +87,7 @@ class MessageController extends Controller
         );
 
 
-        $conversation->save();
+        $conversation->touch();
 
         $authorMsg = App\Models\User::where('id', Input::get('user_id'))->first();
         $conversationId = $conversation->id;

@@ -192,7 +192,7 @@ class MakepideoController extends Controller
             'user_id'           => \Auth::user()->id,
         );
         
-        $conversation->save();
+        $conversation->touch();
 
         $authorMsg = \Auth::user();
         $message = Message::create($params);

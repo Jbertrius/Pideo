@@ -102,7 +102,9 @@ $(function() {
 
     $('body').on('click', '.send-post', function () {
         
-       $category =  $('.selectpicker').val();
+       $category =  ( $('.selectpicker').val() == '' ) ? $('select').val() : $('.selectpicker').val();
+
+
        $description = $('#title').val().trim();
 
         if($description != ""){

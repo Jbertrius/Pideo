@@ -90,7 +90,7 @@
                         <div class="owl-testimonials bottom">
                             <div class="item">
                                 <h4 class="white heading light content">
-                                    Provide instant and efficient solutions to students studying now
+									{{ trans('front/accueil.goal') }}
                                 </h4>
                                 <h5 class="white heading light author"> </h5>
                             </div>
@@ -104,8 +104,7 @@
                         <div class="owl-testimonials bottom">
                             <div class="item">
                                 <h4 class="white heading light content">
-                                    A community of students and teachers linked to each others to provide solutions
-                                    to every exercices
+									{{ trans('front/accueil.vision') }}
                                 </h4>
                                 <h5 class="white heading light author"> </h5>
                             </div>
@@ -119,7 +118,7 @@
 						<div class="owl-testimonials bottom">
 							<div class="item">
 								<h4 class="white heading light content">
-                                    Attract the best experts in all subjets to make even the weakest students brillants
+									{{ trans('front/accueil.mission') }}
                                 </h4>
 								<h5 class="white heading light author"> </h5>
 							</div>
