@@ -78,7 +78,8 @@ $('body').on('click', '.update', function (e) {
     if($val == '')
         $('.cancel').trigger("click");
 
-    editProfile($var, $val).done(function (data) {
+    editProfile($var, $val).done(function (data)
+    {
         $('.update').parent().data('val',data);
         $('.cancel').trigger("click");
     });
