@@ -6,7 +6,7 @@
 
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{elixir('css/theme-blue.css')}}"/>
 
 @endsection
 
@@ -170,7 +170,7 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/plugins/fileinput/fileinput.min.js')}}"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqF6eRkqctYMhsqU5OEzDj1kweuNUfq0&libraries=places"></script>
     <script type="text/javascript"> var lat = '{!!Auth::user()->latitude!!}' ; var lng = '{!!Auth::user()->longitude!!}'; </script>
-    <script type="text/javascript" src="{{asset('js/edit.js')}}"></script>
+    <script type="text/javascript" src="{{elixir('js/edit.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>

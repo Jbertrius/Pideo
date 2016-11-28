@@ -6,7 +6,7 @@
 
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{elixir('css/theme-blue.css')}}"/>
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/pideo.css')}}"/>
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('js/plugins/mediaelement/skin/mediaelementplayer.css')}}"/>
 @endsection

@@ -488,7 +488,6 @@ function getBlob(url) {
     xhr.send();
 
 
-
 }
 
 
@@ -561,11 +560,11 @@ $('#go').on('click',function () {
 
             })
                 .fail(function () {
-                    var retry = '<div class="text-center">'+
+                    var retry = '<a href="#" id="go"><div class="text-center">'+
                         '<i class="fa fa-repeat fa-3x"></i>'+
                         '</div><div class="row text-center" style="font-size: large;font-weight: bold;">'+
                         '<span>Retry </span>'+
-                        '</div>';
+                        '</div></a>';
 
                     $('#generateBody').html(retry);
                 });
@@ -600,6 +599,7 @@ $('.modal').on('click', '#sendPideo', function () {
     {
         $(this).attr('disabled','disabled');
         $(this).html('Sending <i class="fa fa-spinner fa-spin"></i>');
+        $('#delPideo').attr("disabled","disabled");
 
         sendPideo().done(function () {
 
@@ -624,6 +624,7 @@ $('.modal').on('click', '#sendPideo', function () {
 $('.modal').on('click', '#delPideo', function () {
   var filename = $('video').attr('src').split('/')[2];
     $('#delPideo').attr("disabled","disabled");
+    $('#sendPideo').attr('disabled','disabled');
     $('#delPideo').html('Deleting <i class="fa fa-spinner fa-spin"></i>');
 
     deletePideo(filename).done(function (data) {

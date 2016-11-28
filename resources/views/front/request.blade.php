@@ -6,7 +6,7 @@
 
 @section('style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{elixir('css/theme-blue.css')}}"/>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
     <style>

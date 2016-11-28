@@ -1,5 +1,4 @@
 var elixir = require('laravel-elixir');
-require('laravel-elixir-jade');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,23 +10,10 @@ require('laravel-elixir-jade');
  |
  */
 
-var paths = {
-    'jquery': 'node_modules/jquery.2/node_modules/jquery/',
-    'bootstrap': 'node_modules/bootstrap-sass/assets/',
-    'fontawesome': 'node_modules/font-awesome/'
-};
+ 
 
 elixir(function(mix) {
-     mix
-
-
- 
- 
-        .version([
-            'css/app.css',
-            'css/all.css',
-            'js/app.js'
-        ])
+     mix.version( ['js/sendproblem.js', 'js/app.js', 'css/theme-blue.css', 'js/edit.js' ] );
 });
 
 

@@ -60,7 +60,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.css')}}"  media="screen,projection"/>
 
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-blue.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{elixir('css/theme-blue.css')}}"/>
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('js/plugins/mediaelement/skin/mediaelementplayer.css')}}"/>
 
     <link rel="stylesheet" type="text/css"   href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
