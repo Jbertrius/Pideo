@@ -1,5 +1,6 @@
 {
-  "css/all.css": "css/all-54ea2ef822.css",
-  "css/app.css": "css/app-93a84bd8f6.css",
-  "js/app.js": "js/app-7447d25fa6.js"
+  "css/theme-blue.css": "css/theme-blue-dc166ee89d.css",
+  "js/app.js": "js/app-7447d25fa6.js",
+  "js/edit.js": "js/edit-63c208d5eb.js",
+  "js/sendproblem.js": "js/sendproblem-7ad7eb04c5.js"
 }
