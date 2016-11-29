@@ -1,6 +1,7 @@
 {
   "css/theme-blue.css": "css/theme-blue-dc166ee89d.css",
   "js/app.js": "js/app-7447d25fa6.js",
-  "js/edit.js": "js/edit-63c208d5eb.js",
+  "js/chat.js": "js/chat-a01526b8b9.js",
+  "js/edit.js": "js/edit-14c47838ca.js",
   "js/sendproblem.js": "js/sendproblem-7ad7eb04c5.js"
 }

@@ -178,7 +178,7 @@ foreach($conversations as $conversation)
       var pusher = new Pusher('{{env("PUSHER_KEY")}}', { cluster: "eu" });
     </script>
 
-    <script src="{{ asset('js/chat.js')}}"></script>
+    <script src="{{ elixir('js/chat.js')}}"></script>
 
 @endsection
 
