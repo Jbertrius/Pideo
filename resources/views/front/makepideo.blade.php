@@ -301,7 +301,7 @@ foreach($conversations as  $conversation)
         var
                 user_id   = "{{ Auth::user()->id }}";
     </script>
-    <script type="text/javascript" src="{{asset('js/makepideo.js')}}"></script>
+    <script type="text/javascript" src="{{elixir('js/makepideo.js')}}"></script>
     <script>
         function changeSize() {
             var width = parseInt($("#Width").val());
