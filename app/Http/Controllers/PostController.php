@@ -180,7 +180,7 @@ class PostController extends Controller
 
         $post_notifications = array();
 
-        $users = App\Models\Subject::where('id', Request::input('cat'))->first()->users()->get();
+        $users = App\Models\Subject::where('id', Request::input('cat'))->first()->users()->inRandomOrder()->take(50)->get();
 
 
         foreach ($users as $user){
@@ -243,7 +243,7 @@ class PostController extends Controller
 
         $post_notifications = array();
 
-        $users = App\Models\Subject::where('id', Input::get('cat'))->first()->users()->get();
+        $users = App\Models\Subject::where('id', Input::get('cat'))->first()->users()->inRandomOrder()->take(50)->get();
 
 
         foreach ($users as $user){

@@ -57,7 +57,7 @@ class AuthController extends Controller
         Guard $auth)
     {
         $logValue = $request->input('log');
-        $logAccess = filter_var($logValue, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $logAccess = filter_var($logValue, FILTER_VALIDATE_EMAIL) ? 'email' : 'number';
         $throttles = in_array(
             ThrottlesLogins::class, class_uses_recursive(get_class($this))
         );
