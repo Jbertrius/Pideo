@@ -66,7 +66,7 @@ foreach($conversations as $conversation)
                                 <div class="form-group">
                                     <select class="form-control select" id="sub">
                                         <option value = "all"> All </option>
-                                        @foreach(\App\Models\Subject::all() as $subject)
+                                        @foreach(\App\Models\Subject::getAll() as $subject)
                                             <option value="{{ $subject->id }}">{{ $subject->subjects }}</option>
                                         @endforeach
                                     </select>
