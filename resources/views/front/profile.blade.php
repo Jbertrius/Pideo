@@ -56,7 +56,7 @@ foreach($conversations as $conversation)
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000">{!!$User->firstname!!}  {!!$User->lastname!!}</div>
-                                <div class="profile-data-title" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000"> {!!$User->email!!}</div>
+                                @if( $user_id == Auth::user()->id )<div class="profile-data-title" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000"> {!!$User->email!!}</div>@endif
                             </div>
                              
                         </div>
