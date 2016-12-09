@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder {
                 'valid'  => '0',
                 'confirmed'  => '1',
                 'confirmation_code'  => str_random(30),
-                'image_path'  => 'img/icons/user.png',
+                'image_path'  => '/img/icons/user.png',
                 'created_at' 	  => new DateTime,
                 'updated_at' 	  => new DateTime
             ]);
@@ -43,7 +43,7 @@ class UsersTableSeeder extends Seeder {
             'valid'  => '0',
             'confirmed'  => '1',
             'confirmation_code'  => str_random(30),
-            'image_path'  => 'img/icons/user.png',
+            'image_path'  => '/img/icons/user.png',
             'created_at' 	  => new DateTime,
             'updated_at' 	  => new DateTime
         ]);
@@ -53,7 +53,7 @@ class UsersTableSeeder extends Seeder {
             'firstname' => 'Tony',
             'email'   => 'jbertrius@yahoo.com',
             'password'  => bcrypt('123456'),
-            'role_id'  => 2,
+            'role_id'  => 3,
             'number'  => '0627875688',
             'lang'  => 'English',
             'city'  => 'Buenos Aires',
@@ -63,7 +63,7 @@ class UsersTableSeeder extends Seeder {
             'valid'  => '0',
             'confirmed'  => '1',
             'confirmation_code'  => str_random(30),
-            'image_path'  => 'img/icons/user.png',
+            'image_path'  => '/img/icons/user.png',
             'created_at' 	  => new DateTime,
             'updated_at' 	  => new DateTime
         ]);

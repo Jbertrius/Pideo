@@ -29,7 +29,7 @@
                     <div class="profile-data-title"></div>
                 </div>
                 <div class="profile-controls">
-                    <a href= {{ URL::to('profile') }} class="profile-control-left"><span class="fa fa-info"></span></a>
+                    <a href=  " /{!! strtolower($firstname) !!}.{!! strtolower($lastname) !!} " class="profile-control-left"><span class="fa fa-info"></span></a>
                     <a href= {{ URL::to('messages') }} class="profile-control-right"><span class="fa fa-envelope"></span></a>
                 </div>
             </div>

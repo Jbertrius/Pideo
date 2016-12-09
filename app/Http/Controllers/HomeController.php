@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Jobs\ChangeLocale;
 
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->session()->get('statut') == 'user')
+        if($request->session()->get('statut') == 'user' or $request->session()->get('statut') == 'coach' or $request->session()->get('statut') == 'admin')
             return view('front.home');
         else
             return view('front.accueil');
@@ -56,8 +57,20 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function profile(){
-        return view('front.profile');
+    public function profile($profile){
+        if (strpos($profile, '.') !== false) {
+            try{
+            $name = explode('.', $profile);
+            $user_id = User::where('firstname',$name[0])->where('lastname', $name[1])->first()->id;
+
+            return view('front.profile', ['user_id' => $user_id]);
+            }catch (\Exception $e){
+                \App::abort(404);
+            }
+        }
+        else
+            \App::abort(404);
+
     }
 
     public function edit(){

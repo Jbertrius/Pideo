@@ -18,21 +18,21 @@ class CreateMessagesTable extends Migration
             $table->text('body');
             $table->text('type');
             $table->integer('conversation_id')->unsigned();
-            $table->integer('post_id')->unsigned()->nullable();;
-            
+            $table->integer('post_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned();
+
+
+
+
             $table->foreign('conversation_id')->references('id')->on('conversations')
                 ->onDelete('cascade')
                 ->onUpdate('restrict');
-            
-            $table->integer('user_id')->unsigned();
             
             $table->foreign('user_id')->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('restrict');
 
-            $table->foreign('post_id')->references('id')->on('post')
-                ->onDelete('cascade')
-                ->onUpdate('restrict');
+
         });
     }
 

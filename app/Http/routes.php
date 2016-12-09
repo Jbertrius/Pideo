@@ -214,11 +214,8 @@ Route::group( ['middleware' => 'auth' ], function()
         'uses' => 'HomeController@map',
         'as' => 'map']);
 
-    Route::get('profile', [
-    'uses' => 'HomeController@profile',
-    'as' => 'profile']);
 
-    Route::get('edit', [
+    Route::get('edit', [ 
     'uses' => 'HomeController@edit',
     'as' => 'edit']);
 
@@ -247,12 +244,15 @@ Route::group( ['middleware' => 'auth' ], function()
     Route::post('subject/update', 'UserController@updateSubject');
 
     Route::post('webpush', 'WebPushController@addWebPushId');
-    
-    
-    
-    
-    
-    
-    
-    });
+
+
+    Route::get('/{profile}', [
+        'uses' => 'HomeController@profile',
+        'as' => 'profile']);
+
+
+
+
+
+});
 

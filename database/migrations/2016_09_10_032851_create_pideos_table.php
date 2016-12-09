@@ -42,8 +42,8 @@ class CreatePideosTable extends Migration
     public function down()
     {
         Schema::table('pideos', function(Blueprint $table) {
-            $table->dropForeign('pideos_user_id_foreign');
-            $table->dropForeign('pideos_subject_id_foreign');
+            //$table->dropForeign('pideos_user_id_foreign');
+            //$table->dropForeign('pideos_subject_id_foreign');
             $table->drop();
         });
     }

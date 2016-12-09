@@ -1,7 +1,19 @@
+<?php
+$User = \App\Models\User::where('id',$user_id)->first();
+$conversations = Auth::user()->conversations()->get();
+$counter = 0;
+
+foreach($conversations as $conversation)
+{
+    if($conversation->messagesNotifications()->count() != 0)
+        $counter++;
+}
+?>
+
 @extends('layouts.master')
 
 @section('title')
-    {{ trans('front/site.title') }}
+    {{ $User->fullname() }}
 @endsection
 
 @section('style')
@@ -14,16 +26,7 @@
         </style>
 @endsection
 
-<?php
-$conversations = Auth::user()->conversations()->get();
-$counter = 0;
 
-foreach($conversations as $conversation)
-{
-    if($conversation->messagesNotifications()->count() != 0)
-        $counter++;
-}
-?>
 
 @section('contenu')
 
@@ -33,10 +36,12 @@ foreach($conversations as $conversation)
             @include('partials/navbar', ['conversations' => $conversations, 'counter' => $counter])
 
                     <!-- START BREADCRUMB -->
+
             <ul class="breadcrumb">
-                <li>Home</li>
-                <li class="active">Profile</li>
+                <li>Profile</li>
+                <li class="active">{!! $User->fullname() !!}</li>
             </ul>
+
             <!-- END BREADCRUMB -->
 
             <!-- PAGE CONTENT WRAPPER -->
@@ -47,17 +52,16 @@ foreach($conversations as $conversation)
                     <div class="panel panel-default">
                         <div class="panel-body profile" style="background: url({{asset('img/backgrounds/back.jpg')}}) center center no-repeat;">
                             <div class="profile-image">
-                                <img src="{!! Auth::user()->image_path !!}"  alt="Nadia Ali"/>
+                                <img src="{!! $User->image_path !!}"  alt="Nadia Ali"/>
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000">{!!Auth::user()->firstname!!}  {!!Auth::user()->lastname!!}</div>
-                                <div class="profile-data-title" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000"> {!!Auth::user()->email!!}</div>
+                                <div class="profile-data-name" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000">{!!$User->firstname!!}  {!!$User->lastname!!}</div>
+                                <div class="profile-data-title" style="text-shadow: 2px 0px 2px rgba(255, 255, 255, 1); color: #000"> {!!$User->email!!}</div>
                             </div>
-                            <div class="profile-controls">
-                                <a href="#" class="profile-control-left twitter"><span class="fa fa-twitter"></span></a>
-                                <a href="#" class="profile-control-right facebook"><span class="fa fa-facebook"></span></a>
-                            </div>
+                             
                         </div>
+
+                        @if( $user_id == Auth::user()->id )
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-6">
@@ -68,6 +72,9 @@ foreach($conversations as $conversation)
                                 </div>
                             </div>
                         </div>
+                        @endif
+
+
                         <div class="panel-body list-group border-bottom">
                             <a href="#" class="list-group-item active"><span class="fa fa-location-arrow"></span> Location</a>
                             <a href="#" class="list-group-item"><span class="fa fa-bar-chart-o"></span> Activity</a>
@@ -78,14 +85,14 @@ foreach($conversations as $conversation)
 
                                 </a>
                                 <ul style=" margin-top: 3px;margin-bottom: 3px;margin-left: -46px;text-align: center;" class="collapse" id="collapseExample">
-                                    @foreach(Auth::user()->subjects as $subject)
+                                    @foreach($User->subjects as $subject)
                                     <li class="subject_profile" ><span class="badge badge-success">{!! $subject->subjects!!}</span></li>
                                     @endforeach
 
                                 </ul>
 
-                            <a href="#" class="list-group-item"><span class="fa fa-building-o"></span> City <span class="badge badge-default">{!! Auth::user()->city !!}</span></a>
-                            <a href="#" class="list-group-item"><span class="fa fa-phone"></span> Tel <span class="badge badge-default">{!! Auth::user()->number !!}</span></a>
+                            <a href="#" class="list-group-item"><span class="fa fa-building-o"></span> City <span class="badge badge-default">{!! $User->city !!}</span></a>
+                            @if( $user_id == Auth::user()->id )<a href="#" class="list-group-item"><span class="fa fa-phone"></span> Tel <span class="badge badge-default">{!! $User->number !!}</span></a>@endif
                         </div>
                         <div class="panel-body">
                             <h4 class="text-title">Photos</h4>
@@ -161,7 +168,7 @@ foreach($conversations as $conversation)
     <script type="text/javascript" src="{{asset('js/settings.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
-    <script type="text/javascript"> var lat = '{!!Auth::user()->latitude!!}' ; var lng = '{!!Auth::user()->longitude!!}'; </script>
+    <script type="text/javascript"> var lat = '{!!$User->latitude!!}' ; var lng = '{!!$User->longitude!!}'; </script>
     <script type="text/javascript" src="{{asset('js/profileMaps.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/plugins/blueimp/jquery.blueimp-gallery.min.js')}}"></script>
 @endsection

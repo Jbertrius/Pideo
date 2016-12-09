@@ -29,6 +29,16 @@ class Subject extends Model
         return $this->belongsToMany('App\Models\User');
     }
 
+    public function userSimple()
+    {
+        return $this->belongsToMany('App\Models\User')->where('role_id','<>',3);
+    }
+
+    public function userCoach()
+    {
+        return $this->belongsToMany('App\Models\User')->where('role_id',3);
+    }
+
     public function posts(){
         return $this->hasMany('App\Models\Post');
     }

@@ -70,6 +70,7 @@ function setupMarker(data,map) {
     for (var i = 0; i < markers.length; i++) {
         var firstname = markers[i].getAttribute("firstname");
         var lastname = markers[i].getAttribute("lastname");
+        var profile = firstname.toLowerCase()+'.'+lastname.toLowerCase();
         var city = markers[i].getAttribute("city");
         var sub1 = markers[i].getAttribute("sub1");
         var id = markers[i].getAttribute("id");
@@ -78,7 +79,7 @@ function setupMarker(data,map) {
         var point = new google.maps.LatLng(
             parseFloat(markers[i].getAttribute("lat")),
             parseFloat(markers[i].getAttribute("lng")));
-        var html = "<b>" + firstname + " " + lastname + "</b>" +
+        var html = "<a href='/"+ profile +"'><b>" + firstname + " " + lastname + "</b></a>" +
             "<br/> City : <b>" + city +
             "</b> <br/> Language : <b>" + language + "</b>" +
             "</b> <br/> Subjects : <b>" + sub1 +", "+ sub2 +"</b>" +

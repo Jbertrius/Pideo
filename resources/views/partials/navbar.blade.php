@@ -17,7 +17,7 @@
     </li>
     <!-- END SIGN OUT -->
     <!-- MESSAGES -->
-    <li class="xn-icon-button pull-right" id="counter1">
+    <li class="xn-icon-button pull-right messages" id="counter1">
         <a href="#"><span class="fa fa-comments"></span></a>
         @if($counter != 0)
         <div class="informer informer-danger" >{{ $counter }}</div>
@@ -79,7 +79,7 @@
 
     ?>
     <!-- TASKS -->
-    <li class="xn-icon-button pull-right" id="post_counter1">
+    <li class="xn-icon-button pull-right tasks" id="post_counter1">
         <a href="#"><span class="fa fa-exclamation-circle"></span></a>
 
         @if($postCounter != 0)

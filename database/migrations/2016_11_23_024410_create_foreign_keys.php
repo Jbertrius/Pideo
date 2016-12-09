@@ -19,6 +19,14 @@ class CreateForeignKeys extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('restrict');
         });
+
+        Schema::table('messages', function(Blueprint $table) {
+            $table->foreign('post_id')
+                ->references('id')
+                ->on('post')
+                ->onDelete('cascade')
+                ->onUpdate('restrict');
+        });
     }
 
     /**

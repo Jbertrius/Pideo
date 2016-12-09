@@ -178,31 +178,18 @@ class PostController extends Controller
 
         $post =   App\Models\Post::create($params);
 
-        $post_notifications = array();
-
-        $users = App\Models\Subject::where('id', Request::input('cat'))->first()->users()->inRandomOrder()->take(50)->get();
 
 
-        foreach ($users as $user){
+        $userSimple = App\Models\Subject::where('id', Input::get('cat'))->first()->userSimple()->inRandomOrder()->take(50)->get();
 
-            if($user->id != Auth::user()->id)
-            {
-                array_push($post_notifications, new App\Models\PostNotification(array('user_id' =>  $user->id, 'cat_id' =>  Request::input('cat'),  'read' => false)));
+        $userCoach = App\Models\Subject::where('id', Input::get('cat'))->first()->userCoach()->get();
 
-                $pusher->trigger('channel_'.$user->id, 'post',
-                    array(
-                        'message'  => array(
-                            'description' => $post->description,
-                            'category' => $post->cat->subjects,
-                            'date' => $post->created_at,
-                            'author' => $post->users->fullname(),
-                            'id' => $post->id)
-                    ));
 
-                $this->userRepository->sendWebPush($user->id, 'Post : '.$post->description.' - '.$post->cat->subjects  ,'/request/'.$post->id);
-            }
+        $post_notificationSimple = $this->spreadPost($userSimple, $pusher, $post);
 
-        }
+        $post_notificationCoach = $this->spreadPost($userCoach, $pusher, $post);
+
+        $post_notifications= array_merge($post_notificationCoach, $post_notificationSimple);
 
         $post->posts_notifications()->saveMany($post_notifications);
 
@@ -241,10 +228,39 @@ class PostController extends Controller
         
         $post =   App\Models\Post::create($params);
 
+
+
+        $userSimple = App\Models\Subject::where('id', Input::get('cat'))->first()->userSimple()->inRandomOrder()->take(50)->get();
+
+        $userCoach = App\Models\Subject::where('id', Input::get('cat'))->first()->userCoach()->get();
+
+        $post_notificationSimple = $this->spreadPost($userSimple, $pusher, $post);
+
+        $post_notificationCoach = $this->spreadPost($userCoach, $pusher, $post);
+
+        $post_notifications= array_merge($post_notificationCoach, $post_notificationSimple);
+
+        $post->posts_notifications()->saveMany($post_notifications);
+
+
+
+        return  view('partials.success');
+    }
+    
+    public function sendModal(){
+        return  view('partials.PostModal');
+    }
+    
+    public function myrequest(){
+
+        $posts = App\Models\Post::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(6);
+
+        return view('front.request', ['posts' => $posts, 'number' => $posts->count()]);
+    }
+
+    private function spreadPost($users, $pusher, $post ){
+
         $post_notifications = array();
-
-        $users = App\Models\Subject::where('id', Input::get('cat'))->first()->users()->inRandomOrder()->take(50)->get();
-
 
         foreach ($users as $user){
             if($user->id != Auth::user()->id)
@@ -263,25 +279,10 @@ class PostController extends Controller
 
                 $this->userRepository->sendWebPush($user->id, 'Post : '.$post->description.' - '.$post->cat->subjects ,'/request/'.$post->id);
             }
-
         }
 
-        $post->posts_notifications()->saveMany($post_notifications);
+        return $post_notifications;
 
-
-
-        return  view('partials.success');
-    }
-    
-    public function sendModal(){
-        return  view('partials.PostModal');
-    }
-    
-    public function myrequest(){
-
-        $posts = App\Models\Post::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(6);
-
-        return view('front.request', ['posts' => $posts, 'number' => $posts->count()]);
     }
 
     public function deletePost($id)
