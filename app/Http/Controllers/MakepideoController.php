@@ -3,19 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Subject;
+
 use App\Models\Conversation;
 use App\Repositories\PideoRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Models\Pideo;
+use  Dawson\Youtube\YoutubeFacade;
 use Anam\PhantomMagick\Converter;
 use View;
 use Linkthrow\Ffmpeg\Classes\FFMPEG;
 use Image;
 use App\Models\MessageNotification;
 use File;
- use App\Models\User;
- use App\Models\Message;
+use App\Models\User;
+use App\Models\Message;
 use Storage;
 use App\Http\Requests;
 use App\Repositories\FileEntryRepository;
@@ -35,7 +37,8 @@ class MakepideoController extends Controller
     }
 
      public function index(){
-        return View::make('front/makepideo');
+         $isConnected = \Illuminate\Support\Facades\Auth::check();
+        return View::make('front/pideo', ['isConnected' => $isConnected ]);
      }
 
     public function back($result){
@@ -46,21 +49,30 @@ class MakepideoController extends Controller
 
         $getID3 = new \getID3;
 
+        $sectionCpt = count($request->file('files'));
 
-
+        /* Logo recuperation */
         $logo = storage_path().'/app/public/logo.png';
 
-        $params = array();
-        $sectionCpt = $request->input('sectionNb');
-        $userId = $request->input('user_id');
 
         $params['title'] = $request->input('title');
         $params['cat'] = $request->input('category');
+        $params['school'] =  $request->input('school');
 
-        if($request->has('tags'))
-        $params['tags'] = $request->input('tags');
+        if(!is_null(\Auth::user()))
+        {
+            $userId = \Auth::user()->id;
+            $params['userId'] = $userId;
+        }
+        else
+        {
+            $userId = 'guest';
+            $params['username'] = $request->input('username');
+        }
 
-        $params['userId'] = $userId;
+
+        $pictures = $request->file('files');
+        $audios = $this->arrangeAudio($request);
 
 
         $imgEntry = []; $audioEntry = [];
@@ -72,12 +84,12 @@ class MakepideoController extends Controller
 
         for($i = 0; $i< $sectionCpt; $i++){
 
-            $img = $request->file('img'.$i);
-            $imageSession = $this->fileentryRepository->store($img, $userId, 'Pideos');
+            $img =  $pictures[$i];
+            $imageSession = $this->fileentryRepository->store($img, null, 'Pideos');
             $imgEntry['img'.$i] = $imageSession->filename;
 
-            $audio = $request->file('audio'.$i);
-            $audioSession = $this->fileentryRepository->store($audio, $userId, 'Pideos');
+            $audio = $audios[$i+1];
+            $audioSession = $this->fileentryRepository->store($audio, null, 'Pideos');
             $audioEntry['audio'.$i] = $audioSession->filename;
 
             $imgPath = $videopath.'/'.$userId.'_'.$id.'_'.$imgEntry['img'.$i];
@@ -89,7 +101,31 @@ class MakepideoController extends Controller
 
             Storage::makeDirectory('Pideos/'.$userId.'_'.$id);
 
-            $img = Image::make(storage_path().'/app/Pideos/'.$imgEntry['img'.$i])->resize(1280, 720)->insert($logo)->save($imgPath);
+            $watermask = Image::make(storage_path().'/app/Pideos/'.$imgEntry['img'.$i]);
+
+            $width = $watermask->width();
+            $height = $watermask->height();
+
+            $calcuHeight = ( 1280 / $width ) * $height;
+
+
+            if($width > $height && $calcuHeight < 720)
+                $watermask->resize(1280, null, function ($constraint) {
+                    $constraint->aspectRatio();
+
+                });
+            else
+                $watermask->resize(null, 720, function ($constraint) {
+                    $constraint->aspectRatio();
+
+                });
+
+            $watermask->insert($logo);
+            $img = null;
+
+            $img = Image::canvas(1280, 720)->insert($watermask, 'center')->save($imgPath);
+
+
 
             if($i == 0)
                 copy( storage_path().'/app/Pideos/'.$imgEntry['img'.$i] , storage_path().'/app/Pictures/'.$userId.'_'.$id.'.jpg');
@@ -121,7 +157,9 @@ class MakepideoController extends Controller
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
 
+        $videoID = $this->uploadYoutube($params['path'], $params['title']);
 
+        $params['youtubeID'] = $videoID;
 
          $pideo = $this->pideoRepository->store($params);
 
@@ -131,13 +169,15 @@ class MakepideoController extends Controller
 
         }
 
-        return $pideo->filename;
+        return $videoID;
 
 
 
 
 
     }
+
+
 
     public function delete($filename){
 
@@ -159,6 +199,18 @@ class MakepideoController extends Controller
         }
         return response("File doesn't exists", 404);
 
+    }
+    
+    private function arrangeAudio($request){
+        $audios = [];
+        $index = $request->input('audio');
+        $blobs = $request->file('audio');
+        $cpt = count($request->input('audio'));
+
+        for($i = 0; $i < $cpt; $i++)
+            $audios[$index[$i]['id']] = $blobs[$i]['blob'];
+
+        return $audios;
     }
     
     public function send(Request $request){
@@ -214,6 +266,18 @@ class MakepideoController extends Controller
          return   $conversation->name;
         
         
+    }
+
+    private function uploadYoutube($pathToVideo, $title, $description = '' ){
+
+        $video = YoutubeFacade::upload($pathToVideo, [
+            'title'       => $title,
+            'description' => $description,
+            'tags'        => ['piideo', 'tuto'],
+            'category_id' => 10
+        ], 'unlisted');
+
+        return $video->getVideoId();
     }
 
     private function sendNotif($idest, $room, $message, $user, $conver){

@@ -41,6 +41,8 @@ Route::get('confirm ', function( ){
     return view('auth.confirm') ;
 })->name('confirm');
 
+Route::post('createpideo', 'MakepideoController@make');
+
 
 
 
@@ -135,7 +137,6 @@ Route::group( ['middleware' => 'auth' ], function()
 
     Route::post('delete/{filename}', 'MakepideoController@delete');
 
-    Route::post('createpideo', 'MakepideoController@make');
         
     Route::get('images/{filename}/{crop}', function ($filename, $crop)
     {

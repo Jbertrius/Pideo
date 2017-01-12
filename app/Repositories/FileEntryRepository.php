@@ -35,7 +35,10 @@ class FileEntryRepository extends BaseRepository
         $entry->mime = $file->getClientMimeType();
         $entry->original_filename = $file->getClientOriginalName();
         $entry->filename = $file->getFilename().'.'.$extension;
-        $entry->user_id = $user_id;
+
+        if(!is_null($user_id))
+            $entry->user_id = $user_id;
+        
         $entry->save();
         
         return $entry;

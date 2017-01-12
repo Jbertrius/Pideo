@@ -14,5 +14,6 @@ return [
     'who' => 'Tell us who you are',
 	'administration' => 'Administration',
 	'redaction' => 'Redaction',
-	'logout' => 'Logout'
+	'logout' => 'Logout',
+	'login' => 'Sign in'
 ];

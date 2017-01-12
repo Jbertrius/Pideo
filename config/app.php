@@ -179,6 +179,7 @@ return [
         Backpack\CRUD\CrudServiceProvider::class,
         Backpack\Generators\GeneratorsServiceProvider::class,
         Berkayk\OneSignal\OneSignalServiceProvider::class,
+        Dawson\Youtube\YoutubeServiceProvider::class,
          
 
     ],
@@ -233,7 +234,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Converter' => Anam\PhantomMagick\Facades\Converter::class,
         'FFMPEG' => Linkthrow\Ffmpeg\Facade\FfmpegFacade::class,
-        'OneSignal' => Berkayk\OneSignal\OneSignalFacade::class
+        'OneSignal' => Berkayk\OneSignal\OneSignalFacade::class,
+        'Youtube' => Dawson\Youtube\YoutubeFacade::class
 
 
     ],

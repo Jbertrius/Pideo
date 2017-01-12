@@ -26,16 +26,24 @@ class PideoRepository extends BaseRepository
     public function store($param) {
         
         $pideo = new Pideo();
-        $pideo->user_id = $param['userId'];
-        $pideo->subject_id = $param['cat'];
+        if(array_key_exists('userId', $param))
+        {
+            $pideo->user_id = $param['userId'];
+        }
+        else
+            $pideo->username = $param['username'];
+            
+       
+        //$pideo->subject_id = $param['cat'];
         $pideo->title = $param['title'];
         $pideo->filename = $param['filename'];
-
-
-
+        $pideo->school = $param['school'];
+        $pideo->category = $param['cat'];
+        $pideo->youtubeID = $param['youtubeID'];
+        
         $pideo->save();
 
-        if (array_key_exists('tags', $param) && $param['tags'] != '') {
+       /* if (array_key_exists('tags', $param) && $param['tags'] != '') {
             $tags = explode(',', $param['tags']);
 
         foreach ($tags as $tag) {
@@ -48,9 +56,9 @@ class PideoRepository extends BaseRepository
                 $pideo->tags()->attach($tag_ref->id);
             }
         }
-        }
-        
 
+
+        }*/
         
         return $pideo;
     }

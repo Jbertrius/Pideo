@@ -90,7 +90,7 @@ class AuthController extends Controller
             if($request->session()->has('user_id'))	{
                 $request->session()->forget('user_id');
             }
-            return redirect('home');
+            return redirect('/');
         }
 
         $request->session()->put('user_id', $user->id);

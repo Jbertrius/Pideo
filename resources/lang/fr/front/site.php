@@ -11,5 +11,6 @@ return [
 	'connection' => 'Connexion',
 	'administration' => 'Administration',
 	'redaction' => 'Rédaction',
-	'logout' => 'Déconnexion'
+	'logout' => 'Déconnexion',
+	'login' => 'Connexion'
 ];

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\View;
 use App\Http\Requests;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -26,10 +26,9 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->session()->get('statut') == 'user' or $request->session()->get('statut') == 'coach' or $request->session()->get('statut') == 'admin')
-            return view('front.home');
-        else
-            return view('front.accueil');
+        $isConnected = \Illuminate\Support\Facades\Auth::check();
+        return View::make('front/pideo', ['isConnected' => $isConnected ]);
+
 
     }
 

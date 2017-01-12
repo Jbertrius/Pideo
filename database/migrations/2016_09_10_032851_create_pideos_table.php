@@ -16,8 +16,13 @@ class CreatePideosTable extends Migration
             $table->increments('id');
             $table->string('filename');
             $table->string('title'); 
-            $table->integer('subject_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('subject_id')->unsigned()->nullable();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->string('username')->nullable();
+            $table->string('school');
+            $table->string('category');
+            $table->string('youtubeID');
+
             $table->timestamps();
 
             $table->foreign('user_id')

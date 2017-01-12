@@ -37,21 +37,28 @@
 
         <li @if( isset($page) && ($page == 'Search')) class="active" @endif>
             <a href= {{ URL::to('home') }} >
-                <span class="fa fa-upload"></span> <span class="xn-text">Post a problem</span></a>
+                <span class="fa fa-upload"></span> <span class="xn-text">Post a problem</span>
+            </a>
         </li>
 
         <li @if( isset($page) && ($page == 'Map')) class="active" @endif>
-            <a href= {{ URL::to('map') }} ><span class="fa fa-map-marker"></span> <span class="xn-text">Find a Tutor</span></a>
+            <a href= {{ URL::to('map') }} >
+                <span class="fa fa-map-marker"></span> <span class="xn-text">Find a Tutor</span>
+            </a>
         </li>
 
 
         <li @if( isset($page)&& $page == 'MakePideo') class="active" @endif>
-            <a href= {{ URL::to('makepideo') }} ><span class="fa fa-film"></span> <span class="xn-text">Make a Pideo</span></a>
+            <a href= {{ URL::to('makepideo') }} >
+                <span class="fa fa-film"></span> <span class="xn-text">Make a Pideo</span>
+            </a>
         </li>
 
 
         <li @if( isset($page)&& $page == 'myrequest') class="active" @endif>
-            <a href= {{ URL::to('myrequest') }} ><span class="fa fa-share-square"></span> <span class="xn-text">My requests</span></a>
+            <a href= {{ URL::to('myrequest') }} >
+                <span class="fa fa-share-square"></span> <span class="xn-text">My requests</span>
+            </a>
         </li>
 
         <li  class="hidden-md hidden-sm hidden-lg hidden-desktop">
