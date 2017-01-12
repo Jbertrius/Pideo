@@ -63,11 +63,13 @@ class MakepideoController extends Controller
         {
             $userId = \Auth::user()->id;
             $params['userId'] = $userId;
+            $description = "Piideo created by ".\Auth::user()->fullname();
         }
         else
         {
             $userId = 'guest';
             $params['username'] = $request->input('username');
+            $description = "Piideo created by ".$params['username'];
         }
 
 
@@ -157,7 +159,8 @@ class MakepideoController extends Controller
         $params['filename'] = $userId.'_'.$id.'.mp4';
 
 
-        $videoID = $this->uploadYoutube($params['path'], $params['title']);
+
+        $videoID = $this->uploadYoutube($params['path'], $params['title'], $description);
 
         $params['youtubeID'] = $videoID;
 
