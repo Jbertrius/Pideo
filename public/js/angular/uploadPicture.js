@@ -56,25 +56,77 @@ app.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
 });
-app.directive('resizeTest', ['$window', function($window) {
-  return {
-    restrict: 'AC',
-    link: function(scope, element) {
-      var w = angular.element($window);
-      scope.$watch(function() {
-        return { 
-           width: element.width(),
-           height: element.height(),
-         };
-      }, function(newValue, oldValue) {
-        $(window).trigger('resize');
-      }, true);
-      
-      w.bind('resize', function() { scope.$apply(); });
-    }
-  };
-}]);
 
+ 
+
+app.directive('resizeTest', function($window) {
+   return  {
+
+        restrict: 'A',
+
+        link: function (scope, elem, attrs, $window) {
+            
+            var targetElem = elem;
+
+            // Watch for changes
+            scope.$watch(function () {
+                 
+                return targetElem.width();
+            },
+            function (newValue, oldValue) {
+              var hg = $(window).width();
+              var newHg = 0.8 * hg;
+              var newLg = 0.5 * $(window).height();
+
+                if (newValue > oldValue && newValue > newHg) {
+                    elem.css('width', newHg);
+                }
+
+                if (elem.height() > newLg ) {
+                  elem.css('width', 'initial');
+                  elem.css('height', newLg);
+                };
+
+            });
+        }
+
+
+    }
+});
+
+
+app.directive('resizeContainer', function($window) {
+   return  {
+
+        restrict: 'A',
+
+        link: function (scope, elem, attrs, $window) {
+            
+            var targetElem = elem;
+
+            // Watch for changes
+            scope.$watch(function () {
+                 
+                return targetElem.height();
+            },
+            function (newValue, oldValue) {
+              
+              if(newValue > oldValue) {
+                $(window).trigger('resize');
+                elem.css('margin-bottom', 85);
+              }
+              else{
+                 $(window).trigger('resize');
+              }
+                 
+
+
+            });
+        }
+
+
+    }
+});
 
 app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($scope, Upload, $timeout, $sce ) {
 
@@ -83,6 +135,7 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
  
     $scope.style = 'none';
     $scope.youtube = false;
+    
 
     $scope.loading = false;
     $scope.hint = true;
@@ -155,30 +208,30 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
 
 
     var contains = function(needle) {
-    // Per spec, the way to identify NaN is that it is not equal to itself
-    var findNaN = needle !== needle;
-    var indexOf;
+      // Per spec, the way to identify NaN is that it is not equal to itself
+      var findNaN = needle !== needle;
+      var indexOf;
 
-    if(!findNaN && typeof Array.prototype.indexOf === 'function') {
-        indexOf = Array.prototype.indexOf;
-    } else {
-        indexOf = function(needle) {
-            var i = -1, index = -1;
+      if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+          indexOf = Array.prototype.indexOf;
+      } else {
+          indexOf = function(needle) {
+              var i = -1, index = -1;
 
-            for(i = 0; i < this.length; i++) {
-                var item = this[i];
+              for(i = 0; i < this.length; i++) {
+                  var item = this[i];
 
-                if((findNaN && item !== item) || item === needle) {
-                    index = i;
-                    break;
-                }
-            }
+                  if((findNaN && item !== item) || item === needle) {
+                      index = i;
+                      break;
+                  }
+              }
 
-            return index;
-        };
-    }
+              return index;
+          };
+      }
 
-    return indexOf.call(this, needle) > -1;
+      return indexOf.call(this, needle) > -1;
  };
 
 
@@ -194,7 +247,7 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
                 element.push(index);           
 
 
-        checkGenerate();
+        checkGenerate(index);
 
     };
 
@@ -202,7 +255,7 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
         return element.length == $scope.files.length ;
     };
 
-    var checkGenerate = function(){
+    var checkGenerate = function(index){
         if(canGenerate())
         {   
             $scope.showGenerate = true;
@@ -212,19 +265,18 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
            }, 500) 
 
         }
+        else
+           $.fn.fullpage.moveTo('firstPage', index+1);
       
-        
-
-
     };
 
 
 
     $scope.deleteFile = function(idx) {
-     $scope.files.splice(idx, 1);
-     if($scope.files.length == 0){
-      $scope.hint = true;
-       $scope.reset();
+       $scope.files.splice(idx, 1);
+       if($scope.files.length == 0){
+        $scope.hint = true;
+         $scope.reset();
      }
 
        
@@ -239,18 +291,18 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
         $.fn.fullpage.destroy('all');
         $scope.ajust = 'ajust';
 
-      for(i=0; i < $scope.files.length; i++)
-      {
-        var Id = 'recorded-audio-audio'+ i;
+        for(i=0; i < $scope.files.length; i++)
+        {
+          var Id = 'recorded-audio-audio'+ i;
 
-        var blob = dataURItoBlob($('#'+Id)[0].src);
+          var blob = dataURItoBlob($('#'+Id)[0].src);
 
-        var item = {id: i+1, blob: blob};
+          var item = {id: i+1, blob: blob};
 
-        audio.push(item);
-      }
+          audio.push(item);
+        }
 
-        $scope.uploadFiles($scope.files, audio);
+          $scope.uploadFiles($scope.files, audio);
 
 
     };
@@ -258,8 +310,11 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
     
      $scope.addFile = function(file) {
 
-         if(file != null )
-     $scope.files.push(file);
+         if(file.length != 0){
+            for(i=0; i<file.length; i++)
+              $scope.files.push(file[i]);
+         }
+          
       //checkFiles($scope.files);
 
        };
@@ -333,6 +388,15 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
 
 
    $scope.$watch('files.length', function () {
+
+        setTimeout(function(){
+            $(window).trigger('resize');
+        }, 3000);
+
+      
+   });
+
+      $scope.$watch('files.length', function () {
         
 
         setTimeout(function(){
@@ -341,6 +405,8 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$sce',  function ($sc
 
       
    });
+
+
 
 
 

@@ -58,17 +58,14 @@
 
                             <div class="hint" ng-if="hint">
               Selectionnez vos images pour commencer la création de piideo !!
-                                    <p>
-                                  <span class="fa fa-arrow-down"></span> 
-                                  <span class="fa fa-arrow-down"></span>
-                                    </p>
+ 
                             </div>
 
-                            <div class="gallery" id="links" resizeTest>
+                            <div class="gallery" id="links" resize-container>
 
                                 <a ng-repeat="f in files track by $index" class="gallery-item" ngf-src= "f"   data-gallery >
                                     <div class="image">
-                                        <img ngf-src= "f" ngf-resize="{ ratio: '1:1', centerCrop: true, quality: 0.8}"    ngf-no-object-url= true/>
+                                        <img ngf-src= "f"  ngf-resize="{ ratio: '1:1', centerCrop: true, quality: 0.8}"    ngf-no-object-url= true/>
                                         <ul class="gallery-item-controls">
                                             <li><span class="gallery-item-remove" ng-click="deleteFile($index)"><i class="fa fa-times"></i></span></li>
                                         </ul>
@@ -98,7 +95,7 @@
                     </li>
 
                     <li>
-                        <button ng-hide="showme"  ngf-select="addFile($file)" accept="image/*" type="button" class="btn btn-default btn-lg btn-pideo hidden-xs hidden-sm">
+                        <button ng-hide="showme"  ngf-select ng-model="myFiles2" ngf-change="addFile(myFiles2)" accept="image/*" multiple type="button" class="btn btn-default btn-lg btn-pideo hidden-xs hidden-sm">
                             <span class="fa  fa-plus fa-3x"></span> Ajoutez une image
                         </button>
                     </li>
@@ -121,7 +118,7 @@
                     </li>
 
                     <li>
-                        <button type="button"   ng-hide="showme"  ngf-select="addFile($file)" accept="image/*" class="btn-round orange hidden-lg hidden-md">
+                        <button type="button"   ng-hide="showme"  ngf-select ng-model="myFiles" ngf-change="addFile(myFiles)" accept="image/*" multiple = "multiple" class="btn-round orange hidden-lg hidden-md">
                             <div class="content">
                                 <span class="fa fa-plus"></span>
                             </div>
@@ -155,8 +152,8 @@
                     <div class="gallery" id="links">
 
                         <a  class="gallery-item" style="width:100%" ngf-src= "file"   data-gallery>
-                            <div class="image fix-image" style="width: 100%; margin-top: -73px;margin: auto; text-align : center; cursor: auto; left: 18px;">
-                                <img ngf-src= "file" style="width: initial; height: 29em; border: white solid; border-radius: 3px;" ngf-no-object-url= true/>
+                            <div class="image fix-image" style="width: 100%; margin-top: -73px;margin: auto; text-align : center; cursor: auto;">
+                                <img ngf-src= "file" style="width: [[ large ]]; " resize-test ngf-no-object-url= true/>
                             </div>
                         </a>
 
@@ -177,35 +174,35 @@
                                 You need to grant permission for this application to USE your microphone.
                             </div>
 
+                            <ul class="footer"> 
+
                             <li>
                                 <button  type="button" class="btn btn-default btn-lg btn-pideo hidden-xs hidden-sm" ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()" type="button" ng-disabled="recorder.status.isDenied === true ">
                                     <span class="fa fa-microphone"></span> [[ recorder.status.isRecording ? 'Stop' : 'Enregistrez' ]]
                                 </button>
                             </li>
-                            <li>
 
+                            <li>
                                 <button type="button" class="btn btn-default btn-lg btn-pideo hidden-xs hidden-sm" ng-if="recorder.audioModel" ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
                                         ng-disabled="recorder.status.isRecording || !recorder.audioModel">
                                     [[ recorder.status.isStopped || recorder.status.isPaused ? 'Play' : 'Pause' ]]
                                 </button>
-
                             </li>
 
                             <li>
                                 <button  type="button" class=" [[ recorder.status.isRecording ? 'btn-round white hidden-lg hidden-md' : 'btn-round green hidden-lg hidden-md' ]]" ng-click="recorder.status.isRecording ? recorder.stopRecord() : recorder.startRecord()"   ng-disabled="recorder.status.isDenied === true ">
                                     <span  class="[[ recorder.status.isRecording ? 'fa fa-circle ctrlrecording ' : 'fa fa-microphone ctrlrecord' ]]"></span>
                                 </button>
-
                             </li>
 
                             <li>
                                 <button type="button" class="btn-round  hidden-lg hidden-md" ng-if="recorder.audioModel" ng-click="recorder.status.isPlaying ? recorder.playbackPause() : recorder.playbackResume()"
                                         ng-disabled="recorder.status.isRecording || !recorder.audioModel">
                                     <span  class="[[ recorder.status.isStopped || recorder.status.isPaused ? 'fa fa-play ctrlplay' : 'fa fa-pause ctrlplay' ]]"></span>
-
                                 </button>
-
                             </li>
+
+                            </ul>
 
 
                         </div>
@@ -278,14 +275,14 @@
                 @endif
 
                 <div class="row">
-                    <input  type="text" name="school"  class="[[ form.school.$dirty && form.school.$invalid ? 'invalid input' : 'input' ]]"   ng-model="school" placeholder="Ecole..." required>
+                    <input  type="text" name="school"  class="[[ form.school.$dirty && form.school.$invalid ? 'invalid input' : 'input' ]]"   ng-model="school" placeholder="Votre Ecole..." required>
                       <span style="color:red" ng-show="form.school.$dirty && form.school.$invalid">
                       <span ng-show="form.school.$error.required">Le champ "Ecole" est requis</span>
                       </span>
                 </div>
 
                     <div class="row">
-                        <input required type="text" class="[[ form.subject.$dirty && form.subject.$invalid ? 'invalid input' : 'input' ]]" name = "subject" ng-model="subject" placeholder="Categorie...">
+                        <input required type="text" class="[[ form.subject.$dirty && form.subject.$invalid ? 'invalid input' : 'input' ]]" name = "subject" ng-model="subject" placeholder="Le thème/matière que traite la piideo...">
 
                         <span style="color:red" ng-show="form.subject.$dirty && form.subject.$invalid">
                       <span ng-show="form.subject.$error.required">Le champ "Categorie" est requis</span>
@@ -303,7 +300,7 @@
 
                     </div>
 
-                <div class="row"   ng-if="formInfo">
+                <div class="row"  ng-if="formInfo">
 
                     <button type="button"  ng-disabled = "form.$dirty && form.$invalid || form.$pristine" class="btn btn-info btn-pideo btn-lg hidden-xs hidden-sm" ng-click = "save()"> Generate piideo </button>
 
@@ -354,7 +351,7 @@
         $("body").backstretch("img/bg.jpg");
     </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="{{asset('js/angular/angular.min.js')}}"></script>
     <script src="{{asset('js/angular/ng-file-upload-shim.js')}}"></script> <!-- for no html5 browsers support -->
     <script src="{{asset('js/angular/ng-file-upload.js')}}"></script>
 

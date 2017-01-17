@@ -20,6 +20,11 @@
     background-color: rgb(176, 194, 197);
 }
 
+.fix-image img{
+  border: white solid; 
+  border-radius: 3px;
+}
+
 .hint{
 margin-top: 22px;
     text-align: center;
@@ -28,7 +33,7 @@ margin-top: 22px;
     font-size: 21px;
     color: white;
     padding: 31px;
-    padding-top: 58px;
+    padding-top: 100px;
     border: solid white 4px;
 
 }
@@ -121,8 +126,8 @@ video {
     color: white;
     padding: 12px;
     background: rgba(60, 62, 66, 0.23);
-    border: solid 1px white;
-    padding-right: 161px;
+    border: solid 1px white; 
+    width: 308px
 }
 
 .ctrlplay{
@@ -260,7 +265,8 @@ text-align: center;
 }
 
 .picRange .content-frame-body{
-      margin-left: 00px !important;
+    margin-left: 00px !important;
+   /* padding-bottom: 90px !important;*/
 }
 
            ul.footer{
@@ -280,7 +286,7 @@ text-align: center;
        margin: auto;
        top: -54px;
        position: relative;
-       right: -23px;
+        
        width: 100%;
     }
 
@@ -7523,7 +7529,15 @@ li.ext_zip {
   [class^='col-lg-'] {
     margin-bottom: 10px;
   }
+
+  .x-navigation li{
+        margin-right: -63px;
+  }
   
+    .x-navigation li button{
+        margin-left: 57px !important;
+  }
+
   .x-navigation.x-navigation-horizontal .xn-search {
     margin-left: 50px;
 }
@@ -7744,6 +7758,10 @@ display:none;
 }
 
 @media only screen and (max-width: 320px){
+
+  .hint{
+    padding-top: 70px
+  }
 
 
     xn-logo {
