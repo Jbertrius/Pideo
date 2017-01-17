@@ -351,7 +351,7 @@
         $("body").backstretch("img/bg.jpg");
     </script>
 
-    <script src="{{asset('js/angular/angular.min.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="{{asset('js/angular/ng-file-upload-shim.js')}}"></script> <!-- for no html5 browsers support -->
     <script src="{{asset('js/angular/ng-file-upload.js')}}"></script>
 
