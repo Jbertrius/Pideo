@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33900175-87ae-462c-9bf0-437b45a971b1" name="Default" comment="-Mobile design fixed">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/angular/angular-audio-recorder.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/angular/angular.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/angular/angular.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -58,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MakepideoController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MakepideoController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="122">
+              <caret line="53" column="15" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="15" />
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
                 <element signature="e#5311#5559#0#PHP" expanded="false" />
@@ -87,7 +88,7 @@
       <file leaf-file-name="PideoRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/PideoRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="550">
               <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
               <folding>
                 <element signature="e#974#1466#0#PHP" expanded="false" />
@@ -96,26 +97,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pideo.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pideo.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/pideo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="353" column="17" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
+            <state relative-caret-position="550">
+              <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
               <folding>
-                <marker date="1484661547291" expanded="true" signature="998:1293" placeholder="..." />
-                <marker date="1484661547291" expanded="true" signature="1019:1292" placeholder="..." />
-                <marker date="1484661547291" expanded="true" signature="1050:1292" placeholder="..." />
+                <element signature="e#6186#6204#0#HTML" expanded="true" />
+                <element signature="e#6302#6389#0#HTML" expanded="true" />
+                <element signature="e#6452#6480#0#HTML" expanded="true" />
+                <element signature="e#7108#7127#0#HTML" expanded="true" />
+                <element signature="e#10740#10767#0#HTML" expanded="true" />
+                <element signature="e#11005#11029#0#HTML" expanded="true" />
+                <element signature="e#11378#11399#0#HTML" expanded="true" />
+                <element signature="e#12801#12818#0#HTML" expanded="true" />
+                <element signature="e#13391#13408#0#HTML" expanded="true" />
+                <element signature="e#13958#13975#0#HTML" expanded="true" />
+                <element signature="e#14490#14507#0#HTML" expanded="true" />
+                <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+                <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themefirstpage.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/themefirstpage.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,31 +124,11 @@
       <file leaf-file-name="uploadPicture.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/angular/uploadPicture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5423">
-              <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
+            <state relative-caret-position="326">
+              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
               <folding>
-                <marker date="1484610094677" expanded="true" signature="9113:9118" placeholder="{...}" />
+                <marker date="1485189705270" expanded="true" signature="9113:9118" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Youtube.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/Youtube.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/config/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -250,9 +231,9 @@
         <option value="$PROJECT_DIR$/app/Repositories/PideoRepository.php" />
         <option value="$PROJECT_DIR$/vendor/dawson/youtube/src/Youtube.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/navbar2.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/angular/uploadPicture.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php" />
         <option value="$PROJECT_DIR$/public/css/themefirstpage.css" />
+        <option value="$PROJECT_DIR$/public/js/angular/uploadPicture.js" />
         <option value="$PROJECT_DIR$/resources/views/front/pideo.blade.php" />
       </list>
     </option>
@@ -495,7 +476,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pideo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -960,14 +959,9 @@
       <workItem from="1484221323402" duration="1262000" />
       <workItem from="1484658367391" duration="9000" />
       <workItem from="1484659169569" duration="245000" />
-      <workItem from="1484660074636" duration="1422000" />
-    </task>
-    <task id="LOCAL-00034" summary="Update  #29">
-      <created>1477601291464</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1477601291472</updated>
+      <workItem from="1484660074636" duration="2050000" />
+      <workItem from="1484821014394" duration="610000" />
+      <workItem from="1485184668053" duration="5736000" />
     </task>
     <task id="LOCAL-00035" summary="Update  #29">
       <created>1477630881511</created>
@@ -1305,7 +1299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484659443887</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="-Mobile design fixed">
+      <created>1484661569484</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1484661569553</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1314,7 +1315,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1869549000" />
+    <option name="totallyTimeSpent" value="1876523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1327,31 +1328,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1378" height="740" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.61563516" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.29262674" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3237519" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.70737326" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31347963" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18381241" sideWeight="0.39763778" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197492" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49282297" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.61563516" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.29262674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3237519" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18381241" sideWeight="0.39763778" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.53431374" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29623824" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45611286" sideWeight="0.49697885" order="11" side_tool="false" content_ui="tabs" x="550" y="234" width="266" height="194" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197492" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29623824" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23040752" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
@@ -1502,12 +1503,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/pideo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5933">
-          <caret line="349" column="55" selection-start-line="349" selection-start-column="55" selection-end-line="349" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1484661547291" expanded="true" signature="998:1293" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1019:1292" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1050:1292" placeholder="..." />
+            <element signature="e#6186#6204#0#HTML" expanded="true" />
+            <element signature="e#6302#6389#0#HTML" expanded="true" />
+            <element signature="e#6452#6480#0#HTML" expanded="true" />
+            <element signature="e#7108#7127#0#HTML" expanded="true" />
+            <element signature="e#10740#10767#0#HTML" expanded="true" />
+            <element signature="e#11005#11029#0#HTML" expanded="true" />
+            <element signature="e#11378#11399#0#HTML" expanded="true" />
+            <element signature="e#12801#12818#0#HTML" expanded="true" />
+            <element signature="e#13391#13408#0#HTML" expanded="true" />
+            <element signature="e#13958#13975#0#HTML" expanded="true" />
+            <element signature="e#14490#14507#0#HTML" expanded="true" />
+            <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+            <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1525,7 +1536,183 @@
         <state relative-caret-position="5423">
           <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
           <folding>
-            <marker date="1484610094677" expanded="true" signature="9113:9118" placeholder="{...}" />
+            <marker date="1485189705270" expanded="true" signature="9113:9118" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/Youtube.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <element signature="e#5311#5559#0#PHP" expanded="false" />
+            <element signature="e#5565#5965#0#PHP" expanded="false" />
+            <element signature="e#6309#7914#0#PHP" expanded="false" />
+            <element signature="e#8284#8947#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/PideoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="e#974#1466#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/pideo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6186#6204#0#HTML" expanded="true" />
+            <element signature="e#6302#6389#0#HTML" expanded="true" />
+            <element signature="e#6452#6480#0#HTML" expanded="true" />
+            <element signature="e#7108#7127#0#HTML" expanded="true" />
+            <element signature="e#10740#10767#0#HTML" expanded="true" />
+            <element signature="e#11005#11029#0#HTML" expanded="true" />
+            <element signature="e#11378#11399#0#HTML" expanded="true" />
+            <element signature="e#12801#12818#0#HTML" expanded="true" />
+            <element signature="e#13391#13408#0#HTML" expanded="true" />
+            <element signature="e#13958#13975#0#HTML" expanded="true" />
+            <element signature="e#14490#14507#0#HTML" expanded="true" />
+            <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+            <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/themefirstpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/angular/uploadPicture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5423">
+          <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
+          <folding>
+            <marker date="1485189705270" expanded="true" signature="9113:9118" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/Youtube.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/dawson/youtube/src/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <element signature="e#5311#5559#0#PHP" expanded="false" />
+            <element signature="e#5565#5965#0#PHP" expanded="false" />
+            <element signature="e#6309#7914#0#PHP" expanded="false" />
+            <element signature="e#8284#8947#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/PideoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="e#974#1466#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/pideo.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5933">
+          <caret line="349" column="55" selection-start-line="349" selection-start-column="55" selection-end-line="349" selection-end-column="55" />
+          <folding>
+            <element signature="e#6186#6204#0#HTML" expanded="true" />
+            <element signature="e#6302#6389#0#HTML" expanded="true" />
+            <element signature="e#6452#6480#0#HTML" expanded="true" />
+            <element signature="e#7108#7127#0#HTML" expanded="true" />
+            <element signature="e#10740#10767#0#HTML" expanded="true" />
+            <element signature="e#11005#11029#0#HTML" expanded="true" />
+            <element signature="e#11378#11399#0#HTML" expanded="true" />
+            <element signature="e#12801#12818#0#HTML" expanded="true" />
+            <element signature="e#13391#13408#0#HTML" expanded="true" />
+            <element signature="e#13958#13975#0#HTML" expanded="true" />
+            <element signature="e#14490#14507#0#HTML" expanded="true" />
+            <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+            <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/themefirstpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/angular/uploadPicture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5423">
+          <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
+          <folding>
+            <marker date="1485189705270" expanded="true" signature="9113:9118" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1583,23 +1770,19 @@
         <state relative-caret-position="5984">
           <caret line="352" column="55" selection-start-line="352" selection-start-column="55" selection-end-line="352" selection-end-column="55" />
           <folding>
-            <marker date="1484661547291" expanded="true" signature="998:1293" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1019:1292" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1050:1292" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-            <element signature="e#5311#5559#0#PHP" expanded="false" />
-            <element signature="e#5565#5965#0#PHP" expanded="false" />
-            <element signature="e#6309#7914#0#PHP" expanded="false" />
-            <element signature="e#8284#8947#0#PHP" expanded="false" />
+            <element signature="e#6186#6204#0#HTML" expanded="true" />
+            <element signature="e#6302#6389#0#HTML" expanded="true" />
+            <element signature="e#6452#6480#0#HTML" expanded="true" />
+            <element signature="e#7108#7127#0#HTML" expanded="true" />
+            <element signature="e#10740#10767#0#HTML" expanded="true" />
+            <element signature="e#11005#11029#0#HTML" expanded="true" />
+            <element signature="e#11378#11399#0#HTML" expanded="true" />
+            <element signature="e#12801#12818#0#HTML" expanded="true" />
+            <element signature="e#13391#13408#0#HTML" expanded="true" />
+            <element signature="e#13958#13975#0#HTML" expanded="true" />
+            <element signature="e#14490#14507#0#HTML" expanded="true" />
+            <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+            <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1609,34 +1792,6 @@
         <state relative-caret-position="442">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/PideoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="e#974#1466#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/themefirstpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/angular/uploadPicture.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5423">
-          <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
-          <folding>
-            <marker date="1484610094677" expanded="true" signature="9113:9118" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1656,14 +1811,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/PideoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="e#974#1466#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/themefirstpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/angular/uploadPicture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+          <folding>
+            <marker date="1485189705270" expanded="true" signature="9113:9118" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/pideo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="353" column="17" selection-start-line="353" selection-start-column="17" selection-end-line="353" selection-end-column="17" />
+        <state relative-caret-position="550">
+          <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
           <folding>
-            <marker date="1484661547291" expanded="true" signature="998:1293" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1019:1292" placeholder="..." />
-            <marker date="1484661547291" expanded="true" signature="1050:1292" placeholder="..." />
+            <element signature="e#6186#6204#0#HTML" expanded="true" />
+            <element signature="e#6302#6389#0#HTML" expanded="true" />
+            <element signature="e#6452#6480#0#HTML" expanded="true" />
+            <element signature="e#7108#7127#0#HTML" expanded="true" />
+            <element signature="e#10740#10767#0#HTML" expanded="true" />
+            <element signature="e#11005#11029#0#HTML" expanded="true" />
+            <element signature="e#11378#11399#0#HTML" expanded="true" />
+            <element signature="e#12801#12818#0#HTML" expanded="true" />
+            <element signature="e#13391#13408#0#HTML" expanded="true" />
+            <element signature="e#13958#13975#0#HTML" expanded="true" />
+            <element signature="e#14490#14507#0#HTML" expanded="true" />
+            <marker date="1485189962663" expanded="true" signature="923:1214" placeholder="..." />
+            <marker date="1485189962663" expanded="true" signature="944:1213" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/app/public/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakepideoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <element signature="e#5311#5559#0#PHP" expanded="false" />
+            <element signature="e#5565#5965#0#PHP" expanded="false" />
+            <element signature="e#6309#7914#0#PHP" expanded="false" />
+            <element signature="e#8284#8947#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
