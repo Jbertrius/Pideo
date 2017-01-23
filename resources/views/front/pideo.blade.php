@@ -344,7 +344,7 @@ if(\Illuminate\Support\Facades\Auth::check())
             <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>
             <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>
 
-            <script src="{{asset('js/plugins/backstretch/jquery.backstretch.min.js')}}"></script>
+            <script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 
             <script>
                 // To attach Backstrech as the body's background
