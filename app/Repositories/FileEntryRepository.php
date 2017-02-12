@@ -20,7 +20,8 @@ class FileEntryRepository extends BaseRepository
     public function store($file, $user_id, $type) {
 
         $extensions = array('image/jpeg' => 'jpg',
-            'audio/wav' => 'wav'
+            'audio/wav' => 'wav',
+            'audio/mp3' => 'mp3'
         );
 
 

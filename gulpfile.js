@@ -13,7 +13,7 @@ var elixir = require('laravel-elixir');
  
 
 elixir(function(mix) {
-     mix.version( ['js/sendproblem.js', 'js/app.js', 'css/theme-blue.css', 'js/edit.js', 'js/chat.js', 'js/makepideo.js' ] );
+     mix.version( ['js/sendproblem.js', 'js/app.js', 'css/theme-blue.css', 'js/edit.js', 'js/chat.js', 'js/makepideo.js', 'js/angular/uploadPicture.js' ] );
 });
 
 

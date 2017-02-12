@@ -7,8 +7,8 @@
 
 
 @section('style')
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/themefirstpage.css')}}"/>
-    <link rel="stylesheet" type="text/css" id="theme" href="{{asset('js/angular/jquery.fullPage.css')}}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{ asset('css/themefirstpage.css') }}"/>
+    <link rel="stylesheet" type="text/css" id="theme" href="{{ asset('js/angular/jquery.fullPage.css') }}"/>
 @endsection
 
 
@@ -252,7 +252,7 @@ if(\Illuminate\Support\Facades\Auth::check())
 
 
                         <div class="row loading" ng-if="loading">
-                            <span class="fa fa-spin fa-spinner"></span> Generation en cours ...
+                            <span class="fa fa-spin fa-spinner"></span> [[progress]]
                         </div>
 
                         <form name="form">
@@ -351,7 +351,7 @@ if(\Illuminate\Support\Facades\Auth::check())
                 $("body").backstretch("img/bg.jpg");
             </script>
 
-            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+            <script src="{{asset('js/angular/angular.js')}}"></script>
             <script src="{{asset('js/angular/ng-file-upload-shim.js')}}"></script> <!-- for no html5 browsers support -->
             <script src="{{asset('js/angular/ng-file-upload.js')}}"></script>
 
@@ -360,7 +360,7 @@ if(\Illuminate\Support\Facades\Auth::check())
             <script src="{{asset('js/angular/angular-audio-recorder.min.js')}}"></script>
 
 
-            <script src="{{asset('js/angular/uploadPicture.js')}}"></script>
+            <script src="{{elixir('js/angular/uploadPicture.js')}}"></script>  
 
 @endsection
 
